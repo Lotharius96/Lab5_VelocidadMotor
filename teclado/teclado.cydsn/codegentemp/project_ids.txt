@@ -1,0 +1,6 @@
+C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\teclado.cyprj|896b87a6-0b87-4bb7-8f15-f828d89ac6d7
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|14e516bb-d20b-4d62-bd64-f9cd9c8046cd
+C:\Users\jeanpierre\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|ef6fe727-e1d7-45b2-9488-9d18223a6fae
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|0f7b949b-4dcb-4d46-8519-a1ec560c3eb4
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|7197e343-21b7-4fbf-8ae8-3ad9632b6d6c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|1c0be107-a5eb-4235-ab7d-0e255d6dea50
