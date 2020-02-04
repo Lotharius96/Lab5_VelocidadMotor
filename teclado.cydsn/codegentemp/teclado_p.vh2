@@ -1,5 +1,5 @@
 -- Project:   teclado
--- Generated: 01/13/2020 14:29:14
+-- Generated: 01/31/2020 12:52:24
 -- PSoC Creator  4.2
 
 ENTITY teclado IS
@@ -183,9 +183,13 @@ ARCHITECTURE __DEFAULT__ OF teclado IS
     ATTRIBUTE lib_model OF \LCD:LCDPort(6)\ : LABEL IS "iocell15";
     ATTRIBUTE Location OF \LCD:LCDPort(6)\ : LABEL IS "P12[6]";
     ATTRIBUTE lib_model OF Pin_1(0) : LABEL IS "iocell16";
-    ATTRIBUTE Location OF Pin_1(0) : LABEL IS "P2[7]";
+    ATTRIBUTE Location OF Pin_1(0) : LABEL IS "P2[1]";
     ATTRIBUTE lib_model OF Pin_2(0) : LABEL IS "iocell17";
     ATTRIBUTE Location OF Pin_2(0) : LABEL IS "P2[2]";
+    ATTRIBUTE lib_model OF Encoder(0) : LABEL IS "iocell18";
+    ATTRIBUTE Location OF Encoder(0) : LABEL IS "P2[7]";
+    ATTRIBUTE lib_model OF salida(0) : LABEL IS "iocell19";
+    ATTRIBUTE Location OF salida(0) : LABEL IS "P0[3]";
     ATTRIBUTE lib_model OF Net_1 : LABEL IS "macrocell1";
     ATTRIBUTE lib_model OF \Keypad_1:Net_15\ : LABEL IS "macrocell2";
     ATTRIBUTE lib_model OF \Keypad_1:Net_14\ : LABEL IS "macrocell3";
@@ -1742,7 +1746,7 @@ BEGIN
 
     isr_Encoder:interrupt
         GENERIC MAP(
-            int_type => "10",
+            int_type => "00",
             is_nmi => 0)
         PORT MAP(
             interrupt => Net_17,

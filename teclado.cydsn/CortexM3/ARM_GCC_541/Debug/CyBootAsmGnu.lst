@@ -11456,50 +11456,50 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  153              	.set PWM_PWMUDB_sP16_pwmdp_u1__F1_REG, CYREG_B0_UDB03_F1
  154              	
  155              	/* sync */
- 156              	.set sync__0__INTTYPE, CYREG_PICU1_INTTYPE2
- 157              	.set sync__0__MASK, 0x04
+ 156              	.set sync__0__INTTYPE, CYREG_PICU0_INTTYPE0
+ 157              	.set sync__0__MASK, 0x01
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 192
 
 
- 158              	.set sync__0__PC, CYREG_PRT1_PC2
- 159              	.set sync__0__PORT, 1
- 160              	.set sync__0__SHIFT, 2
- 161              	.set sync__AG, CYREG_PRT1_AG
- 162              	.set sync__AMUX, CYREG_PRT1_AMUX
- 163              	.set sync__BIE, CYREG_PRT1_BIE
- 164              	.set sync__BIT_MASK, CYREG_PRT1_BIT_MASK
- 165              	.set sync__BYP, CYREG_PRT1_BYP
- 166              	.set sync__CTL, CYREG_PRT1_CTL
- 167              	.set sync__DM0, CYREG_PRT1_DM0
- 168              	.set sync__DM1, CYREG_PRT1_DM1
- 169              	.set sync__DM2, CYREG_PRT1_DM2
- 170              	.set sync__DR, CYREG_PRT1_DR
- 171              	.set sync__INP_DIS, CYREG_PRT1_INP_DIS
- 172              	.set sync__INTSTAT, CYREG_PICU1_INTSTAT
- 173              	.set sync__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU1_BASE
- 174              	.set sync__LCD_COM_SEG, CYREG_PRT1_LCD_COM_SEG
- 175              	.set sync__LCD_EN, CYREG_PRT1_LCD_EN
- 176              	.set sync__MASK, 0x04
- 177              	.set sync__PORT, 1
- 178              	.set sync__PRT, CYREG_PRT1_PRT
- 179              	.set sync__PRTDSI__CAPS_SEL, CYREG_PRT1_CAPS_SEL
- 180              	.set sync__PRTDSI__DBL_SYNC_IN, CYREG_PRT1_DBL_SYNC_IN
- 181              	.set sync__PRTDSI__OE_SEL0, CYREG_PRT1_OE_SEL0
- 182              	.set sync__PRTDSI__OE_SEL1, CYREG_PRT1_OE_SEL1
- 183              	.set sync__PRTDSI__OUT_SEL0, CYREG_PRT1_OUT_SEL0
- 184              	.set sync__PRTDSI__OUT_SEL1, CYREG_PRT1_OUT_SEL1
- 185              	.set sync__PRTDSI__SYNC_OUT, CYREG_PRT1_SYNC_OUT
- 186              	.set sync__PS, CYREG_PRT1_PS
- 187              	.set sync__SHIFT, 2
- 188              	.set sync__SLW, CYREG_PRT1_SLW
- 189              	.set sync__SNAP, CYREG_PICU1_SNAP
+ 158              	.set sync__0__PC, CYREG_PRT0_PC0
+ 159              	.set sync__0__PORT, 0
+ 160              	.set sync__0__SHIFT, 0
+ 161              	.set sync__AG, CYREG_PRT0_AG
+ 162              	.set sync__AMUX, CYREG_PRT0_AMUX
+ 163              	.set sync__BIE, CYREG_PRT0_BIE
+ 164              	.set sync__BIT_MASK, CYREG_PRT0_BIT_MASK
+ 165              	.set sync__BYP, CYREG_PRT0_BYP
+ 166              	.set sync__CTL, CYREG_PRT0_CTL
+ 167              	.set sync__DM0, CYREG_PRT0_DM0
+ 168              	.set sync__DM1, CYREG_PRT0_DM1
+ 169              	.set sync__DM2, CYREG_PRT0_DM2
+ 170              	.set sync__DR, CYREG_PRT0_DR
+ 171              	.set sync__INP_DIS, CYREG_PRT0_INP_DIS
+ 172              	.set sync__INTSTAT, CYREG_PICU0_INTSTAT
+ 173              	.set sync__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU0_BASE
+ 174              	.set sync__LCD_COM_SEG, CYREG_PRT0_LCD_COM_SEG
+ 175              	.set sync__LCD_EN, CYREG_PRT0_LCD_EN
+ 176              	.set sync__MASK, 0x01
+ 177              	.set sync__PORT, 0
+ 178              	.set sync__PRT, CYREG_PRT0_PRT
+ 179              	.set sync__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
+ 180              	.set sync__PRTDSI__DBL_SYNC_IN, CYREG_PRT0_DBL_SYNC_IN
+ 181              	.set sync__PRTDSI__OE_SEL0, CYREG_PRT0_OE_SEL0
+ 182              	.set sync__PRTDSI__OE_SEL1, CYREG_PRT0_OE_SEL1
+ 183              	.set sync__PRTDSI__OUT_SEL0, CYREG_PRT0_OUT_SEL0
+ 184              	.set sync__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
+ 185              	.set sync__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
+ 186              	.set sync__PS, CYREG_PRT0_PS
+ 187              	.set sync__SHIFT, 0
+ 188              	.set sync__SLW, CYREG_PRT0_SLW
+ 189              	.set sync__SNAP, CYREG_PICU0_SNAP
  190              	
  191              	/* Pin_1 */
- 192              	.set Pin_1__0__INTTYPE, CYREG_PICU2_INTTYPE7
- 193              	.set Pin_1__0__MASK, 0x80
- 194              	.set Pin_1__0__PC, CYREG_PRT2_PC7
+ 192              	.set Pin_1__0__INTTYPE, CYREG_PICU2_INTTYPE1
+ 193              	.set Pin_1__0__MASK, 0x02
+ 194              	.set Pin_1__0__PC, CYREG_PRT2_PC1
  195              	.set Pin_1__0__PORT, 2
- 196              	.set Pin_1__0__SHIFT, 7
+ 196              	.set Pin_1__0__SHIFT, 1
  197              	.set Pin_1__AG, CYREG_PRT2_AG
  198              	.set Pin_1__AMUX, CYREG_PRT2_AMUX
  199              	.set Pin_1__BIE, CYREG_PRT2_BIE
@@ -11514,7 +11514,7 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  208              	.set Pin_1__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU2_BASE
  209              	.set Pin_1__LCD_COM_SEG, CYREG_PRT2_LCD_COM_SEG
  210              	.set Pin_1__LCD_EN, CYREG_PRT2_LCD_EN
- 211              	.set Pin_1__MASK, 0x80
+ 211              	.set Pin_1__MASK, 0x02
  212              	.set Pin_1__PORT, 2
  213              	.set Pin_1__PRT, CYREG_PRT2_PRT
  214              	.set Pin_1__PRTDSI__CAPS_SEL, CYREG_PRT2_CAPS_SEL
@@ -11528,7 +11528,7 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  219              	.set Pin_1__PRTDSI__OUT_SEL1, CYREG_PRT2_OUT_SEL1
  220              	.set Pin_1__PRTDSI__SYNC_OUT, CYREG_PRT2_SYNC_OUT
  221              	.set Pin_1__PS, CYREG_PRT2_PS
- 222              	.set Pin_1__SHIFT, 7
+ 222              	.set Pin_1__SHIFT, 1
  223              	.set Pin_1__SLW, CYREG_PRT2_SLW
  224              	
  225              	/* Pin_2 */
@@ -11576,14 +11576,14 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  267              	.set isr_1__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
  268              	
  269              	/* salida */
- 270              	.set salida__0__INTTYPE, CYREG_PICU0_INTTYPE1
- 271              	.set salida__0__MASK, 0x02
+ 270              	.set salida__0__INTTYPE, CYREG_PICU0_INTTYPE3
+ 271              	.set salida__0__MASK, 0x08
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 194
 
 
- 272              	.set salida__0__PC, CYREG_PRT0_PC1
+ 272              	.set salida__0__PC, CYREG_PRT0_PC3
  273              	.set salida__0__PORT, 0
- 274              	.set salida__0__SHIFT, 1
+ 274              	.set salida__0__SHIFT, 3
  275              	.set salida__AG, CYREG_PRT0_AG
  276              	.set salida__AMUX, CYREG_PRT0_AMUX
  277              	.set salida__BIE, CYREG_PRT0_BIE
@@ -11598,7 +11598,7 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  286              	.set salida__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU0_BASE
  287              	.set salida__LCD_COM_SEG, CYREG_PRT0_LCD_COM_SEG
  288              	.set salida__LCD_EN, CYREG_PRT0_LCD_EN
- 289              	.set salida__MASK, 0x02
+ 289              	.set salida__MASK, 0x08
  290              	.set salida__PORT, 0
  291              	.set salida__PRT, CYREG_PRT0_PRT
  292              	.set salida__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
@@ -11609,47 +11609,47 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  297              	.set salida__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
  298              	.set salida__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
  299              	.set salida__PS, CYREG_PRT0_PS
- 300              	.set salida__SHIFT, 1
+ 300              	.set salida__SHIFT, 3
  301              	.set salida__SLW, CYREG_PRT0_SLW
  302              	
  303              	/* Encoder */
- 304              	.set Encoder__0__INTTYPE, CYREG_PICU0_INTTYPE0
- 305              	.set Encoder__0__MASK, 0x01
- 306              	.set Encoder__0__PC, CYREG_PRT0_PC0
- 307              	.set Encoder__0__PORT, 0
- 308              	.set Encoder__0__SHIFT, 0
- 309              	.set Encoder__AG, CYREG_PRT0_AG
- 310              	.set Encoder__AMUX, CYREG_PRT0_AMUX
- 311              	.set Encoder__BIE, CYREG_PRT0_BIE
- 312              	.set Encoder__BIT_MASK, CYREG_PRT0_BIT_MASK
- 313              	.set Encoder__BYP, CYREG_PRT0_BYP
- 314              	.set Encoder__CTL, CYREG_PRT0_CTL
- 315              	.set Encoder__DM0, CYREG_PRT0_DM0
- 316              	.set Encoder__DM1, CYREG_PRT0_DM1
- 317              	.set Encoder__DM2, CYREG_PRT0_DM2
- 318              	.set Encoder__DR, CYREG_PRT0_DR
- 319              	.set Encoder__INP_DIS, CYREG_PRT0_INP_DIS
- 320              	.set Encoder__INTSTAT, CYREG_PICU0_INTSTAT
- 321              	.set Encoder__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU0_BASE
- 322              	.set Encoder__LCD_COM_SEG, CYREG_PRT0_LCD_COM_SEG
- 323              	.set Encoder__LCD_EN, CYREG_PRT0_LCD_EN
- 324              	.set Encoder__MASK, 0x01
- 325              	.set Encoder__PORT, 0
- 326              	.set Encoder__PRT, CYREG_PRT0_PRT
- 327              	.set Encoder__PRTDSI__CAPS_SEL, CYREG_PRT0_CAPS_SEL
- 328              	.set Encoder__PRTDSI__DBL_SYNC_IN, CYREG_PRT0_DBL_SYNC_IN
+ 304              	.set Encoder__0__INTTYPE, CYREG_PICU2_INTTYPE7
+ 305              	.set Encoder__0__MASK, 0x80
+ 306              	.set Encoder__0__PC, CYREG_PRT2_PC7
+ 307              	.set Encoder__0__PORT, 2
+ 308              	.set Encoder__0__SHIFT, 7
+ 309              	.set Encoder__AG, CYREG_PRT2_AG
+ 310              	.set Encoder__AMUX, CYREG_PRT2_AMUX
+ 311              	.set Encoder__BIE, CYREG_PRT2_BIE
+ 312              	.set Encoder__BIT_MASK, CYREG_PRT2_BIT_MASK
+ 313              	.set Encoder__BYP, CYREG_PRT2_BYP
+ 314              	.set Encoder__CTL, CYREG_PRT2_CTL
+ 315              	.set Encoder__DM0, CYREG_PRT2_DM0
+ 316              	.set Encoder__DM1, CYREG_PRT2_DM1
+ 317              	.set Encoder__DM2, CYREG_PRT2_DM2
+ 318              	.set Encoder__DR, CYREG_PRT2_DR
+ 319              	.set Encoder__INP_DIS, CYREG_PRT2_INP_DIS
+ 320              	.set Encoder__INTSTAT, CYREG_PICU2_INTSTAT
+ 321              	.set Encoder__INTTYPE_BASE, CYDEV_PICU_INTTYPE_PICU2_BASE
+ 322              	.set Encoder__LCD_COM_SEG, CYREG_PRT2_LCD_COM_SEG
+ 323              	.set Encoder__LCD_EN, CYREG_PRT2_LCD_EN
+ 324              	.set Encoder__MASK, 0x80
+ 325              	.set Encoder__PORT, 2
+ 326              	.set Encoder__PRT, CYREG_PRT2_PRT
+ 327              	.set Encoder__PRTDSI__CAPS_SEL, CYREG_PRT2_CAPS_SEL
+ 328              	.set Encoder__PRTDSI__DBL_SYNC_IN, CYREG_PRT2_DBL_SYNC_IN
 ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 195
 
 
- 329              	.set Encoder__PRTDSI__OE_SEL0, CYREG_PRT0_OE_SEL0
- 330              	.set Encoder__PRTDSI__OE_SEL1, CYREG_PRT0_OE_SEL1
- 331              	.set Encoder__PRTDSI__OUT_SEL0, CYREG_PRT0_OUT_SEL0
- 332              	.set Encoder__PRTDSI__OUT_SEL1, CYREG_PRT0_OUT_SEL1
- 333              	.set Encoder__PRTDSI__SYNC_OUT, CYREG_PRT0_SYNC_OUT
- 334              	.set Encoder__PS, CYREG_PRT0_PS
- 335              	.set Encoder__SHIFT, 0
- 336              	.set Encoder__SLW, CYREG_PRT0_SLW
- 337              	.set Encoder__SNAP, CYREG_PICU0_SNAP
+ 329              	.set Encoder__PRTDSI__OE_SEL0, CYREG_PRT2_OE_SEL0
+ 330              	.set Encoder__PRTDSI__OE_SEL1, CYREG_PRT2_OE_SEL1
+ 331              	.set Encoder__PRTDSI__OUT_SEL0, CYREG_PRT2_OUT_SEL0
+ 332              	.set Encoder__PRTDSI__OUT_SEL1, CYREG_PRT2_OUT_SEL1
+ 333              	.set Encoder__PRTDSI__SYNC_OUT, CYREG_PRT2_SYNC_OUT
+ 334              	.set Encoder__PS, CYREG_PRT2_PS
+ 335              	.set Encoder__SHIFT, 7
+ 336              	.set Encoder__SLW, CYREG_PRT2_SLW
+ 337              	.set Encoder__SNAP, CYREG_PICU2_SNAP
  338              	
  339              	/* Keypad_1 */
  340              	.set Keypad_1_Clock__CFG0, CYREG_CLKDIST_DCFG0_CFG0
@@ -11777,30 +11777,30 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  456              	/* isr_sync */
  457              	.set isr_sync__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
  458              	.set isr_sync__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
- 459              	.set isr_sync__INTC_MASK, 0x20
- 460              	.set isr_sync__INTC_NUMBER, 5
+ 459              	.set isr_sync__INTC_MASK, 0x10
+ 460              	.set isr_sync__INTC_NUMBER, 4
  461              	.set isr_sync__INTC_PRIOR_NUM, 7
- 462              	.set isr_sync__INTC_PRIOR_REG, CYREG_NVIC_PRI_5
+ 462              	.set isr_sync__INTC_PRIOR_REG, CYREG_NVIC_PRI_4
  463              	.set isr_sync__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
  464              	.set isr_sync__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
  465              	
  466              	/* isr_press */
  467              	.set isr_press__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
  468              	.set isr_press__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
- 469              	.set isr_press__INTC_MASK, 0x02
- 470              	.set isr_press__INTC_NUMBER, 1
+ 469              	.set isr_press__INTC_MASK, 0x04
+ 470              	.set isr_press__INTC_NUMBER, 2
  471              	.set isr_press__INTC_PRIOR_NUM, 7
- 472              	.set isr_press__INTC_PRIOR_REG, CYREG_NVIC_PRI_1
+ 472              	.set isr_press__INTC_PRIOR_REG, CYREG_NVIC_PRI_2
  473              	.set isr_press__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
  474              	.set isr_press__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
  475              	
  476              	/* isr_Encoder */
  477              	.set isr_Encoder__INTC_CLR_EN_REG, CYREG_NVIC_CLRENA0
  478              	.set isr_Encoder__INTC_CLR_PD_REG, CYREG_NVIC_CLRPEND0
- 479              	.set isr_Encoder__INTC_MASK, 0x10
- 480              	.set isr_Encoder__INTC_NUMBER, 4
+ 479              	.set isr_Encoder__INTC_MASK, 0x02
+ 480              	.set isr_Encoder__INTC_NUMBER, 1
  481              	.set isr_Encoder__INTC_PRIOR_NUM, 7
- 482              	.set isr_Encoder__INTC_PRIOR_REG, CYREG_NVIC_PRI_4
+ 482              	.set isr_Encoder__INTC_PRIOR_REG, CYREG_NVIC_PRI_1
  483              	.set isr_Encoder__INTC_SET_EN_REG, CYREG_NVIC_SETENA0
  484              	.set isr_Encoder__INTC_SET_PD_REG, CYREG_NVIC_SETPEND0
  485              	
@@ -12040,7 +12040,7 @@ ARM GAS  Generated_Source\PSoC5\CyBootAsmGnu.s 			page 1
  707              	.set CYDEV_ECC_ENABLE, 0
  708              	.set CYDEV_HEAP_SIZE, 0x80
  709              	.set CYDEV_INSTRUCT_CACHE_ENABLED, 1
- 710              	.set CYDEV_INTR_RISING, 0x00000003
+ 710              	.set CYDEV_INTR_RISING, 0x00000007
  711              	.set CYDEV_IS_EXPORTING_CODE, 0
  712              	.set CYDEV_IS_IMPORTING_CODE, 0
  713              	.set CYDEV_PROJ_TYPE, 0
