@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="teclado\teclado\Source Files\main.c">
 <ExpandedNodeIds>
 <v>teclado</v>
 <v>teclado\teclado</v>
@@ -236,10 +236,7 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\teclado.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\teclado.cydsn\teclado.cydwr" />
 <name v=".\teclado.cydsn\main.c" />
-<name v=".\teclado.cydsn\Keypad_V1_0\Keypad_V1_0.cysch" />
-<name v=".\teclado.cydsn\Generated_Source\PSoC5\LCD.c" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -247,7 +244,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1134, 425" SelectedTabbedMdiWindow="ed5e32f4-81c9-4b87-8aa0-e61c41782528"><DocumentWindow Key="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\TopDesign\TopDesign.cysch" Guid="4f25bcde-d263-4989-9c20-6a9fccd5bb06" /><DocumentWindow Key="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\teclado.cydwr" Guid="ed5e32f4-81c9-4b87-8aa0-e61c41782528" /><DocumentWindow Key="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\main.c" Guid="07e2f4e5-5694-41f2-b9f6-6a324d123a42" /><DocumentWindow Key="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\Keypad_V1_0\Keypad_V1_0.cysch" Guid="0eacd361-3ca5-4eb5-b126-4502b2afdcf0" /><DocumentWindow Key="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\Generated_Source\PSoC5\LCD.c" Guid="09ffd853-379b-4389-869e-2e24ca88e026" /><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="79a7b893-9c4e-4a75-9199-78ff544fcf92" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1095, 425" SelectedTabbedMdiWindow="db20097b-12fb-424f-b3dc-d5f567d8a634"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="79a7b893-9c4e-4a75-9199-78ff544fcf92" /><DocumentWindow Key="C:\Users\jeanpierre\Documents\PSoC Creator\Lab5_VelocidadMotor\teclado\teclado.cydsn\TopDesign\TopDesign.cysch" Guid="cfcd43c9-b821-442f-8b4d-f07c94619a99" /><DocumentWindow Key="C:\Users\jeanpierre\Documents\PSoC Creator\Lab5_VelocidadMotor\teclado\teclado.cydsn\main.c" Guid="db20097b-12fb-424f-b3dc-d5f567d8a634" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
