@@ -1,6 +1,6 @@
 // ======================================================================
 // teclado.v generated from TopDesign.cysch
-// 01/13/2020 at 14:29
+// 01/31/2020 at 12:52
 // This file is auto generated. ANY EDITS YOU MAKE MAY BE LOST WHEN THIS FILE IS REGENERATED!!!
 // ======================================================================
 
@@ -1050,7 +1050,7 @@ module top ;
 
 
 	cy_isr_v1_0
-		#(.int_type(2'b10))
+		#(.int_type(2'b00))
 		isr_Encoder
 		 (.int_signal(Net_17));
 

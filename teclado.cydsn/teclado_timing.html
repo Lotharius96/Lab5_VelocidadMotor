@@ -539,7 +539,7 @@ function getElementsByClass(rootNode, elemName, className)
 <tr> <td class="prop"> Project :</td>
 <td class="proptext"> teclado</td></tr>
 <tr> <td class="prop"> Build Time :</td>
-<td class="proptext"> 01/13/20 14:29:20</td></tr>
+<td class="proptext"> 01/31/20 12:52:41</td></tr>
 <tr> <td class="prop"> Device :</td>
 <td class="proptext"> CY8C5888LTI-LP097</td></tr>
 <tr> <td class="prop"> Temperature :</td>
@@ -1634,87 +1634,6 @@ Destination Clock : timer_clock : Positive edge(Required Frequency 366.211&nbsp;
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
- <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u1\/ci</td>
- <td class = "number">67.259&nbsp;MHz</td>
- <td class = "number">14.868</td>
- <td class = "number">2730651.799</td>
- <td class = "text_info"></td>
-</tr>
-<tr class="sta_path">
-<td class="sta_path"  colspan="6">
-<table class="sta_path">
- <thead> 
-<tr> 
-<th>Type</th>
-<th>Location</th>
-<th>Fanout</th>
-<th>Instance/Net</th>
-<th>Source</th>
-<th>Dest</th>
-<th>Delay (ns)</th>
-</tr>
-</thead> 
-<tbody>
-<tr> 
- <td class = "text_info">controlcell1</td>
- <td class = "text_info">U(2,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
- <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
- <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
- <td class = "number">1.210</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\Timer:TimerUDB:control_7\</td>
- <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
- <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
- <td class = "number">4.298</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell1</td>
- <td class = "text_info">U(3,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\</td>
- <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
- <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\/co_msb</td>
- <td class = "number">5.130</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"> </td>
- <td class = "number">1</td>
- <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0.co_msb__sig\</td>
- <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\/co_msb</td>
- <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u1\/ci</td>
- <td class = "number">0.000</td>
-</tr>
-<tr> 
- <td class = "text_info">datapathcell2</td>
- <td class = "text_info">U(2,1)</td>
- <td class = "number">1</td>
- <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u1\</td>
- <td class = "text_info"></td>
- <td class = "text_info">SETUP</td>
- <td class = "number">4.230</td>
-</tr>
-<tr> 
- <td class = "text_info">Clock</td>
- <td class = "text_info"> </td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info"></td>
- <td class = "text_info">Skew</td>
- <td class = "number">0.000</td>
-</tr>
-</tbody>
- </table> 
-</td>
-</tr>
-<tr> 
  <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
  <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u1\/ci</td>
  <td class = "number">67.385&nbsp;MHz</td>
@@ -1761,6 +1680,87 @@ Destination Clock : timer_clock : Positive edge(Required Frequency 366.211&nbsp;
  <td class = "number">1</td>
  <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_0</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "number">5.130</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0.co_msb__sig\</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\/co_msb</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">0.000</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(2,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u1\</td>
+ <td class = "text_info"></td>
+ <td class = "text_info">SETUP</td>
+ <td class = "number">4.230</td>
+</tr>
+<tr> 
+ <td class = "text_info">Clock</td>
+ <td class = "text_info"> </td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info"></td>
+ <td class = "text_info">Skew</td>
+ <td class = "number">0.000</td>
+</tr>
+</tbody>
+ </table> 
+</td>
+</tr>
+<tr> 
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u1\/ci</td>
+ <td class = "number">72.348&nbsp;MHz</td>
+ <td class = "number">13.822</td>
+ <td class = "number">2730652.845</td>
+ <td class = "text_info"></td>
+</tr>
+<tr class="sta_path">
+<td class="sta_path"  colspan="6">
+<table class="sta_path">
+ <thead> 
+<tr> 
+<th>Type</th>
+<th>Location</th>
+<th>Fanout</th>
+<th>Instance/Net</th>
+<th>Source</th>
+<th>Dest</th>
+<th>Delay (ns)</th>
+</tr>
+</thead> 
+<tbody>
+<tr> 
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(2,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "number">1.210</td>
+</tr>
+<tr> 
+ <td class = "text_info">Route</td>
+ <td class = "text_info"> </td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer:TimerUDB:control_7\</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
+ <td class = "number">3.252</td>
+</tr>
+<tr> 
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(3,1)</td>
+ <td class = "number">1</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
  <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\/co_msb</td>
  <td class = "number">5.130</td>
 </tr>
@@ -2140,9 +2140,9 @@ Destination Clock : timer_clock : Positive edge(Required Frequency 366.211&nbsp;
 <tr> 
  <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\/z0</td>
  <td class = "text_info">\Timer:TimerUDB:rstSts:stsreg\/status_0</td>
- <td class = "number">77.634&nbsp;MHz</td>
- <td class = "number">12.881</td>
- <td class = "number">2730653.786</td>
+ <td class = "number">77.700&nbsp;MHz</td>
+ <td class = "number">12.870</td>
+ <td class = "number">2730653.797</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -2194,11 +2194,11 @@ Destination Clock : timer_clock : Positive edge(Required Frequency 366.211&nbsp;
  <td class = "text_info">\Timer:TimerUDB:per_zero\</td>
  <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u1\/z0_comb</td>
  <td class = "text_info">\Timer:TimerUDB:status_tc\/main_1</td>
- <td class = "number">3.218</td>
+ <td class = "number">3.197</td>
 </tr>
 <tr> 
  <td class = "text_info">macrocell4</td>
- <td class = "text_info">U(3,1)</td>
+ <td class = "text_info">U(2,1)</td>
  <td class = "number">1</td>
  <td class = "text_info">\Timer:TimerUDB:status_tc\</td>
  <td class = "text_info">\Timer:TimerUDB:status_tc\/main_1</td>
@@ -2212,7 +2212,7 @@ Destination Clock : timer_clock : Positive edge(Required Frequency 366.211&nbsp;
  <td class = "text_info">\Timer:TimerUDB:status_tc\</td>
  <td class = "text_info">\Timer:TimerUDB:status_tc\/q</td>
  <td class = "text_info">\Timer:TimerUDB:rstSts:stsreg\/status_0</td>
- <td class = "number">2.313</td>
+ <td class = "number">2.323</td>
 </tr>
 <tr> 
  <td class = "text_info">statusicell1</td>
@@ -3338,9 +3338,9 @@ Destination Clock : timer_clock : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/ce0</td>
- <td class = "text_info">\PWM:PWMUDB:prevCompare1\/main_0</td>
- <td class = "number">3.842</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
+ <td class = "number">3.612</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3359,46 +3359,28 @@ Destination Clock : timer_clock : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(3,4)</td>
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(2,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/clock</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/ce0</td>
- <td class = "number">0.350</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "number">0.360</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0.ce0__sig\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/ce0</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/ce0i</td>
- <td class = "number">0.000</td>
+ <td class = "text_info">\Timer:TimerUDB:control_7\</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\/cs_addr_1</td>
+ <td class = "number">3.252</td>
 </tr>
 <tr> 
- <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(2,4)</td>
+ <td class = "text_info">datapathcell1</td>
+ <td class = "text_info">U(3,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/ce0i</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/ce0_comb</td>
- <td class = "number">1.190</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:cmp1_eq\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/ce0_comb</td>
- <td class = "text_info">\PWM:PWMUDB:prevCompare1\/main_0</td>
- <td class = "number">2.302</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell14</td>
- <td class = "text_info">U(2,4)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:prevCompare1\</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u0\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -3417,9 +3399,9 @@ Destination Clock : timer_clock : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/ce0</td>
- <td class = "text_info">\PWM:PWMUDB:status_0\/main_1</td>
- <td class = "number">3.842</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u1\/cs_addr_1</td>
+ <td class = "number">3.616</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3438,46 +3420,28 @@ Destination Clock : timer_clock : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(3,4)</td>
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(2,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/clock</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/ce0</td>
- <td class = "number">0.350</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "number">0.360</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0.ce0__sig\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/ce0</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/ce0i</td>
- <td class = "number">0.000</td>
+ <td class = "text_info">\Timer:TimerUDB:control_7\</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u1\/cs_addr_1</td>
+ <td class = "number">3.256</td>
 </tr>
 <tr> 
- <td class = "text_info">datapathcell4</td>
- <td class = "text_info">U(2,4)</td>
+ <td class = "text_info">datapathcell2</td>
+ <td class = "text_info">U(2,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/ce0i</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/ce0_comb</td>
- <td class = "number">1.190</td>
-</tr>
-<tr> 
- <td class = "text_info">Route</td>
- <td class = "text_info"></td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:cmp1_eq\</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u1\/ce0_comb</td>
- <td class = "text_info">\PWM:PWMUDB:status_0\/main_1</td>
- <td class = "number">2.302</td>
-</tr>
-<tr> 
- <td class = "text_info">macrocell15</td>
- <td class = "text_info">U(2,4)</td>
- <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:status_0\</td>
+ <td class = "text_info">\Timer:TimerUDB:sT16:timerdp:u1\</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -3496,9 +3460,9 @@ Destination Clock : timer_clock : Positive edge</span>
 </td>
 </tr>
 <tr> 
- <td class = "text_info">\PWM:PWMUDB:runmode_enable\/q</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/cs_addr_1</td>
- <td class = "number">3.856</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">Net_15/main_0</td>
+ <td class = "number">3.634</td>
  <td class = "text_info"></td>
 </tr>
 <tr class="sta_path">
@@ -3517,28 +3481,28 @@ Destination Clock : timer_clock : Positive edge</span>
 </thead> 
 <tbody>
 <tr> 
- <td class = "text_info">macrocell13</td>
- <td class = "text_info">U(3,4)</td>
+ <td class = "text_info">controlcell1</td>
+ <td class = "text_info">U(2,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:runmode_enable\</td>
- <td class = "text_info">\PWM:PWMUDB:runmode_enable\/clock_0</td>
- <td class = "text_info">\PWM:PWMUDB:runmode_enable\/q</td>
- <td class = "number">1.250</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/clock</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "number">0.360</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>
  <td class = "text_info"></td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:runmode_enable\</td>
- <td class = "text_info">\PWM:PWMUDB:runmode_enable\/q</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\/cs_addr_1</td>
- <td class = "number">2.606</td>
+ <td class = "text_info">\Timer:TimerUDB:control_7\</td>
+ <td class = "text_info">\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\/control_7</td>
+ <td class = "text_info">Net_15/main_0</td>
+ <td class = "number">3.274</td>
 </tr>
 <tr> 
- <td class = "text_info">datapathcell3</td>
- <td class = "text_info">U(3,4)</td>
+ <td class = "text_info">macrocell12</td>
+ <td class = "text_info">U(2,1)</td>
  <td class = "number">1</td>
- <td class = "text_info">\PWM:PWMUDB:sP16:pwmdp:u0\</td>
+ <td class = "text_info">Net_15</td>
  <td class = "text_info"> </td>
  <td class = "text_info">HOLD</td>
  <td class = "number">0.000</td>
@@ -3797,7 +3761,7 @@ Keypad_1_Clock</span>
 <tr> 
  <td class = "text_info">\Keypad_1:Net_82\/q</td>
  <td class = "text_info">\Keypad_1:Column(2)_PAD\</td>
- <td class = "number">21.976</td>
+ <td class = "number">21.960</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -3830,7 +3794,7 @@ Keypad_1_Clock</span>
  <td class = "text_info">\Keypad_1:Net_82\</td>
  <td class = "text_info">\Keypad_1:Net_82\/q</td>
  <td class = "text_info">\Keypad_1:Column(2)\/pin_input</td>
- <td class = "number">6.135</td>
+ <td class = "number">6.119</td>
 </tr>
 <tr> 
  <td class = "text_info">iocell3</td>
@@ -3885,7 +3849,7 @@ timer_clock</span>
 <tr> 
  <td class = "text_info">Net_41/q</td>
  <td class = "text_info">salida(0)_PAD</td>
- <td class = "number">22.488</td>
+ <td class = "number">22.430</td>
 </tr>
 <tr class="sta_path">
 <td class="sta_path"  colspan="3">
@@ -3922,12 +3886,12 @@ timer_clock</span>
 </tr>
 <tr> 
  <td class = "text_info">iocell19</td>
- <td class = "text_info">P0[1]</td>
+ <td class = "text_info">P0[3]</td>
  <td class = "number">1</td>
  <td class = "text_info">salida(0)</td>
  <td class = "text_info">salida(0)/pin_input</td>
  <td class = "text_info">salida(0)/pad_out</td>
- <td class = "number">15.802</td>
+ <td class = "number">15.744</td>
 </tr>
 <tr> 
  <td class = "text_info">Route</td>

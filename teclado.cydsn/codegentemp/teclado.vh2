@@ -2,7 +2,7 @@
 --	Conversion of teclado.v to vh2:
 --
 --	Cypress Semiconductor - WARP Version 6.3 IR 41
---	Mon Jan 13 14:29:12 2020
+--	Fri Jan 31 12:52:19 2020
 --
 
 USE cypress.cypress.all;
@@ -1490,7 +1490,7 @@ isr_1:cy_isr_v1_0
 		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_15);
 isr_Encoder:cy_isr_v1_0
-	GENERIC MAP(int_type=>"10",
+	GENERIC MAP(int_type=>"00",
 		is_nmi=>'0')
 	PORT MAP(int_signal=>Net_17);
 \PWM:PWMUDB:clock_enable_block\:cy_psoc3_udb_clock_enable_v1_0
