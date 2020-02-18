@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\cc5bCXIp.s 			page 1
 
 
@@ -2563,3 +2564,2638 @@ ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\cc5bCXIp.s 			page 1
  2052      72496E74 
  2052      65727275 
  2053              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+=======
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Timer_ISR,"ax",%progbits
+  20              		.align	2
+  21              		.global	Timer_ISR
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	Timer_ISR, %function
+  25              	Timer_ISR:
+  26              	.LFB67:
+  27              		.file 1 "main.c"
+   1:main.c        **** #include "project.h"
+   2:main.c        **** #include "device.h"
+   3:main.c        **** #include "string.h"
+   4:main.c        **** #include "project.h"
+   5:main.c        **** #include <stdio.h>
+   6:main.c        **** #include <stdlib.h>
+   7:main.c        **** #define VMAX 400;
+   8:main.c        **** 
+   9:main.c        **** int flag=1;
+  10:main.c        **** int flag_cont=0;
+  11:main.c        **** char valor[4];
+  12:main.c        **** uint8 contador;
+  13:main.c        **** volatile uint32 counter,event=0;
+  14:main.c        **** volatile uint16 tiempo=0;
+  15:main.c        **** volatile uint32 temp,diff1=0;
+  16:main.c        **** volatile uint16 pwm_Com=0;
+  17:main.c        **** volatile uint16 speed,speed_read=0; //default user_speed;
+  18:main.c        **** int flag1=0;
+  19:main.c        **** int flag_init=0;
+  20:main.c        **** char str[16],str2[16];
+  21:main.c        **** 
+  22:main.c        **** 
+  23:main.c        **** char8 Keypad_1_Key[4][4] = {
+  24:main.c        **** 					{'1','2','3','A'},		//Row 0
+  25:main.c        **** 					
+  26:main.c        **** 					{'4','5','6','B'},		//Row 1
+  27:main.c        **** 										
+  28:main.c        **** 					{'7','8','9','C'},		//Row 2
+  29:main.c        **** 					
+  30:main.c        **** 					{'*','0','#','D'}		//Row 3
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 2
+
+
+  31:main.c        **** 				  };
+  32:main.c        **** 
+  33:main.c        **** 
+  34:main.c        **** 
+  35:main.c        **** 
+  36:main.c        **** /////////////////convertir velocidad usuario a pwm valor//////////////////
+  37:main.c        **** void Convert_Speed(){} 
+  38:main.c        **** //////////////////////////////////////////////////////////////////////////
+  39:main.c        **** 
+  40:main.c        **** ///////////colocamos la velocidad/////////////////////////////////////////
+  41:main.c        **** void Set_Speed(){ //Proposito Es Colocar la velocidad  
+  42:main.c        ****     PWM_WriteCompare(pwm_Com); 
+  43:main.c        **** }
+  44:main.c        **** //////////////////////////////////////////////////////////////////////////
+  45:main.c        **** 
+  46:main.c        **** /////////////////////funcion de control///////////////////////////////////
+  47:main.c        **** void Control_Motor(){
+  48:main.c        ****     if(speed_read != speed){
+  49:main.c        ****         pwm_Com++;
+  50:main.c        ****         Set_Speed();
+  51:main.c        ****         PWM_WriteCompare(pwm_Com);
+  52:main.c        ****     }
+  53:main.c        **** } 
+  54:main.c        **** //////////////////////////////////////////////////////////////////////////
+  55:main.c        **** 
+  56:main.c        **** /////////////////////////////configuracion del timer//////////////////////
+  57:main.c        **** CY_ISR(Timer_ISR){ //AL SEGUNDO
+  28              		.loc 1 57 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  58:main.c        **** if(tiempo<1){
+  36              		.loc 1 58 0
+  37 0002 0E4B     		ldr	r3, .L5
+  38 0004 1B88     		ldrh	r3, [r3]
+  39 0006 9BB2     		uxth	r3, r3
+  40 0008 7BB9     		cbnz	r3, .L2
+  59:main.c        ****     tiempo++;
+  41              		.loc 1 59 0
+  42 000a 0C4A     		ldr	r2, .L5
+  43 000c 1388     		ldrh	r3, [r2]
+  44 000e 9BB2     		uxth	r3, r3
+  45 0010 0133     		adds	r3, r3, #1
+  46 0012 9BB2     		uxth	r3, r3
+  47 0014 1380     		strh	r3, [r2]	@ movhi
+  60:main.c        ****     diff1=0;
+  48              		.loc 1 60 0
+  49 0016 0023     		movs	r3, #0
+  50 0018 5360     		str	r3, [r2, #4]
+  61:main.c        ****     temp=counter;
+  51              		.loc 1 61 0
+  52 001a 094B     		ldr	r3, .L5+4
+  53 001c 1968     		ldr	r1, [r3]
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 3
+
+
+  54 001e 094B     		ldr	r3, .L5+8
+  55 0020 1960     		str	r1, [r3]
+  62:main.c        ****     speed_read=temp;
+  56              		.loc 1 62 0
+  57 0022 1B68     		ldr	r3, [r3]
+  58 0024 9BB2     		uxth	r3, r3
+  59 0026 1381     		strh	r3, [r2, #8]	@ movhi
+  60 0028 04E0     		b	.L3
+  61              	.L2:
+  63:main.c        ****     //Pin_1_Write(1);
+  64:main.c        **** }else{
+  65:main.c        ****     tiempo=0; 
+  62              		.loc 1 65 0
+  63 002a 0023     		movs	r3, #0
+  64 002c 034A     		ldr	r2, .L5
+  65 002e 1380     		strh	r3, [r2]	@ movhi
+  66:main.c        ****     //Pin_1_Write(0);
+  67:main.c        ****     counter=0;
+  66              		.loc 1 67 0
+  67 0030 034A     		ldr	r2, .L5+4
+  68 0032 1360     		str	r3, [r2]
+  69              	.L3:
+  68:main.c        **** }
+  69:main.c        ****  isr_1_ClearPending();
+  70              		.loc 1 69 0
+  71 0034 FFF7FEFF 		bl	isr_1_ClearPending
+  72              	.LVL0:
+  73 0038 08BD     		pop	{r3, pc}
+  74              	.L6:
+  75 003a 00BF     		.align	2
+  76              	.L5:
+  77 003c 00000000 		.word	.LANCHOR0
+  78 0040 00000000 		.word	counter
+  79 0044 00000000 		.word	temp
+  80              		.cfi_endproc
+  81              	.LFE67:
+  82              		.size	Timer_ISR, .-Timer_ISR
+  83              		.section	.text.Encoder_ISR,"ax",%progbits
+  84              		.align	2
+  85              		.global	Encoder_ISR
+  86              		.thumb
+  87              		.thumb_func
+  88              		.type	Encoder_ISR, %function
+  89              	Encoder_ISR:
+  90              	.LFB68:
+  70:main.c        **** }
+  71:main.c        **** //////////////////////////////////////////////////////////////////////////
+  72:main.c        **** 
+  73:main.c        **** //////////////////funcion de lectura del encoder//////////////////////////
+  74:main.c        **** CY_ISR(Encoder_ISR){
+  91              		.loc 1 74 0
+  92              		.cfi_startproc
+  93              		@ args = 0, pretend = 0, frame = 0
+  94              		@ frame_needed = 0, uses_anonymous_args = 0
+  95 0000 08B5     		push	{r3, lr}
+  96              		.cfi_def_cfa_offset 8
+  97              		.cfi_offset 3, -8
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 4
+
+
+  98              		.cfi_offset 14, -4
+  99              	.LVL1:
+  75:main.c        ****  uint8 flag2=0;
+  76:main.c        **** if(Encoder_Read()==1){ 
+ 100              		.loc 1 76 0
+ 101 0002 FFF7FEFF 		bl	Encoder_Read
+ 102              	.LVL2:
+ 103 0006 0128     		cmp	r0, #1
+ 104 0008 05D1     		bne	.L10
+ 105              	.LVL3:
+  77:main.c        ****      flag2=1;
+  78:main.c        ****      CyDelayUs(2000);
+ 106              		.loc 1 78 0
+ 107 000a 4FF4FA60 		mov	r0, #2000
+ 108 000e FFF7FEFF 		bl	CyDelayUs
+ 109              	.LVL4:
+  77:main.c        ****      flag2=1;
+ 110              		.loc 1 77 0
+ 111 0012 0123     		movs	r3, #1
+ 112 0014 00E0     		b	.L8
+ 113              	.LVL5:
+ 114              	.L10:
+  75:main.c        ****  uint8 flag2=0;
+ 115              		.loc 1 75 0
+ 116 0016 0023     		movs	r3, #0
+ 117              	.LVL6:
+ 118              	.L8:
+  79:main.c        **** }
+  80:main.c        ****      if(flag2==1) 
+ 119              		.loc 1 80 0
+ 120 0018 1BB1     		cbz	r3, .L9
+  81:main.c        ****      counter++;
+ 121              		.loc 1 81 0
+ 122 001a 034A     		ldr	r2, .L12
+ 123 001c 1368     		ldr	r3, [r2]
+ 124              	.LVL7:
+ 125 001e 0133     		adds	r3, r3, #1
+ 126 0020 1360     		str	r3, [r2]
+ 127              	.L9:
+  82:main.c        ****      Encoder_ClearInterrupt();
+ 128              		.loc 1 82 0
+ 129 0022 FFF7FEFF 		bl	Encoder_ClearInterrupt
+ 130              	.LVL8:
+ 131 0026 08BD     		pop	{r3, pc}
+ 132              	.L13:
+ 133              		.align	2
+ 134              	.L12:
+ 135 0028 00000000 		.word	counter
+ 136              		.cfi_endproc
+ 137              	.LFE68:
+ 138              		.size	Encoder_ISR, .-Encoder_ISR
+ 139              		.section	.text.sync,"ax",%progbits
+ 140              		.align	2
+ 141              		.global	sync
+ 142              		.thumb
+ 143              		.thumb_func
+ 144              		.type	sync, %function
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 5
+
+
+ 145              	sync:
+ 146              	.LFB69:
+  83:main.c        **** }
+  84:main.c        **** //////////////////////////////////////////////////////////////////////////
+  85:main.c        **** 
+  86:main.c        **** //////////////////funcion de sincronismo y cruce por cero/////////////////
+  87:main.c        **** CY_ISR(sync){    
+ 147              		.loc 1 87 0
+ 148              		.cfi_startproc
+ 149              		@ args = 0, pretend = 0, frame = 0
+ 150              		@ frame_needed = 0, uses_anonymous_args = 0
+ 151 0000 08B5     		push	{r3, lr}
+ 152              		.cfi_def_cfa_offset 8
+ 153              		.cfi_offset 3, -8
+ 154              		.cfi_offset 14, -4
+  88:main.c        **** if (flag_cont == 0 && flag==0){    
+ 155              		.loc 1 88 0
+ 156 0002 094B     		ldr	r3, .L17
+ 157 0004 DB68     		ldr	r3, [r3, #12]
+ 158 0006 5BB9     		cbnz	r3, .L15
+ 159              		.loc 1 88 0 is_stmt 0 discriminator 1
+ 160 0008 084B     		ldr	r3, .L17+4
+ 161 000a 1B68     		ldr	r3, [r3]
+ 162 000c 43B9     		cbnz	r3, .L15
+  89:main.c        ****     
+  90:main.c        ****     CyDelay(50);
+ 163              		.loc 1 90 0 is_stmt 1
+ 164 000e 3220     		movs	r0, #50
+ 165 0010 FFF7FEFF 		bl	CyDelay
+ 166              	.LVL9:
+  91:main.c        ****     flag_init=1;
+ 167              		.loc 1 91 0
+ 168 0014 044B     		ldr	r3, .L17
+ 169 0016 0122     		movs	r2, #1
+ 170 0018 1A61     		str	r2, [r3, #16]
+  92:main.c        ****     //flag_init=(flag1==1)?1:0;
+  93:main.c        ****     flag_cont++;    
+ 171              		.loc 1 93 0
+ 172 001a DA68     		ldr	r2, [r3, #12]
+ 173 001c 0132     		adds	r2, r2, #1
+ 174 001e DA60     		str	r2, [r3, #12]
+ 175              	.L15:
+  94:main.c        **** }
+  95:main.c        ****     sync_ClearInterrupt();
+ 176              		.loc 1 95 0
+ 177 0020 FFF7FEFF 		bl	sync_ClearInterrupt
+ 178              	.LVL10:
+ 179 0024 08BD     		pop	{r3, pc}
+ 180              	.L18:
+ 181 0026 00BF     		.align	2
+ 182              	.L17:
+ 183 0028 00000000 		.word	.LANCHOR0
+ 184 002c 00000000 		.word	.LANCHOR1
+ 185              		.cfi_endproc
+ 186              	.LFE69:
+ 187              		.size	sync, .-sync
+ 188              		.section	.text.press_ISR,"ax",%progbits
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 6
+
+
+ 189              		.align	2
+ 190              		.global	press_ISR
+ 191              		.thumb
+ 192              		.thumb_func
+ 193              		.type	press_ISR, %function
+ 194              	press_ISR:
+ 195              	.LFB70:
+  96:main.c        **** }
+  97:main.c        **** //////////////////////////////////////////////////////////////////////////
+  98:main.c        **** 
+  99:main.c        **** ////////////////////obtenemos de valor de velocidad///////////////////////
+ 100:main.c        **** CY_ISR(press_ISR){
+ 196              		.loc 1 100 0
+ 197              		.cfi_startproc
+ 198              		@ args = 0, pretend = 0, frame = 0
+ 199              		@ frame_needed = 0, uses_anonymous_args = 0
+ 200 0000 70B5     		push	{r4, r5, r6, lr}
+ 201              		.cfi_def_cfa_offset 16
+ 202              		.cfi_offset 4, -16
+ 203              		.cfi_offset 5, -12
+ 204              		.cfi_offset 6, -8
+ 205              		.cfi_offset 14, -4
+ 206              	.LVL11:
+ 101:main.c        **** 
+ 102:main.c        **** int valid=0;  //variable de control de interrupcion  
+ 103:main.c        **** int cont=0;// variable de conteo
+ 207              		.loc 1 103 0
+ 208 0002 0025     		movs	r5, #0
+ 102:main.c        **** int cont=0;// variable de conteo
+ 209              		.loc 1 102 0
+ 210 0004 2E46     		mov	r6, r5
+ 104:main.c        **** char t;//variable de letra
+ 105:main.c        ****     while (valid==0 && flag==1){                   
+ 211              		.loc 1 105 0
+ 212 0006 37E0     		b	.L21
+ 213              	.LVL12:
+ 214              	.L26:
+ 106:main.c        ****             LCD_Position(0,0);
+ 215              		.loc 1 106 0
+ 216 0008 0021     		movs	r1, #0
+ 217 000a 0846     		mov	r0, r1
+ 218 000c FFF7FEFF 		bl	LCD_Position
+ 219              	.LVL13:
+ 107:main.c        ****             LCD_PrintString("vel de control");
+ 220              		.loc 1 107 0
+ 221 0010 1C48     		ldr	r0, .L28
+ 222 0012 FFF7FEFF 		bl	LCD_PrintString
+ 223              	.LVL14:
+ 108:main.c        ****             t=Keypad_1_GetButton();//obtenemos la letra
+ 224              		.loc 1 108 0
+ 225 0016 FFF7FEFF 		bl	Keypad_1_GetButton
+ 226              	.LVL15:
+ 227 001a 0446     		mov	r4, r0
+ 228              	.LVL16:
+ 109:main.c        ****             CyDelay(200);          //delay necesario para leer bien el teclado 
+ 229              		.loc 1 109 0
+ 230 001c C820     		movs	r0, #200
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 7
+
+
+ 231 001e FFF7FEFF 		bl	CyDelay
+ 232              	.LVL17:
+ 110:main.c        ****             LCD_Position(1,0);
+ 233              		.loc 1 110 0
+ 234 0022 0021     		movs	r1, #0
+ 235 0024 0120     		movs	r0, #1
+ 236 0026 FFF7FEFF 		bl	LCD_Position
+ 237              	.LVL18:
+ 111:main.c        ****             LCD_PrintString("valor:");             
+ 238              		.loc 1 111 0
+ 239 002a 1748     		ldr	r0, .L28+4
+ 240 002c FFF7FEFF 		bl	LCD_PrintString
+ 241              	.LVL19:
+ 112:main.c        ****             LCD_Position(1,6+cont);       
+ 242              		.loc 1 112 0
+ 243 0030 A91D     		adds	r1, r5, #6
+ 244 0032 C9B2     		uxtb	r1, r1
+ 245 0034 0120     		movs	r0, #1
+ 246 0036 FFF7FEFF 		bl	LCD_Position
+ 247              	.LVL20:
+ 113:main.c        ****             LCD_PutChar(t);
+ 248              		.loc 1 113 0
+ 249 003a 2046     		mov	r0, r4
+ 250 003c FFF7FEFF 		bl	LCD_PutChar
+ 251              	.LVL21:
+ 114:main.c        ****             if (Keypad_1_GetButton() == 'A'){//aceptacion de valor introducido
+ 252              		.loc 1 114 0
+ 253 0040 FFF7FEFF 		bl	Keypad_1_GetButton
+ 254              	.LVL22:
+ 255 0044 4128     		cmp	r0, #65
+ 256 0046 17D1     		bne	.L21
+ 115:main.c        ****                 valor[cont]=t;// agregamos valor al array
+ 257              		.loc 1 115 0
+ 258 0048 104B     		ldr	r3, .L28+8
+ 259 004a 5C55     		strb	r4, [r3, r5]
+ 116:main.c        ****                 CyDelay(300);//delay para leer la aceptacion
+ 260              		.loc 1 116 0
+ 261 004c 4FF49670 		mov	r0, #300
+ 262 0050 FFF7FEFF 		bl	CyDelay
+ 263              	.LVL23:
+ 117:main.c        ****                 //LCD_Position(1,6+cont);
+ 118:main.c        ****                 //LCD_PutChar(valor[cont]);                            
+ 119:main.c        ****                 cont++;   //amentamos contador
+ 264              		.loc 1 119 0
+ 265 0054 0135     		adds	r5, r5, #1
+ 266              	.LVL24:
+ 120:main.c        ****                 if ((cont>=4 && Keypad_1_GetButton() == 'B')|| flag==0){ //decicion de salir de int
+ 267              		.loc 1 120 0
+ 268 0056 032D     		cmp	r5, #3
+ 269 0058 03DD     		ble	.L22
+ 270              		.loc 1 120 0 is_stmt 0 discriminator 1
+ 271 005a FFF7FEFF 		bl	Keypad_1_GetButton
+ 272              	.LVL25:
+ 273 005e 4228     		cmp	r0, #66
+ 274 0060 02D0     		beq	.L23
+ 275              	.L22:
+ 276              		.loc 1 120 0 discriminator 3
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 8
+
+
+ 277 0062 0B4B     		ldr	r3, .L28+12
+ 278 0064 1B68     		ldr	r3, [r3]
+ 279 0066 3BB9     		cbnz	r3, .L21
+ 280              	.L23:
+ 281              	.LVL26:
+ 121:main.c        ****                     valid=1;//terminamos control
+ 122:main.c        ****                     flag=0;//no dejamos que vuelva a entrar a la interrupcion
+ 282              		.loc 1 122 0 is_stmt 1
+ 283 0068 0022     		movs	r2, #0
+ 284 006a 094B     		ldr	r3, .L28+12
+ 285 006c 1A60     		str	r2, [r3]
+ 123:main.c        ****                     flag1=1;
+ 286              		.loc 1 123 0
+ 287 006e 0126     		movs	r6, #1
+ 288 0070 084B     		ldr	r3, .L28+16
+ 289 0072 5E61     		str	r6, [r3, #20]
+ 124:main.c        ****                    // flag_init=1;
+ 125:main.c        ****                     isr_press_ClearPending();
+ 290              		.loc 1 125 0
+ 291 0074 FFF7FEFF 		bl	isr_press_ClearPending
+ 292              	.LVL27:
+ 293              	.L21:
+ 105:main.c        ****             LCD_Position(0,0);
+ 294              		.loc 1 105 0
+ 295 0078 1EB9     		cbnz	r6, .L19
+ 105:main.c        ****             LCD_Position(0,0);
+ 296              		.loc 1 105 0 is_stmt 0 discriminator 1
+ 297 007a 054B     		ldr	r3, .L28+12
+ 298 007c 1B68     		ldr	r3, [r3]
+ 299 007e 012B     		cmp	r3, #1
+ 300 0080 C2D0     		beq	.L26
+ 301              	.L19:
+ 302 0082 70BD     		pop	{r4, r5, r6, pc}
+ 303              	.LVL28:
+ 304              	.L29:
+ 305              		.align	2
+ 306              	.L28:
+ 307 0084 00000000 		.word	.LC0
+ 308 0088 10000000 		.word	.LC1
+ 309 008c 00000000 		.word	valor
+ 310 0090 00000000 		.word	.LANCHOR1
+ 311 0094 00000000 		.word	.LANCHOR0
+ 312              		.cfi_endproc
+ 313              	.LFE70:
+ 314              		.size	press_ISR, .-press_ISR
+ 315              		.section	.text.Convert_Speed,"ax",%progbits
+ 316              		.align	2
+ 317              		.global	Convert_Speed
+ 318              		.thumb
+ 319              		.thumb_func
+ 320              		.type	Convert_Speed, %function
+ 321              	Convert_Speed:
+ 322              	.LFB64:
+  37:main.c        **** //////////////////////////////////////////////////////////////////////////
+ 323              		.loc 1 37 0 is_stmt 1
+ 324              		.cfi_startproc
+ 325              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 9
+
+
+ 326              		@ frame_needed = 0, uses_anonymous_args = 0
+ 327              		@ link register save eliminated.
+ 328 0000 7047     		bx	lr
+ 329              		.cfi_endproc
+ 330              	.LFE64:
+ 331              		.size	Convert_Speed, .-Convert_Speed
+ 332 0002 00BF     		.section	.text.Set_Speed,"ax",%progbits
+ 333              		.align	2
+ 334              		.global	Set_Speed
+ 335              		.thumb
+ 336              		.thumb_func
+ 337              		.type	Set_Speed, %function
+ 338              	Set_Speed:
+ 339              	.LFB65:
+  41:main.c        ****     PWM_WriteCompare(pwm_Com); 
+ 340              		.loc 1 41 0
+ 341              		.cfi_startproc
+ 342              		@ args = 0, pretend = 0, frame = 0
+ 343              		@ frame_needed = 0, uses_anonymous_args = 0
+  41:main.c        ****     PWM_WriteCompare(pwm_Com); 
+ 344              		.loc 1 41 0
+ 345 0000 08B5     		push	{r3, lr}
+ 346              		.cfi_def_cfa_offset 8
+ 347              		.cfi_offset 3, -8
+ 348              		.cfi_offset 14, -4
+  42:main.c        **** }
+ 349              		.loc 1 42 0
+ 350 0002 034B     		ldr	r3, .L33
+ 351 0004 188B     		ldrh	r0, [r3, #24]
+ 352 0006 80B2     		uxth	r0, r0
+ 353 0008 FFF7FEFF 		bl	PWM_WriteCompare
+ 354              	.LVL29:
+ 355 000c 08BD     		pop	{r3, pc}
+ 356              	.L34:
+ 357 000e 00BF     		.align	2
+ 358              	.L33:
+ 359 0010 00000000 		.word	.LANCHOR0
+ 360              		.cfi_endproc
+ 361              	.LFE65:
+ 362              		.size	Set_Speed, .-Set_Speed
+ 363              		.section	.text.Control_Motor,"ax",%progbits
+ 364              		.align	2
+ 365              		.global	Control_Motor
+ 366              		.thumb
+ 367              		.thumb_func
+ 368              		.type	Control_Motor, %function
+ 369              	Control_Motor:
+ 370              	.LFB66:
+  47:main.c        ****     if(speed_read != speed){
+ 371              		.loc 1 47 0
+ 372              		.cfi_startproc
+ 373              		@ args = 0, pretend = 0, frame = 0
+ 374              		@ frame_needed = 0, uses_anonymous_args = 0
+  48:main.c        ****         pwm_Com++;
+ 375              		.loc 1 48 0
+ 376 0000 0B4B     		ldr	r3, .L39
+ 377 0002 1A89     		ldrh	r2, [r3, #8]
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 10
+
+
+ 378 0004 92B2     		uxth	r2, r2
+ 379 0006 0B4B     		ldr	r3, .L39+4
+ 380 0008 1B88     		ldrh	r3, [r3]
+ 381 000a 9BB2     		uxth	r3, r3
+ 382 000c 9A42     		cmp	r2, r3
+ 383 000e 0DD0     		beq	.L38
+  47:main.c        ****     if(speed_read != speed){
+ 384              		.loc 1 47 0
+ 385 0010 10B5     		push	{r4, lr}
+ 386              		.cfi_def_cfa_offset 8
+ 387              		.cfi_offset 4, -8
+ 388              		.cfi_offset 14, -4
+  49:main.c        ****         Set_Speed();
+ 389              		.loc 1 49 0
+ 390 0012 074C     		ldr	r4, .L39
+ 391 0014 238B     		ldrh	r3, [r4, #24]
+ 392 0016 9BB2     		uxth	r3, r3
+ 393 0018 0133     		adds	r3, r3, #1
+ 394 001a 9BB2     		uxth	r3, r3
+ 395 001c 2383     		strh	r3, [r4, #24]	@ movhi
+  50:main.c        ****         PWM_WriteCompare(pwm_Com);
+ 396              		.loc 1 50 0
+ 397 001e FFF7FEFF 		bl	Set_Speed
+ 398              	.LVL30:
+  51:main.c        ****     }
+ 399              		.loc 1 51 0
+ 400 0022 208B     		ldrh	r0, [r4, #24]
+ 401 0024 80B2     		uxth	r0, r0
+ 402 0026 FFF7FEFF 		bl	PWM_WriteCompare
+ 403              	.LVL31:
+ 404 002a 10BD     		pop	{r4, pc}
+ 405              	.L38:
+ 406              		.cfi_def_cfa_offset 0
+ 407              		.cfi_restore 4
+ 408              		.cfi_restore 14
+ 409 002c 7047     		bx	lr
+ 410              	.L40:
+ 411 002e 00BF     		.align	2
+ 412              	.L39:
+ 413 0030 00000000 		.word	.LANCHOR0
+ 414 0034 00000000 		.word	speed
+ 415              		.cfi_endproc
+ 416              	.LFE66:
+ 417              		.size	Control_Motor, .-Control_Motor
+ 418              		.section	.text.main,"ax",%progbits
+ 419              		.align	2
+ 420              		.global	main
+ 421              		.thumb
+ 422              		.thumb_func
+ 423              		.type	main, %function
+ 424              	main:
+ 425              	.LFB71:
+ 126:main.c        ****                 }
+ 127:main.c        ****             }
+ 128:main.c        ****            
+ 129:main.c        ****     }
+ 130:main.c        ****     
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 11
+
+
+ 131:main.c        **** }
+ 132:main.c        **** //////////////////////////////////////////////////////////////////////////
+ 133:main.c        **** 
+ 134:main.c        **** 
+ 135:main.c        **** int main(void)
+ 136:main.c        **** {
+ 426              		.loc 1 136 0
+ 427              		.cfi_startproc
+ 428              		@ args = 0, pretend = 0, frame = 0
+ 429              		@ frame_needed = 0, uses_anonymous_args = 0
+ 430 0000 10B5     		push	{r4, lr}
+ 431              		.cfi_def_cfa_offset 8
+ 432              		.cfi_offset 4, -8
+ 433              		.cfi_offset 14, -4
+ 137:main.c        ****     //--------------interrupcione-----------
+ 138:main.c        ****     CyGlobalIntEnable;
+ 434              		.loc 1 138 0
+ 435              		.syntax unified
+ 436              	@ 138 "main.c" 1
+ 437 0002 62B6     		CPSIE   i
+ 438              	@ 0 "" 2
+ 139:main.c        ****     isr_press_StartEx(press_ISR);
+ 439              		.loc 1 139 0
+ 440              		.thumb
+ 441              		.syntax unified
+ 442 0004 2548     		ldr	r0, .L45
+ 443 0006 FFF7FEFF 		bl	isr_press_StartEx
+ 444              	.LVL32:
+ 140:main.c        ****     isr_1_StartEx(Timer_ISR);
+ 445              		.loc 1 140 0
+ 446 000a 2548     		ldr	r0, .L45+4
+ 447 000c FFF7FEFF 		bl	isr_1_StartEx
+ 448              	.LVL33:
+ 141:main.c        ****     isr_Encoder_StartEx(Encoder_ISR);
+ 449              		.loc 1 141 0
+ 450 0010 2448     		ldr	r0, .L45+8
+ 451 0012 FFF7FEFF 		bl	isr_Encoder_StartEx
+ 452              	.LVL34:
+ 142:main.c        ****     isr_sync_StartEx(sync); 
+ 453              		.loc 1 142 0
+ 454 0016 2448     		ldr	r0, .L45+12
+ 455 0018 FFF7FEFF 		bl	isr_sync_StartEx
+ 456              	.LVL35:
+ 143:main.c        ****     
+ 144:main.c        ****    //--------incio de LCD---------------
+ 145:main.c        ****     LCD_Start();
+ 457              		.loc 1 145 0
+ 458 001c FFF7FEFF 		bl	LCD_Start
+ 459              	.LVL36:
+ 146:main.c        ****     
+ 147:main.c        ****     //----variables--------------   
+ 148:main.c        ****     pwm_Com=127;
+ 460              		.loc 1 148 0
+ 461 0020 224C     		ldr	r4, .L45+16
+ 462 0022 7F23     		movs	r3, #127
+ 463 0024 2383     		strh	r3, [r4, #24]	@ movhi
+ 149:main.c        ****     Pin_1_Write(salida_Read());
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 12
+
+
+ 464              		.loc 1 149 0
+ 465 0026 FFF7FEFF 		bl	salida_Read
+ 466              	.LVL37:
+ 467 002a FFF7FEFF 		bl	Pin_1_Write
+ 468              	.LVL38:
+ 150:main.c        ****     event=0;
+ 469              		.loc 1 150 0
+ 470 002e 0023     		movs	r3, #0
+ 471 0030 E361     		str	r3, [r4, #28]
+ 472              	.L43:
+ 151:main.c        ****     char8 i;
+ 152:main.c        ****     
+ 153:main.c        ****     for(;;)
+ 154:main.c        ****     {
+ 155:main.c        ****         
+ 156:main.c        ****         if(flag_init==1){
+ 473              		.loc 1 156 0
+ 474 0032 1E4B     		ldr	r3, .L45+16
+ 475 0034 1B69     		ldr	r3, [r3, #16]
+ 476 0036 012B     		cmp	r3, #1
+ 477 0038 03D1     		bne	.L42
+ 157:main.c        ****             PWM_Start();
+ 478              		.loc 1 157 0
+ 479 003a FFF7FEFF 		bl	PWM_Start
+ 480              	.LVL39:
+ 158:main.c        ****             Timer_Start();
+ 481              		.loc 1 158 0
+ 482 003e FFF7FEFF 		bl	Timer_Start
+ 483              	.LVL40:
+ 484              	.L42:
+ 159:main.c        ****         }       
+ 160:main.c        ****         //Pin_1_Write();
+ 161:main.c        ****         //LCD_Position(1,2);
+ 162:main.c        ****         sprintf(str,"%u",speed_read);
+ 485              		.loc 1 162 0
+ 486 0042 1A4B     		ldr	r3, .L45+16
+ 487 0044 1A89     		ldrh	r2, [r3, #8]
+ 488 0046 1A4C     		ldr	r4, .L45+20
+ 489 0048 92B2     		uxth	r2, r2
+ 490 004a 1A49     		ldr	r1, .L45+24
+ 491 004c 2046     		mov	r0, r4
+ 492 004e FFF7FEFF 		bl	sprintf
+ 493              	.LVL41:
+ 163:main.c        ****         //LCD_PrintString(str); 
+ 164:main.c        ****         //LCD_Position(0,2);       
+ 165:main.c        ****         //sprintf(str2,"%lu",diff1);
+ 166:main.c        ****        // LCD_PrintString(str2);
+ 167:main.c        ****         Set_Speed();
+ 494              		.loc 1 167 0
+ 495 0052 FFF7FEFF 		bl	Set_Speed
+ 496              	.LVL42:
+ 168:main.c        ****        
+ 169:main.c        ****         i=speed;   
+ 497              		.loc 1 169 0
+ 498 0056 184B     		ldr	r3, .L45+28
+ 499 0058 1B88     		ldrh	r3, [r3]
+ 500              	.LVL43:
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 13
+
+
+ 170:main.c        ****         CyDelay(200);
+ 501              		.loc 1 170 0
+ 502 005a C820     		movs	r0, #200
+ 503 005c FFF7FEFF 		bl	CyDelay
+ 504              	.LVL44:
+ 171:main.c        ****         LCD_Position(0,0);
+ 505              		.loc 1 171 0
+ 506 0060 0021     		movs	r1, #0
+ 507 0062 0846     		mov	r0, r1
+ 508 0064 FFF7FEFF 		bl	LCD_Position
+ 509              	.LVL45:
+ 172:main.c        ****         LCD_PrintString("Vel control:");
+ 510              		.loc 1 172 0
+ 511 0068 1448     		ldr	r0, .L45+32
+ 512 006a FFF7FEFF 		bl	LCD_PrintString
+ 513              	.LVL46:
+ 173:main.c        ****         LCD_Position(0,12);
+ 514              		.loc 1 173 0
+ 515 006e 0C21     		movs	r1, #12
+ 516 0070 0020     		movs	r0, #0
+ 517 0072 FFF7FEFF 		bl	LCD_Position
+ 518              	.LVL47:
+ 174:main.c        ****         LCD_PrintString(valor);//velocidad de control
+ 519              		.loc 1 174 0
+ 520 0076 1248     		ldr	r0, .L45+36
+ 521 0078 FFF7FEFF 		bl	LCD_PrintString
+ 522              	.LVL48:
+ 175:main.c        ****         LCD_Position(1,0);
+ 523              		.loc 1 175 0
+ 524 007c 0021     		movs	r1, #0
+ 525 007e 0120     		movs	r0, #1
+ 526 0080 FFF7FEFF 		bl	LCD_Position
+ 527              	.LVL49:
+ 176:main.c        ****         LCD_PrintString("Vel sensor:");
+ 528              		.loc 1 176 0
+ 529 0084 0F48     		ldr	r0, .L45+40
+ 530 0086 FFF7FEFF 		bl	LCD_PrintString
+ 531              	.LVL50:
+ 177:main.c        ****         LCD_Position(01,11);
+ 532              		.loc 1 177 0
+ 533 008a 0B21     		movs	r1, #11
+ 534 008c 0120     		movs	r0, #1
+ 535 008e FFF7FEFF 		bl	LCD_Position
+ 536              	.LVL51:
+ 178:main.c        ****         LCD_PrintString(str);//velocidad medida por el sensor
+ 537              		.loc 1 178 0
+ 538 0092 2046     		mov	r0, r4
+ 539 0094 FFF7FEFF 		bl	LCD_PrintString
+ 540              	.LVL52:
+ 179:main.c        ****     }
+ 541              		.loc 1 179 0
+ 542 0098 CBE7     		b	.L43
+ 543              	.L46:
+ 544 009a 00BF     		.align	2
+ 545              	.L45:
+ 546 009c 00000000 		.word	press_ISR
+ 547 00a0 00000000 		.word	Timer_ISR
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 14
+
+
+ 548 00a4 00000000 		.word	Encoder_ISR
+ 549 00a8 00000000 		.word	sync
+ 550 00ac 00000000 		.word	.LANCHOR0
+ 551 00b0 00000000 		.word	str
+ 552 00b4 18000000 		.word	.LC2
+ 553 00b8 00000000 		.word	speed
+ 554 00bc 1C000000 		.word	.LC3
+ 555 00c0 00000000 		.word	valor
+ 556 00c4 2C000000 		.word	.LC4
+ 557              		.cfi_endproc
+ 558              	.LFE71:
+ 559              		.size	main, .-main
+ 560              		.comm	str2,16,4
+ 561              		.comm	str,16,4
+ 562              		.global	flag_init
+ 563              		.global	flag1
+ 564              		.global	speed_read
+ 565              		.comm	speed,2,2
+ 566              		.global	pwm_Com
+ 567              		.global	diff1
+ 568              		.comm	temp,4,4
+ 569              		.global	tiempo
+ 570              		.global	event
+ 571              		.comm	counter,4,4
+ 572              		.comm	contador,1,1
+ 573              		.comm	valor,4,4
+ 574              		.global	flag_cont
+ 575              		.global	flag
+ 576              		.global	Keypad_1_Key
+ 577              		.data
+ 578              		.align	2
+ 579              		.set	.LANCHOR1,. + 0
+ 580              		.type	flag, %object
+ 581              		.size	flag, 4
+ 582              	flag:
+ 583 0000 01000000 		.word	1
+ 584              		.type	Keypad_1_Key, %object
+ 585              		.size	Keypad_1_Key, 16
+ 586              	Keypad_1_Key:
+ 587 0004 31       		.byte	49
+ 588 0005 32       		.byte	50
+ 589 0006 33       		.byte	51
+ 590 0007 41       		.byte	65
+ 591 0008 34       		.byte	52
+ 592 0009 35       		.byte	53
+ 593 000a 36       		.byte	54
+ 594 000b 42       		.byte	66
+ 595 000c 37       		.byte	55
+ 596 000d 38       		.byte	56
+ 597 000e 39       		.byte	57
+ 598 000f 43       		.byte	67
+ 599 0010 2A       		.byte	42
+ 600 0011 30       		.byte	48
+ 601 0012 23       		.byte	35
+ 602 0013 44       		.byte	68
+ 603              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 604              		.align	2
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 15
+
+
+ 605              	.LC0:
+ 606 0000 76656C20 		.ascii	"vel de control\000"
+ 606      64652063 
+ 606      6F6E7472 
+ 606      6F6C00
+ 607 000f 00       		.space	1
+ 608              	.LC1:
+ 609 0010 76616C6F 		.ascii	"valor:\000"
+ 609      723A00
+ 610 0017 00       		.space	1
+ 611              	.LC2:
+ 612 0018 257500   		.ascii	"%u\000"
+ 613 001b 00       		.space	1
+ 614              	.LC3:
+ 615 001c 56656C20 		.ascii	"Vel control:\000"
+ 615      636F6E74 
+ 615      726F6C3A 
+ 615      00
+ 616 0029 000000   		.space	3
+ 617              	.LC4:
+ 618 002c 56656C20 		.ascii	"Vel sensor:\000"
+ 618      73656E73 
+ 618      6F723A00 
+ 619              		.bss
+ 620              		.align	2
+ 621              		.set	.LANCHOR0,. + 0
+ 622              		.type	tiempo, %object
+ 623              		.size	tiempo, 2
+ 624              	tiempo:
+ 625 0000 0000     		.space	2
+ 626 0002 0000     		.space	2
+ 627              		.type	diff1, %object
+ 628              		.size	diff1, 4
+ 629              	diff1:
+ 630 0004 00000000 		.space	4
+ 631              		.type	speed_read, %object
+ 632              		.size	speed_read, 2
+ 633              	speed_read:
+ 634 0008 0000     		.space	2
+ 635 000a 0000     		.space	2
+ 636              		.type	flag_cont, %object
+ 637              		.size	flag_cont, 4
+ 638              	flag_cont:
+ 639 000c 00000000 		.space	4
+ 640              		.type	flag_init, %object
+ 641              		.size	flag_init, 4
+ 642              	flag_init:
+ 643 0010 00000000 		.space	4
+ 644              		.type	flag1, %object
+ 645              		.size	flag1, 4
+ 646              	flag1:
+ 647 0014 00000000 		.space	4
+ 648              		.type	pwm_Com, %object
+ 649              		.size	pwm_Com, 2
+ 650              	pwm_Com:
+ 651 0018 0000     		.space	2
+ 652 001a 0000     		.space	2
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 16
+
+
+ 653              		.type	event, %object
+ 654              		.size	event, 4
+ 655              	event:
+ 656 001c 00000000 		.space	4
+ 657              		.text
+ 658              	.Letext0:
+ 659              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 660              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 661              		.file 4 "Generated_Source\\PSoC5/cytypes.h"
+ 662              		.file 5 "Generated_Source\\PSoC5/core_cm3.h"
+ 663              		.file 6 "Generated_Source\\PSoC5/isr_1.h"
+ 664              		.file 7 "Generated_Source\\PSoC5/Encoder.h"
+ 665              		.file 8 "Generated_Source\\PSoC5/CyLib.h"
+ 666              		.file 9 "Generated_Source\\PSoC5/sync.h"
+ 667              		.file 10 "Generated_Source\\PSoC5/LCD.h"
+ 668              		.file 11 "Generated_Source\\PSoC5/Keypad_1_Keypad1.h"
+ 669              		.file 12 "Generated_Source\\PSoC5/isr_press.h"
+ 670              		.file 13 "Generated_Source\\PSoC5/PWM.h"
+ 671              		.file 14 "Generated_Source\\PSoC5/isr_Encoder.h"
+ 672              		.file 15 "Generated_Source\\PSoC5/isr_sync.h"
+ 673              		.file 16 "Generated_Source\\PSoC5/salida.h"
+ 674              		.file 17 "Generated_Source\\PSoC5/Pin_1.h"
+ 675              		.file 18 "Generated_Source\\PSoC5/Timer.h"
+ 676              		.file 19 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4
+ 677              		.section	.debug_info,"",%progbits
+ 678              	.Ldebug_info0:
+ 679 0000 DF060000 		.4byte	0x6df
+ 680 0004 0400     		.2byte	0x4
+ 681 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 682 000a 04       		.byte	0x4
+ 683 000b 01       		.uleb128 0x1
+ 684 000c 2D030000 		.4byte	.LASF68
+ 685 0010 0C       		.byte	0xc
+ 686 0011 41020000 		.4byte	.LASF69
+ 687 0015 D2000000 		.4byte	.LASF70
+ 688 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 689 001d 00000000 		.4byte	0
+ 690 0021 00000000 		.4byte	.Ldebug_line0
+ 691 0025 02       		.uleb128 0x2
+ 692 0026 01       		.byte	0x1
+ 693 0027 06       		.byte	0x6
+ 694 0028 92010000 		.4byte	.LASF0
+ 695 002c 02       		.uleb128 0x2
+ 696 002d 01       		.byte	0x1
+ 697 002e 08       		.byte	0x8
+ 698 002f 2A010000 		.4byte	.LASF1
+ 699 0033 02       		.uleb128 0x2
+ 700 0034 02       		.byte	0x2
+ 701 0035 05       		.byte	0x5
+ 702 0036 0B000000 		.4byte	.LASF2
+ 703 003a 02       		.uleb128 0x2
+ 704 003b 02       		.byte	0x2
+ 705 003c 07       		.byte	0x7
+ 706 003d 0F020000 		.4byte	.LASF3
+ 707 0041 03       		.uleb128 0x3
+ 708 0042 8E020000 		.4byte	.LASF9
+ 709 0046 02       		.byte	0x2
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 17
+
+
+ 710 0047 3F       		.byte	0x3f
+ 711 0048 4C000000 		.4byte	0x4c
+ 712 004c 02       		.uleb128 0x2
+ 713 004d 04       		.byte	0x4
+ 714 004e 05       		.byte	0x5
+ 715 004f C9000000 		.4byte	.LASF4
+ 716 0053 02       		.uleb128 0x2
+ 717 0054 04       		.byte	0x4
+ 718 0055 07       		.byte	0x7
+ 719 0056 48020000 		.4byte	.LASF5
+ 720 005a 02       		.uleb128 0x2
+ 721 005b 08       		.byte	0x8
+ 722 005c 05       		.byte	0x5
+ 723 005d AF000000 		.4byte	.LASF6
+ 724 0061 02       		.uleb128 0x2
+ 725 0062 08       		.byte	0x8
+ 726 0063 07       		.byte	0x7
+ 727 0064 9E010000 		.4byte	.LASF7
+ 728 0068 04       		.uleb128 0x4
+ 729 0069 04       		.byte	0x4
+ 730 006a 05       		.byte	0x5
+ 731 006b 696E7400 		.ascii	"int\000"
+ 732 006f 02       		.uleb128 0x2
+ 733 0070 04       		.byte	0x4
+ 734 0071 07       		.byte	0x7
+ 735 0072 B5010000 		.4byte	.LASF8
+ 736 0076 03       		.uleb128 0x3
+ 737 0077 07020000 		.4byte	.LASF10
+ 738 007b 03       		.byte	0x3
+ 739 007c 2C       		.byte	0x2c
+ 740 007d 41000000 		.4byte	0x41
+ 741 0081 05       		.uleb128 0x5
+ 742 0082 7E000000 		.4byte	.LASF11
+ 743 0086 04       		.byte	0x4
+ 744 0087 E401     		.2byte	0x1e4
+ 745 0089 2C000000 		.4byte	0x2c
+ 746 008d 05       		.uleb128 0x5
+ 747 008e 6C000000 		.4byte	.LASF12
+ 748 0092 04       		.byte	0x4
+ 749 0093 E501     		.2byte	0x1e5
+ 750 0095 3A000000 		.4byte	0x3a
+ 751 0099 05       		.uleb128 0x5
+ 752 009a 3A020000 		.4byte	.LASF13
+ 753 009e 04       		.byte	0x4
+ 754 009f E601     		.2byte	0x1e6
+ 755 00a1 53000000 		.4byte	0x53
+ 756 00a5 02       		.uleb128 0x2
+ 757 00a6 04       		.byte	0x4
+ 758 00a7 04       		.byte	0x4
+ 759 00a8 9F000000 		.4byte	.LASF14
+ 760 00ac 02       		.uleb128 0x2
+ 761 00ad 08       		.byte	0x8
+ 762 00ae 04       		.byte	0x4
+ 763 00af 5A020000 		.4byte	.LASF15
+ 764 00b3 05       		.uleb128 0x5
+ 765 00b4 30000000 		.4byte	.LASF16
+ 766 00b8 04       		.byte	0x4
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 18
+
+
+ 767 00b9 F501     		.2byte	0x1f5
+ 768 00bb BF000000 		.4byte	0xbf
+ 769 00bf 02       		.uleb128 0x2
+ 770 00c0 01       		.byte	0x1
+ 771 00c1 08       		.byte	0x8
+ 772 00c2 F1010000 		.4byte	.LASF17
+ 773 00c6 06       		.uleb128 0x6
+ 774 00c7 8D000000 		.4byte	0x8d
+ 775 00cb 06       		.uleb128 0x6
+ 776 00cc 99000000 		.4byte	0x99
+ 777 00d0 02       		.uleb128 0x2
+ 778 00d1 08       		.byte	0x8
+ 779 00d2 04       		.byte	0x4
+ 780 00d3 4E010000 		.4byte	.LASF18
+ 781 00d7 02       		.uleb128 0x2
+ 782 00d8 04       		.byte	0x4
+ 783 00d9 07       		.byte	0x7
+ 784 00da 27000000 		.4byte	.LASF19
+ 785 00de 07       		.uleb128 0x7
+ 786 00df 84020000 		.4byte	.LASF20
+ 787 00e3 01       		.byte	0x1
+ 788 00e4 39       		.byte	0x39
+ 789 00e5 00000000 		.4byte	.LFB67
+ 790 00e9 48000000 		.4byte	.LFE67-.LFB67
+ 791 00ed 01       		.uleb128 0x1
+ 792 00ee 9C       		.byte	0x9c
+ 793 00ef FD000000 		.4byte	0xfd
+ 794 00f3 08       		.uleb128 0x8
+ 795 00f4 38000000 		.4byte	.LVL0
+ 796 00f8 F0050000 		.4byte	0x5f0
+ 797 00fc 00       		.byte	0
+ 798 00fd 07       		.uleb128 0x7
+ 799 00fe C2010000 		.4byte	.LASF21
+ 800 0102 01       		.byte	0x1
+ 801 0103 4A       		.byte	0x4a
+ 802 0104 00000000 		.4byte	.LFB68
+ 803 0108 2C000000 		.4byte	.LFE68-.LFB68
+ 804 010c 01       		.uleb128 0x1
+ 805 010d 9C       		.byte	0x9c
+ 806 010e 49010000 		.4byte	0x149
+ 807 0112 09       		.uleb128 0x9
+ 808 0113 8A000000 		.4byte	.LASF24
+ 809 0117 01       		.byte	0x1
+ 810 0118 4B       		.byte	0x4b
+ 811 0119 81000000 		.4byte	0x81
+ 812 011d 00000000 		.4byte	.LLST0
+ 813 0121 08       		.uleb128 0x8
+ 814 0122 06000000 		.4byte	.LVL2
+ 815 0126 FB050000 		.4byte	0x5fb
+ 816 012a 0A       		.uleb128 0xa
+ 817 012b 12000000 		.4byte	.LVL4
+ 818 012f 06060000 		.4byte	0x606
+ 819 0133 3F010000 		.4byte	0x13f
+ 820 0137 0B       		.uleb128 0xb
+ 821 0138 01       		.uleb128 0x1
+ 822 0139 50       		.byte	0x50
+ 823 013a 03       		.uleb128 0x3
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 19
+
+
+ 824 013b 0A       		.byte	0xa
+ 825 013c D007     		.2byte	0x7d0
+ 826 013e 00       		.byte	0
+ 827 013f 08       		.uleb128 0x8
+ 828 0140 26000000 		.4byte	.LVL8
+ 829 0144 11060000 		.4byte	0x611
+ 830 0148 00       		.byte	0
+ 831 0149 07       		.uleb128 0x7
+ 832 014a 35020000 		.4byte	.LASF22
+ 833 014e 01       		.byte	0x1
+ 834 014f 57       		.byte	0x57
+ 835 0150 00000000 		.4byte	.LFB69
+ 836 0154 30000000 		.4byte	.LFE69-.LFB69
+ 837 0158 01       		.uleb128 0x1
+ 838 0159 9C       		.byte	0x9c
+ 839 015a 7C010000 		.4byte	0x17c
+ 840 015e 0A       		.uleb128 0xa
+ 841 015f 14000000 		.4byte	.LVL9
+ 842 0163 1C060000 		.4byte	0x61c
+ 843 0167 72010000 		.4byte	0x172
+ 844 016b 0B       		.uleb128 0xb
+ 845 016c 01       		.uleb128 0x1
+ 846 016d 50       		.byte	0x50
+ 847 016e 02       		.uleb128 0x2
+ 848 016f 08       		.byte	0x8
+ 849 0170 32       		.byte	0x32
+ 850 0171 00       		.byte	0
+ 851 0172 08       		.uleb128 0x8
+ 852 0173 24000000 		.4byte	.LVL10
+ 853 0177 27060000 		.4byte	0x627
+ 854 017b 00       		.byte	0
+ 855 017c 07       		.uleb128 0x7
+ 856 017d A5000000 		.4byte	.LASF23
+ 857 0181 01       		.byte	0x1
+ 858 0182 64       		.byte	0x64
+ 859 0183 00000000 		.4byte	.LFB70
+ 860 0187 98000000 		.4byte	.LFE70-.LFB70
+ 861 018b 01       		.uleb128 0x1
+ 862 018c 9C       		.byte	0x9c
+ 863 018d 95020000 		.4byte	0x295
+ 864 0191 09       		.uleb128 0x9
+ 865 0192 00000000 		.4byte	.LASF25
+ 866 0196 01       		.byte	0x1
+ 867 0197 66       		.byte	0x66
+ 868 0198 68000000 		.4byte	0x68
+ 869 019c 37000000 		.4byte	.LLST1
+ 870 01a0 09       		.uleb128 0x9
+ 871 01a1 9A000000 		.4byte	.LASF26
+ 872 01a5 01       		.byte	0x1
+ 873 01a6 67       		.byte	0x67
+ 874 01a7 68000000 		.4byte	0x68
+ 875 01ab 6D000000 		.4byte	.LLST2
+ 876 01af 0C       		.uleb128 0xc
+ 877 01b0 7400     		.ascii	"t\000"
+ 878 01b2 01       		.byte	0x1
+ 879 01b3 68       		.byte	0x68
+ 880 01b4 BF000000 		.4byte	0xbf
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 20
+
+
+ 881 01b8 8C000000 		.4byte	.LLST3
+ 882 01bc 0A       		.uleb128 0xa
+ 883 01bd 10000000 		.4byte	.LVL13
+ 884 01c1 32060000 		.4byte	0x632
+ 885 01c5 D4010000 		.4byte	0x1d4
+ 886 01c9 0B       		.uleb128 0xb
+ 887 01ca 01       		.uleb128 0x1
+ 888 01cb 50       		.byte	0x50
+ 889 01cc 01       		.uleb128 0x1
+ 890 01cd 30       		.byte	0x30
+ 891 01ce 0B       		.uleb128 0xb
+ 892 01cf 01       		.uleb128 0x1
+ 893 01d0 51       		.byte	0x51
+ 894 01d1 01       		.uleb128 0x1
+ 895 01d2 30       		.byte	0x30
+ 896 01d3 00       		.byte	0
+ 897 01d4 0A       		.uleb128 0xa
+ 898 01d5 16000000 		.4byte	.LVL14
+ 899 01d9 3D060000 		.4byte	0x63d
+ 900 01dd EB010000 		.4byte	0x1eb
+ 901 01e1 0B       		.uleb128 0xb
+ 902 01e2 01       		.uleb128 0x1
+ 903 01e3 50       		.byte	0x50
+ 904 01e4 05       		.uleb128 0x5
+ 905 01e5 03       		.byte	0x3
+ 906 01e6 00000000 		.4byte	.LC0
+ 907 01ea 00       		.byte	0
+ 908 01eb 08       		.uleb128 0x8
+ 909 01ec 1A000000 		.4byte	.LVL15
+ 910 01f0 48060000 		.4byte	0x648
+ 911 01f4 0A       		.uleb128 0xa
+ 912 01f5 22000000 		.4byte	.LVL17
+ 913 01f9 1C060000 		.4byte	0x61c
+ 914 01fd 08020000 		.4byte	0x208
+ 915 0201 0B       		.uleb128 0xb
+ 916 0202 01       		.uleb128 0x1
+ 917 0203 50       		.byte	0x50
+ 918 0204 02       		.uleb128 0x2
+ 919 0205 08       		.byte	0x8
+ 920 0206 C8       		.byte	0xc8
+ 921 0207 00       		.byte	0
+ 922 0208 0A       		.uleb128 0xa
+ 923 0209 2A000000 		.4byte	.LVL18
+ 924 020d 32060000 		.4byte	0x632
+ 925 0211 20020000 		.4byte	0x220
+ 926 0215 0B       		.uleb128 0xb
+ 927 0216 01       		.uleb128 0x1
+ 928 0217 50       		.byte	0x50
+ 929 0218 01       		.uleb128 0x1
+ 930 0219 31       		.byte	0x31
+ 931 021a 0B       		.uleb128 0xb
+ 932 021b 01       		.uleb128 0x1
+ 933 021c 51       		.byte	0x51
+ 934 021d 01       		.uleb128 0x1
+ 935 021e 30       		.byte	0x30
+ 936 021f 00       		.byte	0
+ 937 0220 0A       		.uleb128 0xa
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 21
+
+
+ 938 0221 30000000 		.4byte	.LVL19
+ 939 0225 3D060000 		.4byte	0x63d
+ 940 0229 37020000 		.4byte	0x237
+ 941 022d 0B       		.uleb128 0xb
+ 942 022e 01       		.uleb128 0x1
+ 943 022f 50       		.byte	0x50
+ 944 0230 05       		.uleb128 0x5
+ 945 0231 03       		.byte	0x3
+ 946 0232 10000000 		.4byte	.LC1
+ 947 0236 00       		.byte	0
+ 948 0237 0A       		.uleb128 0xa
+ 949 0238 3A000000 		.4byte	.LVL20
+ 950 023c 32060000 		.4byte	0x632
+ 951 0240 50020000 		.4byte	0x250
+ 952 0244 0B       		.uleb128 0xb
+ 953 0245 01       		.uleb128 0x1
+ 954 0246 50       		.byte	0x50
+ 955 0247 01       		.uleb128 0x1
+ 956 0248 31       		.byte	0x31
+ 957 0249 0B       		.uleb128 0xb
+ 958 024a 01       		.uleb128 0x1
+ 959 024b 51       		.byte	0x51
+ 960 024c 02       		.uleb128 0x2
+ 961 024d 75       		.byte	0x75
+ 962 024e 06       		.sleb128 6
+ 963 024f 00       		.byte	0
+ 964 0250 0A       		.uleb128 0xa
+ 965 0251 40000000 		.4byte	.LVL21
+ 966 0255 53060000 		.4byte	0x653
+ 967 0259 64020000 		.4byte	0x264
+ 968 025d 0B       		.uleb128 0xb
+ 969 025e 01       		.uleb128 0x1
+ 970 025f 50       		.byte	0x50
+ 971 0260 02       		.uleb128 0x2
+ 972 0261 74       		.byte	0x74
+ 973 0262 00       		.sleb128 0
+ 974 0263 00       		.byte	0
+ 975 0264 08       		.uleb128 0x8
+ 976 0265 44000000 		.4byte	.LVL22
+ 977 0269 48060000 		.4byte	0x648
+ 978 026d 0A       		.uleb128 0xa
+ 979 026e 54000000 		.4byte	.LVL23
+ 980 0272 1C060000 		.4byte	0x61c
+ 981 0276 82020000 		.4byte	0x282
+ 982 027a 0B       		.uleb128 0xb
+ 983 027b 01       		.uleb128 0x1
+ 984 027c 50       		.byte	0x50
+ 985 027d 03       		.uleb128 0x3
+ 986 027e 0A       		.byte	0xa
+ 987 027f 2C01     		.2byte	0x12c
+ 988 0281 00       		.byte	0
+ 989 0282 08       		.uleb128 0x8
+ 990 0283 5E000000 		.4byte	.LVL25
+ 991 0287 48060000 		.4byte	0x648
+ 992 028b 08       		.uleb128 0x8
+ 993 028c 78000000 		.4byte	.LVL27
+ 994 0290 5E060000 		.4byte	0x65e
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 22
+
+
+ 995 0294 00       		.byte	0
+ 996 0295 0D       		.uleb128 0xd
+ 997 0296 74010000 		.4byte	.LASF71
+ 998 029a 01       		.byte	0x1
+ 999 029b 25       		.byte	0x25
+ 1000 029c 00000000 		.4byte	.LFB64
+ 1001 02a0 02000000 		.4byte	.LFE64-.LFB64
+ 1002 02a4 01       		.uleb128 0x1
+ 1003 02a5 9C       		.byte	0x9c
+ 1004 02a6 0E       		.uleb128 0xe
+ 1005 02a7 E3020000 		.4byte	.LASF27
+ 1006 02ab 01       		.byte	0x1
+ 1007 02ac 29       		.byte	0x29
+ 1008 02ad 00000000 		.4byte	.LFB65
+ 1009 02b1 14000000 		.4byte	.LFE65-.LFB65
+ 1010 02b5 01       		.uleb128 0x1
+ 1011 02b6 9C       		.byte	0x9c
+ 1012 02b7 C5020000 		.4byte	0x2c5
+ 1013 02bb 08       		.uleb128 0x8
+ 1014 02bc 0C000000 		.4byte	.LVL29
+ 1015 02c0 69060000 		.4byte	0x669
+ 1016 02c4 00       		.byte	0
+ 1017 02c5 0E       		.uleb128 0xe
+ 1018 02c6 F9020000 		.4byte	.LASF28
+ 1019 02ca 01       		.byte	0x1
+ 1020 02cb 2F       		.byte	0x2f
+ 1021 02cc 00000000 		.4byte	.LFB66
+ 1022 02d0 38000000 		.4byte	.LFE66-.LFB66
+ 1023 02d4 01       		.uleb128 0x1
+ 1024 02d5 9C       		.byte	0x9c
+ 1025 02d6 ED020000 		.4byte	0x2ed
+ 1026 02da 08       		.uleb128 0x8
+ 1027 02db 22000000 		.4byte	.LVL30
+ 1028 02df A6020000 		.4byte	0x2a6
+ 1029 02e3 08       		.uleb128 0x8
+ 1030 02e4 2A000000 		.4byte	.LVL31
+ 1031 02e8 69060000 		.4byte	0x669
+ 1032 02ec 00       		.byte	0
+ 1033 02ed 0F       		.uleb128 0xf
+ 1034 02ee 36000000 		.4byte	.LASF72
+ 1035 02f2 01       		.byte	0x1
+ 1036 02f3 87       		.byte	0x87
+ 1037 02f4 68000000 		.4byte	0x68
+ 1038 02f8 00000000 		.4byte	.LFB71
+ 1039 02fc C8000000 		.4byte	.LFE71-.LFB71
+ 1040 0300 01       		.uleb128 0x1
+ 1041 0301 9C       		.byte	0x9c
+ 1042 0302 88040000 		.4byte	0x488
+ 1043 0306 10       		.uleb128 0x10
+ 1044 0307 6900     		.ascii	"i\000"
+ 1045 0309 01       		.byte	0x1
+ 1046 030a 97       		.byte	0x97
+ 1047 030b B3000000 		.4byte	0xb3
+ 1048 030f 0A       		.uleb128 0xa
+ 1049 0310 0A000000 		.4byte	.LVL32
+ 1050 0314 74060000 		.4byte	0x674
+ 1051 0318 26030000 		.4byte	0x326
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 23
+
+
+ 1052 031c 0B       		.uleb128 0xb
+ 1053 031d 01       		.uleb128 0x1
+ 1054 031e 50       		.byte	0x50
+ 1055 031f 05       		.uleb128 0x5
+ 1056 0320 03       		.byte	0x3
+ 1057 0321 00000000 		.4byte	press_ISR
+ 1058 0325 00       		.byte	0
+ 1059 0326 0A       		.uleb128 0xa
+ 1060 0327 10000000 		.4byte	.LVL33
+ 1061 032b 7F060000 		.4byte	0x67f
+ 1062 032f 3D030000 		.4byte	0x33d
+ 1063 0333 0B       		.uleb128 0xb
+ 1064 0334 01       		.uleb128 0x1
+ 1065 0335 50       		.byte	0x50
+ 1066 0336 05       		.uleb128 0x5
+ 1067 0337 03       		.byte	0x3
+ 1068 0338 00000000 		.4byte	Timer_ISR
+ 1069 033c 00       		.byte	0
+ 1070 033d 0A       		.uleb128 0xa
+ 1071 033e 16000000 		.4byte	.LVL34
+ 1072 0342 8A060000 		.4byte	0x68a
+ 1073 0346 54030000 		.4byte	0x354
+ 1074 034a 0B       		.uleb128 0xb
+ 1075 034b 01       		.uleb128 0x1
+ 1076 034c 50       		.byte	0x50
+ 1077 034d 05       		.uleb128 0x5
+ 1078 034e 03       		.byte	0x3
+ 1079 034f 00000000 		.4byte	Encoder_ISR
+ 1080 0353 00       		.byte	0
+ 1081 0354 0A       		.uleb128 0xa
+ 1082 0355 1C000000 		.4byte	.LVL35
+ 1083 0359 95060000 		.4byte	0x695
+ 1084 035d 6B030000 		.4byte	0x36b
+ 1085 0361 0B       		.uleb128 0xb
+ 1086 0362 01       		.uleb128 0x1
+ 1087 0363 50       		.byte	0x50
+ 1088 0364 05       		.uleb128 0x5
+ 1089 0365 03       		.byte	0x3
+ 1090 0366 00000000 		.4byte	sync
+ 1091 036a 00       		.byte	0
+ 1092 036b 08       		.uleb128 0x8
+ 1093 036c 20000000 		.4byte	.LVL36
+ 1094 0370 A0060000 		.4byte	0x6a0
+ 1095 0374 08       		.uleb128 0x8
+ 1096 0375 2A000000 		.4byte	.LVL37
+ 1097 0379 AB060000 		.4byte	0x6ab
+ 1098 037d 08       		.uleb128 0x8
+ 1099 037e 2E000000 		.4byte	.LVL38
+ 1100 0382 B6060000 		.4byte	0x6b6
+ 1101 0386 08       		.uleb128 0x8
+ 1102 0387 3E000000 		.4byte	.LVL39
+ 1103 038b C1060000 		.4byte	0x6c1
+ 1104 038f 08       		.uleb128 0x8
+ 1105 0390 42000000 		.4byte	.LVL40
+ 1106 0394 CC060000 		.4byte	0x6cc
+ 1107 0398 0A       		.uleb128 0xa
+ 1108 0399 52000000 		.4byte	.LVL41
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 24
+
+
+ 1109 039d D7060000 		.4byte	0x6d7
+ 1110 03a1 B5030000 		.4byte	0x3b5
+ 1111 03a5 0B       		.uleb128 0xb
+ 1112 03a6 01       		.uleb128 0x1
+ 1113 03a7 50       		.byte	0x50
+ 1114 03a8 02       		.uleb128 0x2
+ 1115 03a9 74       		.byte	0x74
+ 1116 03aa 00       		.sleb128 0
+ 1117 03ab 0B       		.uleb128 0xb
+ 1118 03ac 01       		.uleb128 0x1
+ 1119 03ad 51       		.byte	0x51
+ 1120 03ae 05       		.uleb128 0x5
+ 1121 03af 03       		.byte	0x3
+ 1122 03b0 18000000 		.4byte	.LC2
+ 1123 03b4 00       		.byte	0
+ 1124 03b5 08       		.uleb128 0x8
+ 1125 03b6 56000000 		.4byte	.LVL42
+ 1126 03ba A6020000 		.4byte	0x2a6
+ 1127 03be 0A       		.uleb128 0xa
+ 1128 03bf 60000000 		.4byte	.LVL44
+ 1129 03c3 1C060000 		.4byte	0x61c
+ 1130 03c7 D2030000 		.4byte	0x3d2
+ 1131 03cb 0B       		.uleb128 0xb
+ 1132 03cc 01       		.uleb128 0x1
+ 1133 03cd 50       		.byte	0x50
+ 1134 03ce 02       		.uleb128 0x2
+ 1135 03cf 08       		.byte	0x8
+ 1136 03d0 C8       		.byte	0xc8
+ 1137 03d1 00       		.byte	0
+ 1138 03d2 0A       		.uleb128 0xa
+ 1139 03d3 68000000 		.4byte	.LVL45
+ 1140 03d7 32060000 		.4byte	0x632
+ 1141 03db EA030000 		.4byte	0x3ea
+ 1142 03df 0B       		.uleb128 0xb
+ 1143 03e0 01       		.uleb128 0x1
+ 1144 03e1 50       		.byte	0x50
+ 1145 03e2 01       		.uleb128 0x1
+ 1146 03e3 30       		.byte	0x30
+ 1147 03e4 0B       		.uleb128 0xb
+ 1148 03e5 01       		.uleb128 0x1
+ 1149 03e6 51       		.byte	0x51
+ 1150 03e7 01       		.uleb128 0x1
+ 1151 03e8 30       		.byte	0x30
+ 1152 03e9 00       		.byte	0
+ 1153 03ea 0A       		.uleb128 0xa
+ 1154 03eb 6E000000 		.4byte	.LVL46
+ 1155 03ef 3D060000 		.4byte	0x63d
+ 1156 03f3 01040000 		.4byte	0x401
+ 1157 03f7 0B       		.uleb128 0xb
+ 1158 03f8 01       		.uleb128 0x1
+ 1159 03f9 50       		.byte	0x50
+ 1160 03fa 05       		.uleb128 0x5
+ 1161 03fb 03       		.byte	0x3
+ 1162 03fc 1C000000 		.4byte	.LC3
+ 1163 0400 00       		.byte	0
+ 1164 0401 0A       		.uleb128 0xa
+ 1165 0402 76000000 		.4byte	.LVL47
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 25
+
+
+ 1166 0406 32060000 		.4byte	0x632
+ 1167 040a 19040000 		.4byte	0x419
+ 1168 040e 0B       		.uleb128 0xb
+ 1169 040f 01       		.uleb128 0x1
+ 1170 0410 50       		.byte	0x50
+ 1171 0411 01       		.uleb128 0x1
+ 1172 0412 30       		.byte	0x30
+ 1173 0413 0B       		.uleb128 0xb
+ 1174 0414 01       		.uleb128 0x1
+ 1175 0415 51       		.byte	0x51
+ 1176 0416 01       		.uleb128 0x1
+ 1177 0417 3C       		.byte	0x3c
+ 1178 0418 00       		.byte	0
+ 1179 0419 0A       		.uleb128 0xa
+ 1180 041a 7C000000 		.4byte	.LVL48
+ 1181 041e 3D060000 		.4byte	0x63d
+ 1182 0422 30040000 		.4byte	0x430
+ 1183 0426 0B       		.uleb128 0xb
+ 1184 0427 01       		.uleb128 0x1
+ 1185 0428 50       		.byte	0x50
+ 1186 0429 05       		.uleb128 0x5
+ 1187 042a 03       		.byte	0x3
+ 1188 042b 00000000 		.4byte	valor
+ 1189 042f 00       		.byte	0
+ 1190 0430 0A       		.uleb128 0xa
+ 1191 0431 84000000 		.4byte	.LVL49
+ 1192 0435 32060000 		.4byte	0x632
+ 1193 0439 48040000 		.4byte	0x448
+ 1194 043d 0B       		.uleb128 0xb
+ 1195 043e 01       		.uleb128 0x1
+ 1196 043f 50       		.byte	0x50
+ 1197 0440 01       		.uleb128 0x1
+ 1198 0441 31       		.byte	0x31
+ 1199 0442 0B       		.uleb128 0xb
+ 1200 0443 01       		.uleb128 0x1
+ 1201 0444 51       		.byte	0x51
+ 1202 0445 01       		.uleb128 0x1
+ 1203 0446 30       		.byte	0x30
+ 1204 0447 00       		.byte	0
+ 1205 0448 0A       		.uleb128 0xa
+ 1206 0449 8A000000 		.4byte	.LVL50
+ 1207 044d 3D060000 		.4byte	0x63d
+ 1208 0451 5F040000 		.4byte	0x45f
+ 1209 0455 0B       		.uleb128 0xb
+ 1210 0456 01       		.uleb128 0x1
+ 1211 0457 50       		.byte	0x50
+ 1212 0458 05       		.uleb128 0x5
+ 1213 0459 03       		.byte	0x3
+ 1214 045a 2C000000 		.4byte	.LC4
+ 1215 045e 00       		.byte	0
+ 1216 045f 0A       		.uleb128 0xa
+ 1217 0460 92000000 		.4byte	.LVL51
+ 1218 0464 32060000 		.4byte	0x632
+ 1219 0468 77040000 		.4byte	0x477
+ 1220 046c 0B       		.uleb128 0xb
+ 1221 046d 01       		.uleb128 0x1
+ 1222 046e 50       		.byte	0x50
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 26
+
+
+ 1223 046f 01       		.uleb128 0x1
+ 1224 0470 31       		.byte	0x31
+ 1225 0471 0B       		.uleb128 0xb
+ 1226 0472 01       		.uleb128 0x1
+ 1227 0473 51       		.byte	0x51
+ 1228 0474 01       		.uleb128 0x1
+ 1229 0475 3B       		.byte	0x3b
+ 1230 0476 00       		.byte	0
+ 1231 0477 11       		.uleb128 0x11
+ 1232 0478 98000000 		.4byte	.LVL52
+ 1233 047c 3D060000 		.4byte	0x63d
+ 1234 0480 0B       		.uleb128 0xb
+ 1235 0481 01       		.uleb128 0x1
+ 1236 0482 50       		.byte	0x50
+ 1237 0483 02       		.uleb128 0x2
+ 1238 0484 74       		.byte	0x74
+ 1239 0485 00       		.sleb128 0
+ 1240 0486 00       		.byte	0
+ 1241 0487 00       		.byte	0
+ 1242 0488 12       		.uleb128 0x12
+ 1243 0489 B3000000 		.4byte	0xb3
+ 1244 048d 9E040000 		.4byte	0x49e
+ 1245 0491 13       		.uleb128 0x13
+ 1246 0492 D7000000 		.4byte	0xd7
+ 1247 0496 03       		.byte	0x3
+ 1248 0497 13       		.uleb128 0x13
+ 1249 0498 D7000000 		.4byte	0xd7
+ 1250 049c 03       		.byte	0x3
+ 1251 049d 00       		.byte	0
+ 1252 049e 14       		.uleb128 0x14
+ 1253 049f D6020000 		.4byte	.LASF29
+ 1254 04a3 01       		.byte	0x1
+ 1255 04a4 17       		.byte	0x17
+ 1256 04a5 88040000 		.4byte	0x488
+ 1257 04a9 05       		.uleb128 0x5
+ 1258 04aa 03       		.byte	0x3
+ 1259 04ab 00000000 		.4byte	Keypad_1_Key
+ 1260 04af 15       		.uleb128 0x15
+ 1261 04b0 20030000 		.4byte	.LASF30
+ 1262 04b4 05       		.byte	0x5
+ 1263 04b5 1207     		.2byte	0x712
+ 1264 04b7 BB040000 		.4byte	0x4bb
+ 1265 04bb 06       		.uleb128 0x6
+ 1266 04bc 76000000 		.4byte	0x76
+ 1267 04c0 14       		.uleb128 0x14
+ 1268 04c1 07030000 		.4byte	.LASF31
+ 1269 04c5 01       		.byte	0x1
+ 1270 04c6 09       		.byte	0x9
+ 1271 04c7 68000000 		.4byte	0x68
+ 1272 04cb 05       		.uleb128 0x5
+ 1273 04cc 03       		.byte	0x3
+ 1274 04cd 00000000 		.4byte	flag
+ 1275 04d1 14       		.uleb128 0x14
+ 1276 04d2 90000000 		.4byte	.LASF32
+ 1277 04d6 01       		.byte	0x1
+ 1278 04d7 0A       		.byte	0xa
+ 1279 04d8 68000000 		.4byte	0x68
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 27
+
+
+ 1280 04dc 05       		.uleb128 0x5
+ 1281 04dd 03       		.byte	0x3
+ 1282 04de 00000000 		.4byte	flag_cont
+ 1283 04e2 12       		.uleb128 0x12
+ 1284 04e3 BF000000 		.4byte	0xbf
+ 1285 04e7 F2040000 		.4byte	0x4f2
+ 1286 04eb 13       		.uleb128 0x13
+ 1287 04ec D7000000 		.4byte	0xd7
+ 1288 04f0 03       		.byte	0x3
+ 1289 04f1 00       		.byte	0
+ 1290 04f2 14       		.uleb128 0x14
+ 1291 04f3 98020000 		.4byte	.LASF33
+ 1292 04f7 01       		.byte	0x1
+ 1293 04f8 0B       		.byte	0xb
+ 1294 04f9 E2040000 		.4byte	0x4e2
+ 1295 04fd 05       		.uleb128 0x5
+ 1296 04fe 03       		.byte	0x3
+ 1297 04ff 00000000 		.4byte	valor
+ 1298 0503 14       		.uleb128 0x14
+ 1299 0504 13010000 		.4byte	.LASF34
+ 1300 0508 01       		.byte	0x1
+ 1301 0509 0C       		.byte	0xc
+ 1302 050a 81000000 		.4byte	0x81
+ 1303 050e 05       		.uleb128 0x5
+ 1304 050f 03       		.byte	0x3
+ 1305 0510 00000000 		.4byte	contador
+ 1306 0514 14       		.uleb128 0x14
+ 1307 0515 82010000 		.4byte	.LASF35
+ 1308 0519 01       		.byte	0x1
+ 1309 051a 0D       		.byte	0xd
+ 1310 051b CB000000 		.4byte	0xcb
+ 1311 051f 05       		.uleb128 0x5
+ 1312 0520 03       		.byte	0x3
+ 1313 0521 00000000 		.4byte	counter
+ 1314 0525 14       		.uleb128 0x14
+ 1315 0526 4E000000 		.4byte	.LASF36
+ 1316 052a 01       		.byte	0x1
+ 1317 052b 0D       		.byte	0xd
+ 1318 052c CB000000 		.4byte	0xcb
+ 1319 0530 05       		.uleb128 0x5
+ 1320 0531 03       		.byte	0x3
+ 1321 0532 00000000 		.4byte	event
+ 1322 0536 14       		.uleb128 0x14
+ 1323 0537 22020000 		.4byte	.LASF37
+ 1324 053b 01       		.byte	0x1
+ 1325 053c 0E       		.byte	0xe
+ 1326 053d C6000000 		.4byte	0xc6
+ 1327 0541 05       		.uleb128 0x5
+ 1328 0542 03       		.byte	0x3
+ 1329 0543 00000000 		.4byte	tiempo
+ 1330 0547 14       		.uleb128 0x14
+ 1331 0548 06000000 		.4byte	.LASF38
+ 1332 054c 01       		.byte	0x1
+ 1333 054d 0F       		.byte	0xf
+ 1334 054e CB000000 		.4byte	0xcb
+ 1335 0552 05       		.uleb128 0x5
+ 1336 0553 03       		.byte	0x3
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 28
+
+
+ 1337 0554 00000000 		.4byte	temp
+ 1338 0558 14       		.uleb128 0x14
+ 1339 0559 38010000 		.4byte	.LASF39
+ 1340 055d 01       		.byte	0x1
+ 1341 055e 0F       		.byte	0xf
+ 1342 055f CB000000 		.4byte	0xcb
+ 1343 0563 05       		.uleb128 0x5
+ 1344 0564 03       		.byte	0x3
+ 1345 0565 00000000 		.4byte	diff1
+ 1346 0569 14       		.uleb128 0x14
+ 1347 056a DF010000 		.4byte	.LASF40
+ 1348 056e 01       		.byte	0x1
+ 1349 056f 10       		.byte	0x10
+ 1350 0570 C6000000 		.4byte	0xc6
+ 1351 0574 05       		.uleb128 0x5
+ 1352 0575 03       		.byte	0x3
+ 1353 0576 00000000 		.4byte	pwm_Com
+ 1354 057a 14       		.uleb128 0x14
+ 1355 057b 48010000 		.4byte	.LASF41
+ 1356 057f 01       		.byte	0x1
+ 1357 0580 11       		.byte	0x11
+ 1358 0581 C6000000 		.4byte	0xc6
+ 1359 0585 05       		.uleb128 0x5
+ 1360 0586 03       		.byte	0x3
+ 1361 0587 00000000 		.4byte	speed
+ 1362 058b 14       		.uleb128 0x14
+ 1363 058c 73000000 		.4byte	.LASF42
+ 1364 0590 01       		.byte	0x1
+ 1365 0591 11       		.byte	0x11
+ 1366 0592 C6000000 		.4byte	0xc6
+ 1367 0596 05       		.uleb128 0x5
+ 1368 0597 03       		.byte	0x3
+ 1369 0598 00000000 		.4byte	speed_read
+ 1370 059c 14       		.uleb128 0x14
+ 1371 059d 84000000 		.4byte	.LASF43
+ 1372 05a1 01       		.byte	0x1
+ 1373 05a2 12       		.byte	0x12
+ 1374 05a3 68000000 		.4byte	0x68
+ 1375 05a7 05       		.uleb128 0x5
+ 1376 05a8 03       		.byte	0x3
+ 1377 05a9 00000000 		.4byte	flag1
+ 1378 05ad 14       		.uleb128 0x14
+ 1379 05ae E7010000 		.4byte	.LASF44
+ 1380 05b2 01       		.byte	0x1
+ 1381 05b3 13       		.byte	0x13
+ 1382 05b4 68000000 		.4byte	0x68
+ 1383 05b8 05       		.uleb128 0x5
+ 1384 05b9 03       		.byte	0x3
+ 1385 05ba 00000000 		.4byte	flag_init
+ 1386 05be 12       		.uleb128 0x12
+ 1387 05bf BF000000 		.4byte	0xbf
+ 1388 05c3 CE050000 		.4byte	0x5ce
+ 1389 05c7 13       		.uleb128 0x13
+ 1390 05c8 D7000000 		.4byte	0xd7
+ 1391 05cc 0F       		.byte	0xf
+ 1392 05cd 00       		.byte	0
+ 1393 05ce 16       		.uleb128 0x16
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 29
+
+
+ 1394 05cf 73747200 		.ascii	"str\000"
+ 1395 05d3 01       		.byte	0x1
+ 1396 05d4 14       		.byte	0x14
+ 1397 05d5 BE050000 		.4byte	0x5be
+ 1398 05d9 05       		.uleb128 0x5
+ 1399 05da 03       		.byte	0x3
+ 1400 05db 00000000 		.4byte	str
+ 1401 05df 14       		.uleb128 0x14
+ 1402 05e0 54000000 		.4byte	.LASF45
+ 1403 05e4 01       		.byte	0x1
+ 1404 05e5 14       		.byte	0x14
+ 1405 05e6 BE050000 		.4byte	0x5be
+ 1406 05ea 05       		.uleb128 0x5
+ 1407 05eb 03       		.byte	0x3
+ 1408 05ec 00000000 		.4byte	str2
+ 1409 05f0 17       		.uleb128 0x17
+ 1410 05f1 59000000 		.4byte	.LASF46
+ 1411 05f5 59000000 		.4byte	.LASF46
+ 1412 05f9 06       		.byte	0x6
+ 1413 05fa 28       		.byte	0x28
+ 1414 05fb 17       		.uleb128 0x17
+ 1415 05fc 9E020000 		.4byte	.LASF47
+ 1416 0600 9E020000 		.4byte	.LASF47
+ 1417 0604 07       		.byte	0x7
+ 1418 0605 29       		.byte	0x29
+ 1419 0606 17       		.uleb128 0x17
+ 1420 0607 6A010000 		.4byte	.LASF48
+ 1421 060b 6A010000 		.4byte	.LASF48
+ 1422 060f 08       		.byte	0x8
+ 1423 0610 77       		.byte	0x77
+ 1424 0611 17       		.uleb128 0x17
+ 1425 0612 C3030000 		.4byte	.LASF49
+ 1426 0616 C3030000 		.4byte	.LASF49
+ 1427 061a 07       		.byte	0x7
+ 1428 061b 2B       		.byte	0x2b
+ 1429 061c 17       		.uleb128 0x17
+ 1430 061d BB030000 		.4byte	.LASF50
+ 1431 0621 BB030000 		.4byte	.LASF50
+ 1432 0625 08       		.byte	0x8
+ 1433 0626 76       		.byte	0x76
+ 1434 0627 17       		.uleb128 0x17
+ 1435 0628 B5020000 		.4byte	.LASF51
+ 1436 062c B5020000 		.4byte	.LASF51
+ 1437 0630 09       		.byte	0x9
+ 1438 0631 2B       		.byte	0x2b
+ 1439 0632 17       		.uleb128 0x17
+ 1440 0633 C9020000 		.4byte	.LASF52
+ 1441 0637 C9020000 		.4byte	.LASF52
+ 1442 063b 0A       		.byte	0xa
+ 1443 063c 3D       		.byte	0x3d
+ 1444 063d 17       		.uleb128 0x17
+ 1445 063e 5A010000 		.4byte	.LASF53
+ 1446 0642 5A010000 		.4byte	.LASF53
+ 1447 0646 0A       		.byte	0xa
+ 1448 0647 3C       		.byte	0x3c
+ 1449 0648 17       		.uleb128 0x17
+ 1450 0649 3B000000 		.4byte	.LASF54
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 30
+
+
+ 1451 064d 3B000000 		.4byte	.LASF54
+ 1452 0651 0B       		.byte	0xb
+ 1453 0652 14       		.byte	0x14
+ 1454 0653 17       		.uleb128 0x17
+ 1455 0654 61020000 		.4byte	.LASF55
+ 1456 0658 61020000 		.4byte	.LASF55
+ 1457 065c 0A       		.byte	0xa
+ 1458 065d 3E       		.byte	0x3e
+ 1459 065e 17       		.uleb128 0x17
+ 1460 065f 6D020000 		.4byte	.LASF56
+ 1461 0663 6D020000 		.4byte	.LASF56
+ 1462 0667 0C       		.byte	0xc
+ 1463 0668 28       		.byte	0x28
+ 1464 0669 17       		.uleb128 0x17
+ 1465 066a CE010000 		.4byte	.LASF57
+ 1466 066e CE010000 		.4byte	.LASF57
+ 1467 0672 0D       		.byte	0xd
+ 1468 0673 C3       		.byte	0xc3
+ 1469 0674 17       		.uleb128 0x17
+ 1470 0675 15000000 		.4byte	.LASF58
+ 1471 0679 15000000 		.4byte	.LASF58
+ 1472 067d 0C       		.byte	0xc
+ 1473 067e 18       		.byte	0x18
+ 1474 067f 17       		.uleb128 0x17
+ 1475 0680 1C010000 		.4byte	.LASF59
+ 1476 0684 1C010000 		.4byte	.LASF59
+ 1477 0688 06       		.byte	0x6
+ 1478 0689 18       		.byte	0x18
+ 1479 068a 17       		.uleb128 0x17
+ 1480 068b 0C030000 		.4byte	.LASF60
+ 1481 068f 0C030000 		.4byte	.LASF60
+ 1482 0693 0E       		.byte	0xe
+ 1483 0694 18       		.byte	0x18
+ 1484 0695 17       		.uleb128 0x17
+ 1485 0696 F6010000 		.4byte	.LASF61
+ 1486 069a F6010000 		.4byte	.LASF61
+ 1487 069e 0F       		.byte	0xf
+ 1488 069f 18       		.byte	0x18
+ 1489 06a0 17       		.uleb128 0x17
+ 1490 06a1 3E010000 		.4byte	.LASF62
+ 1491 06a5 3E010000 		.4byte	.LASF62
+ 1492 06a9 0A       		.byte	0xa
+ 1493 06aa 38       		.byte	0x38
+ 1494 06ab 17       		.uleb128 0x17
+ 1495 06ac 29020000 		.4byte	.LASF63
+ 1496 06b0 29020000 		.4byte	.LASF63
+ 1497 06b4 10       		.byte	0x10
+ 1498 06b5 29       		.byte	0x29
+ 1499 06b6 17       		.uleb128 0x17
+ 1500 06b7 ED020000 		.4byte	.LASF64
+ 1501 06bb ED020000 		.4byte	.LASF64
+ 1502 06bf 11       		.byte	0x11
+ 1503 06c0 26       		.byte	0x26
+ 1504 06c1 17       		.uleb128 0x17
+ 1505 06c2 AB020000 		.4byte	.LASF65
+ 1506 06c6 AB020000 		.4byte	.LASF65
+ 1507 06ca 0D       		.byte	0xd
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 31
+
+
+ 1508 06cb 92       		.byte	0x92
+ 1509 06cc 17       		.uleb128 0x17
+ 1510 06cd BD000000 		.4byte	.LASF66
+ 1511 06d1 BD000000 		.4byte	.LASF66
+ 1512 06d5 12       		.byte	0x12
+ 1513 06d6 5A       		.byte	0x5a
+ 1514 06d7 17       		.uleb128 0x17
+ 1515 06d8 8A010000 		.4byte	.LASF67
+ 1516 06dc 8A010000 		.4byte	.LASF67
+ 1517 06e0 13       		.byte	0x13
+ 1518 06e1 E7       		.byte	0xe7
+ 1519 06e2 00       		.byte	0
+ 1520              		.section	.debug_abbrev,"",%progbits
+ 1521              	.Ldebug_abbrev0:
+ 1522 0000 01       		.uleb128 0x1
+ 1523 0001 11       		.uleb128 0x11
+ 1524 0002 01       		.byte	0x1
+ 1525 0003 25       		.uleb128 0x25
+ 1526 0004 0E       		.uleb128 0xe
+ 1527 0005 13       		.uleb128 0x13
+ 1528 0006 0B       		.uleb128 0xb
+ 1529 0007 03       		.uleb128 0x3
+ 1530 0008 0E       		.uleb128 0xe
+ 1531 0009 1B       		.uleb128 0x1b
+ 1532 000a 0E       		.uleb128 0xe
+ 1533 000b 55       		.uleb128 0x55
+ 1534 000c 17       		.uleb128 0x17
+ 1535 000d 11       		.uleb128 0x11
+ 1536 000e 01       		.uleb128 0x1
+ 1537 000f 10       		.uleb128 0x10
+ 1538 0010 17       		.uleb128 0x17
+ 1539 0011 00       		.byte	0
+ 1540 0012 00       		.byte	0
+ 1541 0013 02       		.uleb128 0x2
+ 1542 0014 24       		.uleb128 0x24
+ 1543 0015 00       		.byte	0
+ 1544 0016 0B       		.uleb128 0xb
+ 1545 0017 0B       		.uleb128 0xb
+ 1546 0018 3E       		.uleb128 0x3e
+ 1547 0019 0B       		.uleb128 0xb
+ 1548 001a 03       		.uleb128 0x3
+ 1549 001b 0E       		.uleb128 0xe
+ 1550 001c 00       		.byte	0
+ 1551 001d 00       		.byte	0
+ 1552 001e 03       		.uleb128 0x3
+ 1553 001f 16       		.uleb128 0x16
+ 1554 0020 00       		.byte	0
+ 1555 0021 03       		.uleb128 0x3
+ 1556 0022 0E       		.uleb128 0xe
+ 1557 0023 3A       		.uleb128 0x3a
+ 1558 0024 0B       		.uleb128 0xb
+ 1559 0025 3B       		.uleb128 0x3b
+ 1560 0026 0B       		.uleb128 0xb
+ 1561 0027 49       		.uleb128 0x49
+ 1562 0028 13       		.uleb128 0x13
+ 1563 0029 00       		.byte	0
+ 1564 002a 00       		.byte	0
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 32
+
+
+ 1565 002b 04       		.uleb128 0x4
+ 1566 002c 24       		.uleb128 0x24
+ 1567 002d 00       		.byte	0
+ 1568 002e 0B       		.uleb128 0xb
+ 1569 002f 0B       		.uleb128 0xb
+ 1570 0030 3E       		.uleb128 0x3e
+ 1571 0031 0B       		.uleb128 0xb
+ 1572 0032 03       		.uleb128 0x3
+ 1573 0033 08       		.uleb128 0x8
+ 1574 0034 00       		.byte	0
+ 1575 0035 00       		.byte	0
+ 1576 0036 05       		.uleb128 0x5
+ 1577 0037 16       		.uleb128 0x16
+ 1578 0038 00       		.byte	0
+ 1579 0039 03       		.uleb128 0x3
+ 1580 003a 0E       		.uleb128 0xe
+ 1581 003b 3A       		.uleb128 0x3a
+ 1582 003c 0B       		.uleb128 0xb
+ 1583 003d 3B       		.uleb128 0x3b
+ 1584 003e 05       		.uleb128 0x5
+ 1585 003f 49       		.uleb128 0x49
+ 1586 0040 13       		.uleb128 0x13
+ 1587 0041 00       		.byte	0
+ 1588 0042 00       		.byte	0
+ 1589 0043 06       		.uleb128 0x6
+ 1590 0044 35       		.uleb128 0x35
+ 1591 0045 00       		.byte	0
+ 1592 0046 49       		.uleb128 0x49
+ 1593 0047 13       		.uleb128 0x13
+ 1594 0048 00       		.byte	0
+ 1595 0049 00       		.byte	0
+ 1596 004a 07       		.uleb128 0x7
+ 1597 004b 2E       		.uleb128 0x2e
+ 1598 004c 01       		.byte	0x1
+ 1599 004d 3F       		.uleb128 0x3f
+ 1600 004e 19       		.uleb128 0x19
+ 1601 004f 03       		.uleb128 0x3
+ 1602 0050 0E       		.uleb128 0xe
+ 1603 0051 3A       		.uleb128 0x3a
+ 1604 0052 0B       		.uleb128 0xb
+ 1605 0053 3B       		.uleb128 0x3b
+ 1606 0054 0B       		.uleb128 0xb
+ 1607 0055 27       		.uleb128 0x27
+ 1608 0056 19       		.uleb128 0x19
+ 1609 0057 11       		.uleb128 0x11
+ 1610 0058 01       		.uleb128 0x1
+ 1611 0059 12       		.uleb128 0x12
+ 1612 005a 06       		.uleb128 0x6
+ 1613 005b 40       		.uleb128 0x40
+ 1614 005c 18       		.uleb128 0x18
+ 1615 005d 9742     		.uleb128 0x2117
+ 1616 005f 19       		.uleb128 0x19
+ 1617 0060 01       		.uleb128 0x1
+ 1618 0061 13       		.uleb128 0x13
+ 1619 0062 00       		.byte	0
+ 1620 0063 00       		.byte	0
+ 1621 0064 08       		.uleb128 0x8
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 33
+
+
+ 1622 0065 898201   		.uleb128 0x4109
+ 1623 0068 00       		.byte	0
+ 1624 0069 11       		.uleb128 0x11
+ 1625 006a 01       		.uleb128 0x1
+ 1626 006b 31       		.uleb128 0x31
+ 1627 006c 13       		.uleb128 0x13
+ 1628 006d 00       		.byte	0
+ 1629 006e 00       		.byte	0
+ 1630 006f 09       		.uleb128 0x9
+ 1631 0070 34       		.uleb128 0x34
+ 1632 0071 00       		.byte	0
+ 1633 0072 03       		.uleb128 0x3
+ 1634 0073 0E       		.uleb128 0xe
+ 1635 0074 3A       		.uleb128 0x3a
+ 1636 0075 0B       		.uleb128 0xb
+ 1637 0076 3B       		.uleb128 0x3b
+ 1638 0077 0B       		.uleb128 0xb
+ 1639 0078 49       		.uleb128 0x49
+ 1640 0079 13       		.uleb128 0x13
+ 1641 007a 02       		.uleb128 0x2
+ 1642 007b 17       		.uleb128 0x17
+ 1643 007c 00       		.byte	0
+ 1644 007d 00       		.byte	0
+ 1645 007e 0A       		.uleb128 0xa
+ 1646 007f 898201   		.uleb128 0x4109
+ 1647 0082 01       		.byte	0x1
+ 1648 0083 11       		.uleb128 0x11
+ 1649 0084 01       		.uleb128 0x1
+ 1650 0085 31       		.uleb128 0x31
+ 1651 0086 13       		.uleb128 0x13
+ 1652 0087 01       		.uleb128 0x1
+ 1653 0088 13       		.uleb128 0x13
+ 1654 0089 00       		.byte	0
+ 1655 008a 00       		.byte	0
+ 1656 008b 0B       		.uleb128 0xb
+ 1657 008c 8A8201   		.uleb128 0x410a
+ 1658 008f 00       		.byte	0
+ 1659 0090 02       		.uleb128 0x2
+ 1660 0091 18       		.uleb128 0x18
+ 1661 0092 9142     		.uleb128 0x2111
+ 1662 0094 18       		.uleb128 0x18
+ 1663 0095 00       		.byte	0
+ 1664 0096 00       		.byte	0
+ 1665 0097 0C       		.uleb128 0xc
+ 1666 0098 34       		.uleb128 0x34
+ 1667 0099 00       		.byte	0
+ 1668 009a 03       		.uleb128 0x3
+ 1669 009b 08       		.uleb128 0x8
+ 1670 009c 3A       		.uleb128 0x3a
+ 1671 009d 0B       		.uleb128 0xb
+ 1672 009e 3B       		.uleb128 0x3b
+ 1673 009f 0B       		.uleb128 0xb
+ 1674 00a0 49       		.uleb128 0x49
+ 1675 00a1 13       		.uleb128 0x13
+ 1676 00a2 02       		.uleb128 0x2
+ 1677 00a3 17       		.uleb128 0x17
+ 1678 00a4 00       		.byte	0
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 34
+
+
+ 1679 00a5 00       		.byte	0
+ 1680 00a6 0D       		.uleb128 0xd
+ 1681 00a7 2E       		.uleb128 0x2e
+ 1682 00a8 00       		.byte	0
+ 1683 00a9 3F       		.uleb128 0x3f
+ 1684 00aa 19       		.uleb128 0x19
+ 1685 00ab 03       		.uleb128 0x3
+ 1686 00ac 0E       		.uleb128 0xe
+ 1687 00ad 3A       		.uleb128 0x3a
+ 1688 00ae 0B       		.uleb128 0xb
+ 1689 00af 3B       		.uleb128 0x3b
+ 1690 00b0 0B       		.uleb128 0xb
+ 1691 00b1 11       		.uleb128 0x11
+ 1692 00b2 01       		.uleb128 0x1
+ 1693 00b3 12       		.uleb128 0x12
+ 1694 00b4 06       		.uleb128 0x6
+ 1695 00b5 40       		.uleb128 0x40
+ 1696 00b6 18       		.uleb128 0x18
+ 1697 00b7 9742     		.uleb128 0x2117
+ 1698 00b9 19       		.uleb128 0x19
+ 1699 00ba 00       		.byte	0
+ 1700 00bb 00       		.byte	0
+ 1701 00bc 0E       		.uleb128 0xe
+ 1702 00bd 2E       		.uleb128 0x2e
+ 1703 00be 01       		.byte	0x1
+ 1704 00bf 3F       		.uleb128 0x3f
+ 1705 00c0 19       		.uleb128 0x19
+ 1706 00c1 03       		.uleb128 0x3
+ 1707 00c2 0E       		.uleb128 0xe
+ 1708 00c3 3A       		.uleb128 0x3a
+ 1709 00c4 0B       		.uleb128 0xb
+ 1710 00c5 3B       		.uleb128 0x3b
+ 1711 00c6 0B       		.uleb128 0xb
+ 1712 00c7 11       		.uleb128 0x11
+ 1713 00c8 01       		.uleb128 0x1
+ 1714 00c9 12       		.uleb128 0x12
+ 1715 00ca 06       		.uleb128 0x6
+ 1716 00cb 40       		.uleb128 0x40
+ 1717 00cc 18       		.uleb128 0x18
+ 1718 00cd 9742     		.uleb128 0x2117
+ 1719 00cf 19       		.uleb128 0x19
+ 1720 00d0 01       		.uleb128 0x1
+ 1721 00d1 13       		.uleb128 0x13
+ 1722 00d2 00       		.byte	0
+ 1723 00d3 00       		.byte	0
+ 1724 00d4 0F       		.uleb128 0xf
+ 1725 00d5 2E       		.uleb128 0x2e
+ 1726 00d6 01       		.byte	0x1
+ 1727 00d7 3F       		.uleb128 0x3f
+ 1728 00d8 19       		.uleb128 0x19
+ 1729 00d9 03       		.uleb128 0x3
+ 1730 00da 0E       		.uleb128 0xe
+ 1731 00db 3A       		.uleb128 0x3a
+ 1732 00dc 0B       		.uleb128 0xb
+ 1733 00dd 3B       		.uleb128 0x3b
+ 1734 00de 0B       		.uleb128 0xb
+ 1735 00df 27       		.uleb128 0x27
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 35
+
+
+ 1736 00e0 19       		.uleb128 0x19
+ 1737 00e1 49       		.uleb128 0x49
+ 1738 00e2 13       		.uleb128 0x13
+ 1739 00e3 8701     		.uleb128 0x87
+ 1740 00e5 19       		.uleb128 0x19
+ 1741 00e6 11       		.uleb128 0x11
+ 1742 00e7 01       		.uleb128 0x1
+ 1743 00e8 12       		.uleb128 0x12
+ 1744 00e9 06       		.uleb128 0x6
+ 1745 00ea 40       		.uleb128 0x40
+ 1746 00eb 18       		.uleb128 0x18
+ 1747 00ec 9742     		.uleb128 0x2117
+ 1748 00ee 19       		.uleb128 0x19
+ 1749 00ef 01       		.uleb128 0x1
+ 1750 00f0 13       		.uleb128 0x13
+ 1751 00f1 00       		.byte	0
+ 1752 00f2 00       		.byte	0
+ 1753 00f3 10       		.uleb128 0x10
+ 1754 00f4 34       		.uleb128 0x34
+ 1755 00f5 00       		.byte	0
+ 1756 00f6 03       		.uleb128 0x3
+ 1757 00f7 08       		.uleb128 0x8
+ 1758 00f8 3A       		.uleb128 0x3a
+ 1759 00f9 0B       		.uleb128 0xb
+ 1760 00fa 3B       		.uleb128 0x3b
+ 1761 00fb 0B       		.uleb128 0xb
+ 1762 00fc 49       		.uleb128 0x49
+ 1763 00fd 13       		.uleb128 0x13
+ 1764 00fe 00       		.byte	0
+ 1765 00ff 00       		.byte	0
+ 1766 0100 11       		.uleb128 0x11
+ 1767 0101 898201   		.uleb128 0x4109
+ 1768 0104 01       		.byte	0x1
+ 1769 0105 11       		.uleb128 0x11
+ 1770 0106 01       		.uleb128 0x1
+ 1771 0107 31       		.uleb128 0x31
+ 1772 0108 13       		.uleb128 0x13
+ 1773 0109 00       		.byte	0
+ 1774 010a 00       		.byte	0
+ 1775 010b 12       		.uleb128 0x12
+ 1776 010c 01       		.uleb128 0x1
+ 1777 010d 01       		.byte	0x1
+ 1778 010e 49       		.uleb128 0x49
+ 1779 010f 13       		.uleb128 0x13
+ 1780 0110 01       		.uleb128 0x1
+ 1781 0111 13       		.uleb128 0x13
+ 1782 0112 00       		.byte	0
+ 1783 0113 00       		.byte	0
+ 1784 0114 13       		.uleb128 0x13
+ 1785 0115 21       		.uleb128 0x21
+ 1786 0116 00       		.byte	0
+ 1787 0117 49       		.uleb128 0x49
+ 1788 0118 13       		.uleb128 0x13
+ 1789 0119 2F       		.uleb128 0x2f
+ 1790 011a 0B       		.uleb128 0xb
+ 1791 011b 00       		.byte	0
+ 1792 011c 00       		.byte	0
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 36
+
+
+ 1793 011d 14       		.uleb128 0x14
+ 1794 011e 34       		.uleb128 0x34
+ 1795 011f 00       		.byte	0
+ 1796 0120 03       		.uleb128 0x3
+ 1797 0121 0E       		.uleb128 0xe
+ 1798 0122 3A       		.uleb128 0x3a
+ 1799 0123 0B       		.uleb128 0xb
+ 1800 0124 3B       		.uleb128 0x3b
+ 1801 0125 0B       		.uleb128 0xb
+ 1802 0126 49       		.uleb128 0x49
+ 1803 0127 13       		.uleb128 0x13
+ 1804 0128 3F       		.uleb128 0x3f
+ 1805 0129 19       		.uleb128 0x19
+ 1806 012a 02       		.uleb128 0x2
+ 1807 012b 18       		.uleb128 0x18
+ 1808 012c 00       		.byte	0
+ 1809 012d 00       		.byte	0
+ 1810 012e 15       		.uleb128 0x15
+ 1811 012f 34       		.uleb128 0x34
+ 1812 0130 00       		.byte	0
+ 1813 0131 03       		.uleb128 0x3
+ 1814 0132 0E       		.uleb128 0xe
+ 1815 0133 3A       		.uleb128 0x3a
+ 1816 0134 0B       		.uleb128 0xb
+ 1817 0135 3B       		.uleb128 0x3b
+ 1818 0136 05       		.uleb128 0x5
+ 1819 0137 49       		.uleb128 0x49
+ 1820 0138 13       		.uleb128 0x13
+ 1821 0139 3F       		.uleb128 0x3f
+ 1822 013a 19       		.uleb128 0x19
+ 1823 013b 3C       		.uleb128 0x3c
+ 1824 013c 19       		.uleb128 0x19
+ 1825 013d 00       		.byte	0
+ 1826 013e 00       		.byte	0
+ 1827 013f 16       		.uleb128 0x16
+ 1828 0140 34       		.uleb128 0x34
+ 1829 0141 00       		.byte	0
+ 1830 0142 03       		.uleb128 0x3
+ 1831 0143 08       		.uleb128 0x8
+ 1832 0144 3A       		.uleb128 0x3a
+ 1833 0145 0B       		.uleb128 0xb
+ 1834 0146 3B       		.uleb128 0x3b
+ 1835 0147 0B       		.uleb128 0xb
+ 1836 0148 49       		.uleb128 0x49
+ 1837 0149 13       		.uleb128 0x13
+ 1838 014a 3F       		.uleb128 0x3f
+ 1839 014b 19       		.uleb128 0x19
+ 1840 014c 02       		.uleb128 0x2
+ 1841 014d 18       		.uleb128 0x18
+ 1842 014e 00       		.byte	0
+ 1843 014f 00       		.byte	0
+ 1844 0150 17       		.uleb128 0x17
+ 1845 0151 2E       		.uleb128 0x2e
+ 1846 0152 00       		.byte	0
+ 1847 0153 3F       		.uleb128 0x3f
+ 1848 0154 19       		.uleb128 0x19
+ 1849 0155 3C       		.uleb128 0x3c
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 37
+
+
+ 1850 0156 19       		.uleb128 0x19
+ 1851 0157 6E       		.uleb128 0x6e
+ 1852 0158 0E       		.uleb128 0xe
+ 1853 0159 03       		.uleb128 0x3
+ 1854 015a 0E       		.uleb128 0xe
+ 1855 015b 3A       		.uleb128 0x3a
+ 1856 015c 0B       		.uleb128 0xb
+ 1857 015d 3B       		.uleb128 0x3b
+ 1858 015e 0B       		.uleb128 0xb
+ 1859 015f 00       		.byte	0
+ 1860 0160 00       		.byte	0
+ 1861 0161 00       		.byte	0
+ 1862              		.section	.debug_loc,"",%progbits
+ 1863              	.Ldebug_loc0:
+ 1864              	.LLST0:
+ 1865 0000 02000000 		.4byte	.LVL1
+ 1866 0004 0A000000 		.4byte	.LVL3
+ 1867 0008 0200     		.2byte	0x2
+ 1868 000a 30       		.byte	0x30
+ 1869 000b 9F       		.byte	0x9f
+ 1870 000c 0A000000 		.4byte	.LVL3
+ 1871 0010 16000000 		.4byte	.LVL5
+ 1872 0014 0200     		.2byte	0x2
+ 1873 0016 31       		.byte	0x31
+ 1874 0017 9F       		.byte	0x9f
+ 1875 0018 16000000 		.4byte	.LVL5
+ 1876 001c 18000000 		.4byte	.LVL6
+ 1877 0020 0200     		.2byte	0x2
+ 1878 0022 30       		.byte	0x30
+ 1879 0023 9F       		.byte	0x9f
+ 1880 0024 18000000 		.4byte	.LVL6
+ 1881 0028 1E000000 		.4byte	.LVL7
+ 1882 002c 0100     		.2byte	0x1
+ 1883 002e 53       		.byte	0x53
+ 1884 002f 00000000 		.4byte	0
+ 1885 0033 00000000 		.4byte	0
+ 1886              	.LLST1:
+ 1887 0037 02000000 		.4byte	.LVL11
+ 1888 003b 08000000 		.4byte	.LVL12
+ 1889 003f 0200     		.2byte	0x2
+ 1890 0041 30       		.byte	0x30
+ 1891 0042 9F       		.byte	0x9f
+ 1892 0043 08000000 		.4byte	.LVL12
+ 1893 0047 68000000 		.4byte	.LVL26
+ 1894 004b 0100     		.2byte	0x1
+ 1895 004d 56       		.byte	0x56
+ 1896 004e 68000000 		.4byte	.LVL26
+ 1897 0052 78000000 		.4byte	.LVL27
+ 1898 0056 0200     		.2byte	0x2
+ 1899 0058 31       		.byte	0x31
+ 1900 0059 9F       		.byte	0x9f
+ 1901 005a 78000000 		.4byte	.LVL27
+ 1902 005e 84000000 		.4byte	.LVL28
+ 1903 0062 0100     		.2byte	0x1
+ 1904 0064 56       		.byte	0x56
+ 1905 0065 00000000 		.4byte	0
+ 1906 0069 00000000 		.4byte	0
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 38
+
+
+ 1907              	.LLST2:
+ 1908 006d 02000000 		.4byte	.LVL11
+ 1909 0071 08000000 		.4byte	.LVL12
+ 1910 0075 0200     		.2byte	0x2
+ 1911 0077 30       		.byte	0x30
+ 1912 0078 9F       		.byte	0x9f
+ 1913 0079 08000000 		.4byte	.LVL12
+ 1914 007d 84000000 		.4byte	.LVL28
+ 1915 0081 0100     		.2byte	0x1
+ 1916 0083 55       		.byte	0x55
+ 1917 0084 00000000 		.4byte	0
+ 1918 0088 00000000 		.4byte	0
+ 1919              	.LLST3:
+ 1920 008c 1C000000 		.4byte	.LVL16
+ 1921 0090 78000000 		.4byte	.LVL27
+ 1922 0094 0100     		.2byte	0x1
+ 1923 0096 54       		.byte	0x54
+ 1924 0097 00000000 		.4byte	0
+ 1925 009b 00000000 		.4byte	0
+ 1926              		.section	.debug_aranges,"",%progbits
+ 1927 0000 54000000 		.4byte	0x54
+ 1928 0004 0200     		.2byte	0x2
+ 1929 0006 00000000 		.4byte	.Ldebug_info0
+ 1930 000a 04       		.byte	0x4
+ 1931 000b 00       		.byte	0
+ 1932 000c 0000     		.2byte	0
+ 1933 000e 0000     		.2byte	0
+ 1934 0010 00000000 		.4byte	.LFB67
+ 1935 0014 48000000 		.4byte	.LFE67-.LFB67
+ 1936 0018 00000000 		.4byte	.LFB68
+ 1937 001c 2C000000 		.4byte	.LFE68-.LFB68
+ 1938 0020 00000000 		.4byte	.LFB69
+ 1939 0024 30000000 		.4byte	.LFE69-.LFB69
+ 1940 0028 00000000 		.4byte	.LFB70
+ 1941 002c 98000000 		.4byte	.LFE70-.LFB70
+ 1942 0030 00000000 		.4byte	.LFB64
+ 1943 0034 02000000 		.4byte	.LFE64-.LFB64
+ 1944 0038 00000000 		.4byte	.LFB65
+ 1945 003c 14000000 		.4byte	.LFE65-.LFB65
+ 1946 0040 00000000 		.4byte	.LFB66
+ 1947 0044 38000000 		.4byte	.LFE66-.LFB66
+ 1948 0048 00000000 		.4byte	.LFB71
+ 1949 004c C8000000 		.4byte	.LFE71-.LFB71
+ 1950 0050 00000000 		.4byte	0
+ 1951 0054 00000000 		.4byte	0
+ 1952              		.section	.debug_ranges,"",%progbits
+ 1953              	.Ldebug_ranges0:
+ 1954 0000 00000000 		.4byte	.LFB67
+ 1955 0004 48000000 		.4byte	.LFE67
+ 1956 0008 00000000 		.4byte	.LFB68
+ 1957 000c 2C000000 		.4byte	.LFE68
+ 1958 0010 00000000 		.4byte	.LFB69
+ 1959 0014 30000000 		.4byte	.LFE69
+ 1960 0018 00000000 		.4byte	.LFB70
+ 1961 001c 98000000 		.4byte	.LFE70
+ 1962 0020 00000000 		.4byte	.LFB64
+ 1963 0024 02000000 		.4byte	.LFE64
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 39
+
+
+ 1964 0028 00000000 		.4byte	.LFB65
+ 1965 002c 14000000 		.4byte	.LFE65
+ 1966 0030 00000000 		.4byte	.LFB66
+ 1967 0034 38000000 		.4byte	.LFE66
+ 1968 0038 00000000 		.4byte	.LFB71
+ 1969 003c C8000000 		.4byte	.LFE71
+ 1970 0040 00000000 		.4byte	0
+ 1971 0044 00000000 		.4byte	0
+ 1972              		.section	.debug_line,"",%progbits
+ 1973              	.Ldebug_line0:
+ 1974 0000 49030000 		.section	.debug_str,"MS",%progbits,1
+ 1974      02006402 
+ 1974      00000201 
+ 1974      FB0E0D00 
+ 1974      01010101 
+ 1975              	.LASF25:
+ 1976 0000 76616C69 		.ascii	"valid\000"
+ 1976      6400
+ 1977              	.LASF38:
+ 1978 0006 74656D70 		.ascii	"temp\000"
+ 1978      00
+ 1979              	.LASF2:
+ 1980 000b 73686F72 		.ascii	"short int\000"
+ 1980      7420696E 
+ 1980      7400
+ 1981              	.LASF58:
+ 1982 0015 6973725F 		.ascii	"isr_press_StartEx\000"
+ 1982      70726573 
+ 1982      735F5374 
+ 1982      61727445 
+ 1982      7800
+ 1983              	.LASF19:
+ 1984 0027 73697A65 		.ascii	"sizetype\000"
+ 1984      74797065 
+ 1984      00
+ 1985              	.LASF16:
+ 1986 0030 63686172 		.ascii	"char8\000"
+ 1986      3800
+ 1987              	.LASF72:
+ 1988 0036 6D61696E 		.ascii	"main\000"
+ 1988      00
+ 1989              	.LASF54:
+ 1990 003b 4B657970 		.ascii	"Keypad_1_GetButton\000"
+ 1990      61645F31 
+ 1990      5F476574 
+ 1990      42757474 
+ 1990      6F6E00
+ 1991              	.LASF36:
+ 1992 004e 6576656E 		.ascii	"event\000"
+ 1992      7400
+ 1993              	.LASF45:
+ 1994 0054 73747232 		.ascii	"str2\000"
+ 1994      00
+ 1995              	.LASF46:
+ 1996 0059 6973725F 		.ascii	"isr_1_ClearPending\000"
+ 1996      315F436C 
+ 1996      65617250 
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 40
+
+
+ 1996      656E6469 
+ 1996      6E6700
+ 1997              	.LASF12:
+ 1998 006c 75696E74 		.ascii	"uint16\000"
+ 1998      313600
+ 1999              	.LASF42:
+ 2000 0073 73706565 		.ascii	"speed_read\000"
+ 2000      645F7265 
+ 2000      616400
+ 2001              	.LASF11:
+ 2002 007e 75696E74 		.ascii	"uint8\000"
+ 2002      3800
+ 2003              	.LASF43:
+ 2004 0084 666C6167 		.ascii	"flag1\000"
+ 2004      3100
+ 2005              	.LASF24:
+ 2006 008a 666C6167 		.ascii	"flag2\000"
+ 2006      3200
+ 2007              	.LASF32:
+ 2008 0090 666C6167 		.ascii	"flag_cont\000"
+ 2008      5F636F6E 
+ 2008      7400
+ 2009              	.LASF26:
+ 2010 009a 636F6E74 		.ascii	"cont\000"
+ 2010      00
+ 2011              	.LASF14:
+ 2012 009f 666C6F61 		.ascii	"float\000"
+ 2012      7400
+ 2013              	.LASF23:
+ 2014 00a5 70726573 		.ascii	"press_ISR\000"
+ 2014      735F4953 
+ 2014      5200
+ 2015              	.LASF6:
+ 2016 00af 6C6F6E67 		.ascii	"long long int\000"
+ 2016      206C6F6E 
+ 2016      6720696E 
+ 2016      7400
+ 2017              	.LASF66:
+ 2018 00bd 54696D65 		.ascii	"Timer_Start\000"
+ 2018      725F5374 
+ 2018      61727400 
+ 2019              	.LASF4:
+ 2020 00c9 6C6F6E67 		.ascii	"long int\000"
+ 2020      20696E74 
+ 2020      00
+ 2021              	.LASF70:
+ 2022 00d2 433A5C55 		.ascii	"C:\\Users\\jeanpierre\\Documents\\PSoC Creator\\tec"
+ 2022      73657273 
+ 2022      5C6A6561 
+ 2022      6E706965 
+ 2022      7272655C 
+ 2023 0100 6C61646F 		.ascii	"lado\\teclado.cydsn\000"
+ 2023      5C746563 
+ 2023      6C61646F 
+ 2023      2E637964 
+ 2023      736E00
+ 2024              	.LASF34:
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 41
+
+
+ 2025 0113 636F6E74 		.ascii	"contador\000"
+ 2025      61646F72 
+ 2025      00
+ 2026              	.LASF59:
+ 2027 011c 6973725F 		.ascii	"isr_1_StartEx\000"
+ 2027      315F5374 
+ 2027      61727445 
+ 2027      7800
+ 2028              	.LASF1:
+ 2029 012a 756E7369 		.ascii	"unsigned char\000"
+ 2029      676E6564 
+ 2029      20636861 
+ 2029      7200
+ 2030              	.LASF39:
+ 2031 0138 64696666 		.ascii	"diff1\000"
+ 2031      3100
+ 2032              	.LASF62:
+ 2033 013e 4C43445F 		.ascii	"LCD_Start\000"
+ 2033      53746172 
+ 2033      7400
+ 2034              	.LASF41:
+ 2035 0148 73706565 		.ascii	"speed\000"
+ 2035      6400
+ 2036              	.LASF18:
+ 2037 014e 6C6F6E67 		.ascii	"long double\000"
+ 2037      20646F75 
+ 2037      626C6500 
+ 2038              	.LASF53:
+ 2039 015a 4C43445F 		.ascii	"LCD_PrintString\000"
+ 2039      5072696E 
+ 2039      74537472 
+ 2039      696E6700 
+ 2040              	.LASF48:
+ 2041 016a 43794465 		.ascii	"CyDelayUs\000"
+ 2041      6C617955 
+ 2041      7300
+ 2042              	.LASF71:
+ 2043 0174 436F6E76 		.ascii	"Convert_Speed\000"
+ 2043      6572745F 
+ 2043      53706565 
+ 2043      6400
+ 2044              	.LASF35:
+ 2045 0182 636F756E 		.ascii	"counter\000"
+ 2045      74657200 
+ 2046              	.LASF67:
+ 2047 018a 73707269 		.ascii	"sprintf\000"
+ 2047      6E746600 
+ 2048              	.LASF0:
+ 2049 0192 7369676E 		.ascii	"signed char\000"
+ 2049      65642063 
+ 2049      68617200 
+ 2050              	.LASF7:
+ 2051 019e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2051      206C6F6E 
+ 2051      6720756E 
+ 2051      7369676E 
+ 2051      65642069 
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 42
+
+
+ 2052              	.LASF8:
+ 2053 01b5 756E7369 		.ascii	"unsigned int\000"
+ 2053      676E6564 
+ 2053      20696E74 
+ 2053      00
+ 2054              	.LASF21:
+ 2055 01c2 456E636F 		.ascii	"Encoder_ISR\000"
+ 2055      6465725F 
+ 2055      49535200 
+ 2056              	.LASF57:
+ 2057 01ce 50574D5F 		.ascii	"PWM_WriteCompare\000"
+ 2057      57726974 
+ 2057      65436F6D 
+ 2057      70617265 
+ 2057      00
+ 2058              	.LASF40:
+ 2059 01df 70776D5F 		.ascii	"pwm_Com\000"
+ 2059      436F6D00 
+ 2060              	.LASF44:
+ 2061 01e7 666C6167 		.ascii	"flag_init\000"
+ 2061      5F696E69 
+ 2061      7400
+ 2062              	.LASF17:
+ 2063 01f1 63686172 		.ascii	"char\000"
+ 2063      00
+ 2064              	.LASF61:
+ 2065 01f6 6973725F 		.ascii	"isr_sync_StartEx\000"
+ 2065      73796E63 
+ 2065      5F537461 
+ 2065      72744578 
+ 2065      00
+ 2066              	.LASF10:
+ 2067 0207 696E7433 		.ascii	"int32_t\000"
+ 2067      325F7400 
+ 2068              	.LASF3:
+ 2069 020f 73686F72 		.ascii	"short unsigned int\000"
+ 2069      7420756E 
+ 2069      7369676E 
+ 2069      65642069 
+ 2069      6E7400
+ 2070              	.LASF37:
+ 2071 0222 7469656D 		.ascii	"tiempo\000"
+ 2071      706F00
+ 2072              	.LASF63:
+ 2073 0229 73616C69 		.ascii	"salida_Read\000"
+ 2073      64615F52 
+ 2073      65616400 
+ 2074              	.LASF22:
+ 2075 0235 73796E63 		.ascii	"sync\000"
+ 2075      00
+ 2076              	.LASF13:
+ 2077 023a 75696E74 		.ascii	"uint32\000"
+ 2077      333200
+ 2078              	.LASF69:
+ 2079 0241 6D61696E 		.ascii	"main.c\000"
+ 2079      2E6300
+ 2080              	.LASF5:
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 43
+
+
+ 2081 0248 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2081      20756E73 
+ 2081      69676E65 
+ 2081      6420696E 
+ 2081      7400
+ 2082              	.LASF15:
+ 2083 025a 646F7562 		.ascii	"double\000"
+ 2083      6C6500
+ 2084              	.LASF55:
+ 2085 0261 4C43445F 		.ascii	"LCD_PutChar\000"
+ 2085      50757443 
+ 2085      68617200 
+ 2086              	.LASF56:
+ 2087 026d 6973725F 		.ascii	"isr_press_ClearPending\000"
+ 2087      70726573 
+ 2087      735F436C 
+ 2087      65617250 
+ 2087      656E6469 
+ 2088              	.LASF20:
+ 2089 0284 54696D65 		.ascii	"Timer_ISR\000"
+ 2089      725F4953 
+ 2089      5200
+ 2090              	.LASF9:
+ 2091 028e 5F5F696E 		.ascii	"__int32_t\000"
+ 2091      7433325F 
+ 2091      7400
+ 2092              	.LASF33:
+ 2093 0298 76616C6F 		.ascii	"valor\000"
+ 2093      7200
+ 2094              	.LASF47:
+ 2095 029e 456E636F 		.ascii	"Encoder_Read\000"
+ 2095      6465725F 
+ 2095      52656164 
+ 2095      00
+ 2096              	.LASF65:
+ 2097 02ab 50574D5F 		.ascii	"PWM_Start\000"
+ 2097      53746172 
+ 2097      7400
+ 2098              	.LASF51:
+ 2099 02b5 73796E63 		.ascii	"sync_ClearInterrupt\000"
+ 2099      5F436C65 
+ 2099      6172496E 
+ 2099      74657272 
+ 2099      75707400 
+ 2100              	.LASF52:
+ 2101 02c9 4C43445F 		.ascii	"LCD_Position\000"
+ 2101      506F7369 
+ 2101      74696F6E 
+ 2101      00
+ 2102              	.LASF29:
+ 2103 02d6 4B657970 		.ascii	"Keypad_1_Key\000"
+ 2103      61645F31 
+ 2103      5F4B6579 
+ 2103      00
+ 2104              	.LASF27:
+ 2105 02e3 5365745F 		.ascii	"Set_Speed\000"
+ 2105      53706565 
+ARM GAS  C:\Users\JEANPI~1\AppData\Local\Temp\ccMaUiiy.s 			page 44
+
+
+ 2105      6400
+ 2106              	.LASF64:
+ 2107 02ed 50696E5F 		.ascii	"Pin_1_Write\000"
+ 2107      315F5772 
+ 2107      69746500 
+ 2108              	.LASF28:
+ 2109 02f9 436F6E74 		.ascii	"Control_Motor\000"
+ 2109      726F6C5F 
+ 2109      4D6F746F 
+ 2109      7200
+ 2110              	.LASF31:
+ 2111 0307 666C6167 		.ascii	"flag\000"
+ 2111      00
+ 2112              	.LASF60:
+ 2113 030c 6973725F 		.ascii	"isr_Encoder_StartEx\000"
+ 2113      456E636F 
+ 2113      6465725F 
+ 2113      53746172 
+ 2113      74457800 
+ 2114              	.LASF30:
+ 2115 0320 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 2115      52784275 
+ 2115      66666572 
+ 2115      00
+ 2116              	.LASF68:
+ 2117 032d 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2117      43313120 
+ 2117      352E342E 
+ 2117      31203230 
+ 2117      31363036 
+ 2118 0360 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2118      20726576 
+ 2118      6973696F 
+ 2118      6E203233 
+ 2118      37373135 
+ 2119 0393 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 2119      66756E63 
+ 2119      74696F6E 
+ 2119      2D736563 
+ 2119      74696F6E 
+ 2120              	.LASF50:
+ 2121 03bb 43794465 		.ascii	"CyDelay\000"
+ 2121      6C617900 
+ 2122              	.LASF49:
+ 2123 03c3 456E636F 		.ascii	"Encoder_ClearInterrupt\000"
+ 2123      6465725F 
+ 2123      436C6561 
+ 2123      72496E74 
+ 2123      65727275 
+ 2124              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
+>>>>>>> 3fa70c016b72230f56fb1d61b64031d5e62add14

@@ -23,6 +23,37 @@
   <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\LCD.c" value="SOURCE_C;CortexM3;;;;LCD" />
   <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\LCD.h" value="HEADER;;;;;LCD" />
   <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\LCD_PM.c" value="SOURCE_C;CortexM3;;;;LCD" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\isr_press.c" value="SOURCE_C;CortexM3;;;;isr_press" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\isr_press.h" value="HEADER;;;;;isr_press" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Pin_1_aliases.h" value="HEADER;;;;;Pin_1" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Pin_1.c" value="SOURCE_C;CortexM3;;;;Pin_1" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Pin_1.h" value="HEADER;;;;;Pin_1" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Pin_2_aliases.h" value="HEADER;;;;;Pin_2" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Pin_2.c" value="SOURCE_C;CortexM3;;;;Pin_2" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Pin_2.h" value="HEADER;;;;;Pin_2" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Encoder_aliases.h" value="HEADER;;;;;Encoder" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Encoder.c" value="SOURCE_C;CortexM3;;;;Encoder" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Encoder.h" value="HEADER;;;;;Encoder" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\timer_clock.c" value="SOURCE_C;CortexM3;;;;timer_clock" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\timer_clock.h" value="HEADER;;;;;timer_clock" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Timer.c" value="SOURCE_C;CortexM3;;;;Timer" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Timer.h" value="HEADER;;;;;Timer" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Timer_PM.c" value="SOURCE_C;CortexM3;;;;Timer" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\isr_1.c" value="SOURCE_C;CortexM3;;;;isr_1" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\isr_1.h" value="HEADER;;;;;isr_1" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\isr_Encoder.c" value="SOURCE_C;CortexM3;;;;isr_Encoder" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\isr_Encoder.h" value="HEADER;;;;;isr_Encoder" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\PWM.c" value="SOURCE_C;CortexM3;;;;PWM" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\PWM.h" value="HEADER;;;;;PWM" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\PWM_PM.c" value="SOURCE_C;CortexM3;;;;PWM" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\salida_aliases.h" value="HEADER;;;;;salida" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\salida.c" value="SOURCE_C;CortexM3;;;;salida" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\salida.h" value="HEADER;;;;;salida" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\sync_aliases.h" value="HEADER;;;;;sync" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\sync.c" value="SOURCE_C;CortexM3;;;;sync" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\sync.h" value="HEADER;;;;;sync" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\isr_sync.c" value="SOURCE_C;CortexM3;;;;isr_sync" />
+  <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\isr_sync.h" value="HEADER;;;;;isr_sync" />
   <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Keypad_1_Status_Reg.c" value="SOURCE_C;CortexM3;;;;Keypad_1_Status_Reg" />
   <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Keypad_1_Status_Reg.h" value="HEADER;;;;;Keypad_1_Status_Reg" />
   <file name="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\Keypad_1_Column_aliases.h" value="HEADER;;;;;Keypad_1_Column" />

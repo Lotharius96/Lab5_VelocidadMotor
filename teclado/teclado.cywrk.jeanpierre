@@ -13,7 +13,7 @@
 <v>Output</v>
 </TreeKeys>
 <TreeStates>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="teclado\teclado\Source Files\main.c">
 <ExpandedNodeIds>
 <v>teclado</v>
 <v>teclado\teclado</v>
@@ -57,6 +57,11 @@
 <v>teclado\teclado\Generated_Source\PSoC5</v>
 <v>teclado\teclado\Generated_Source\PSoC5\cy_boot</v>
 <v>teclado\teclado\Generated_Source\PSoC5\Em_EEPROM_Dynamic</v>
+<v>teclado\teclado\Generated_Source\PSoC5\Encoder</v>
+<v>teclado\teclado\Generated_Source\PSoC5\isr_1</v>
+<v>teclado\teclado\Generated_Source\PSoC5\isr_Encoder</v>
+<v>teclado\teclado\Generated_Source\PSoC5\isr_press</v>
+<v>teclado\teclado\Generated_Source\PSoC5\isr_sync</v>
 <v>teclado\teclado\Generated_Source\PSoC5\Keypad_1</v>
 <v>teclado\teclado\Generated_Source\PSoC5\Keypad_1_Clock</v>
 <v>teclado\teclado\Generated_Source\PSoC5\Keypad_1_Column</v>
@@ -64,14 +69,9 @@
 <v>teclado\teclado\Generated_Source\PSoC5\Keypad_1_Status_Reg</v>
 <v>teclado\teclado\Generated_Source\PSoC5\LCD</v>
 <v>teclado\teclado\Generated_Source\PSoC5\LCD_LCDPort</v>
-<v>teclado\teclado\Generated_Source\PSoC5\cycodeshareexport.ld</v>
-<v>teclado\teclado\Generated_Source\PSoC5\cycodeshareimport.ld</v>
-<v>teclado\teclado\Generated_Source\PSoC5\cycodeshareimport.scat</v>
-<v>teclado\teclado\Generated_Source\PSoC5\cydevice.h</v>
-<v>teclado\teclado\Generated_Source\PSoC5\cydevice_trm.h</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
-<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="teclado\teclado\Keypad_V1_0\Keypad_V1_0.cysch">
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
 <ExpandedNodeIds>
 <v>teclado</v>
 <v>teclado\teclado</v>
@@ -116,6 +116,11 @@
 <v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
 <v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
 <v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Encoder.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_1.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_Encoder.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_press.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_sync.lst</v>
 <v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Keypad_1_Clock.lst</v>
 <v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Keypad_1_Keypad1.lst</v>
 <v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Keypad_1_Status_Reg.lst</v>
@@ -123,6 +128,15 @@
 <v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
 <v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
 <v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_PM.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\salida.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\sync.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_PM.lst</v>
 <v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\teclado.elf</v>
 <v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\teclado.hex</v>
 <v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\teclado.map</v>
@@ -133,8 +147,37 @@
 <VisibleNodeIds>
 <v>teclado</v>
 <v>teclado\teclado</v>
-<v>teclado\teclado\teclado.rpt</v>
-<v>teclado\teclado\teclado_timing.html</v>
+<v>teclado\teclado\CortexM3</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\cy_em_eeprom.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Encoder.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_1.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_Encoder.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_press.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_sync.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Keypad_1_Clock.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Keypad_1_Keypad1.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Keypad_1_Status_Reg.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_LCDPort.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\LCD_PM.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM.lst</v>
+<v>teclado\teclado\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_PM.lst</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStates>
@@ -151,6 +194,14 @@
 <v>teclado\teclado\System Reference Guides</v>
 <v>teclado\teclado\System Reference Guides\cy_boot_v5_80</v>
 <v>teclado\teclado\CharLCD_v2_20.pdf</v>
+<v>teclado\teclado\cy_clock_v2_20.pdf</v>
+<v>teclado\teclado\cy_isr_v1_70</v>
+<v>teclado\teclado\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>teclado\teclado\cy_pins_v2_20</v>
+<v>teclado\teclado\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>teclado\teclado\PWM_v3_30.pdf</v>
+<v>teclado\teclado\Timer_v2_80.pdf</v>
+<v>teclado\teclado\ZeroTerminal.pdf</v>
 </ExpandedNodeIds>
 <VisibleNodeIds>
 <v>teclado</v>
@@ -160,6 +211,14 @@
 <v>teclado\teclado\System Reference Guides</v>
 <v>teclado\teclado\System Reference Guides\cy_boot_v5_80</v>
 <v>teclado\teclado\CharLCD_v2_20.pdf</v>
+<v>teclado\teclado\cy_clock_v2_20.pdf</v>
+<v>teclado\teclado\cy_isr_v1_70</v>
+<v>teclado\teclado\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>teclado\teclado\cy_pins_v2_20</v>
+<v>teclado\teclado\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>teclado\teclado\PWM_v3_30.pdf</v>
+<v>teclado\teclado\Timer_v2_80.pdf</v>
+<v>teclado\teclado\ZeroTerminal.pdf</v>
 </VisibleNodeIds>
 </CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
 </TreeStatesV2>
@@ -177,9 +236,7 @@
 <Unloaded />
 <OpenDocs>
 <name v=".\teclado.cydsn\TopDesign\TopDesign.cysch" />
-<name v=".\teclado.cydsn\teclado.cydwr" />
 <name v=".\teclado.cydsn\main.c" />
-<name v=".\teclado.cydsn\Keypad_V1_0\Keypad_V1_0.cysch" />
 </OpenDocs>
 <OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
 
@@ -187,7 +244,7 @@
   Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
   http://www.actiprosoftware.com
 
---><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1134, 404" SelectedTabbedMdiWindow="ed5e32f4-81c9-4b87-8aa0-e61c41782528"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="79a7b893-9c4e-4a75-9199-78ff544fcf92" /><DocumentWindow Key="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\TopDesign\TopDesign.cysch" Guid="4f25bcde-d263-4989-9c20-6a9fccd5bb06" /><DocumentWindow Key="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\teclado.cydwr" Guid="ed5e32f4-81c9-4b87-8aa0-e61c41782528" /><DocumentWindow Key="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\main.c" Guid="07e2f4e5-5694-41f2-b9f6-6a324d123a42" /><DocumentWindow Key="C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\Keypad_V1_0\Keypad_V1_0.cysch" Guid="0eacd361-3ca5-4eb5-b126-4502b2afdcf0" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1095, 425" SelectedTabbedMdiWindow="db20097b-12fb-424f-b3dc-d5f567d8a634"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="79a7b893-9c4e-4a75-9199-78ff544fcf92" /><DocumentWindow Key="C:\Users\jeanpierre\Documents\PSoC Creator\Lab5_VelocidadMotor\teclado\teclado.cydsn\TopDesign\TopDesign.cysch" Guid="cfcd43c9-b821-442f-8b4d-f07c94619a99" /><DocumentWindow Key="C:\Users\jeanpierre\Documents\PSoC Creator\Lab5_VelocidadMotor\teclado\teclado.cydsn\main.c" Guid="db20097b-12fb-424f-b3dc-d5f567d8a634" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
 <config v="" />
 <AutoUpdate v="true" />
 </CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>

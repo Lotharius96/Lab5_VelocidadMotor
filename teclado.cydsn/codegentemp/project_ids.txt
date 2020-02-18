@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\teclado.cyprj|b02fbf56-6dff-41ee-873c-78bc42fdf725
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|018a3233-0456-4981-94c9-92f6da0edeb6
 C:\Users\jeanpierre\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|18e3adee-be3f-445f-993e-15e0c4ea9f97
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|a33ba469-cfba-45c0-aafb-bb40adf0be3e
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|180b9ced-3379-47b7-84c0-fc5bfa9e84ed
 C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|cef9ace7-4532-4e8f-a733-06af8803eefa
+=======
+C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\teclado.cyprj|ffce343f-66f3-4add-b47f-f3dc8f6ac6a5
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\default\CyAnnotationLibrary\CyAnnotationLibrary.cylib\CyAnnotationLibrary.cyprj|5b0fc026-3abc-4be8-a9cc-ae0c226bc516
+C:\Users\jeanpierre\Documents\PSoC Creator\4.2\Downloads ( 4.2).cylib\Downloads ( 4.2).cyprj|62106f0a-ec30-4379-964b-19d462f70a92
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibraryupdates\CyComponentLibraryUpdates.cylib\CyComponentLibraryUpdates.cyprj|4af51e7c-b9f0-4fb1-8156-4f398b398e56
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cycomponentlibrary\CyComponentLibrary.cylib\CyComponentLibrary.cyprj|c3c5b598-e155-4fe0-94b9-c7bc4368881c
+C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\cyprimitives\CyPrimitives.cylib\CyPrimitives.cyprj|a6188dcd-a4a0-4674-8792-52f0bf0add4f
+>>>>>>> 3fa70c016b72230f56fb1d61b64031d5e62add14
