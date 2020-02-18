@@ -1,13 +1,13 @@
-Loading plugins phase: Elapsed time ==> 0s.286ms
+Loading plugins phase: Elapsed time ==> 0s.172ms
 <CYPRESSTAG name="CyDsfit arguments...">
-cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\teclado.cyprj -d CY8C5888LTI-LP097 -s C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
+cydsfit arguments: -.fdsnotice -.fdswarpdepfile=warp_dependencies.txt -.fdselabdepfile=elab_dependencies.txt -.fdsbldfile=generated_files.txt -.fdsreffile=referenced_files.txt -p C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\teclado.cyprj -d CY8C5888LTI-LP097 -s C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\Generated_Source\PSoC5 -- -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE
 </CYPRESSTAG>
 <CYPRESSTAG name="Design elaboration results...">
 </CYPRESSTAG>
-Elaboration phase: Elapsed time ==> 2s.211ms
+Elaboration phase: Elapsed time ==> 1s.969ms
 <CYPRESSTAG name="HDL generation results...">
 </CYPRESSTAG>
-HDL generation phase: Elapsed time ==> 0s.341ms
+HDL generation phase: Elapsed time ==> 0s.190ms
 <CYPRESSTAG name="Synthesis results...">
 
      | | | | | | |
@@ -25,23 +25,23 @@ HDL generation phase: Elapsed time ==> 0s.341ms
 ======================================================================
 Compiling:  teclado.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\teclado.cyprj -dcpsoc3 teclado.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\teclado.cyprj -dcpsoc3 teclado.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  teclado.v
 Program  :   C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\teclado.cyprj -dcpsoc3 teclado.v -verilog
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\teclado.cyprj -dcpsoc3 teclado.v -verilog
 ======================================================================
 
 ======================================================================
 Compiling:  teclado.v
 Program  :   vlogfe
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\teclado.cyprj -dcpsoc3 -verilog teclado.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\teclado.cyprj -dcpsoc3 -verilog teclado.v
 ======================================================================
 
 vlogfe V6.3 IR 41:  Verilog parser
-Mon Jan 13 14:29:09 2020
+Wed Feb 12 13:12:59 2020
 
 
 ======================================================================
@@ -51,7 +51,7 @@ Options  :    -yv2 -q10 teclado.v
 ======================================================================
 
 vpp V6.3 IR 41:  Verilog Pre-Processor
-Mon Jan 13 14:29:09 2020
+Wed Feb 12 13:12:59 2020
 
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
@@ -64,6 +64,7 @@ Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\wa
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'
 Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'
+Flattening file 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\and_v1_0.v'
 
 vpp:  No errors.
 
@@ -93,11 +94,11 @@ vlogfe:  No errors.
 ======================================================================
 Compiling:  teclado.v
 Program  :   tovif
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\teclado.cyprj -dcpsoc3 -verilog teclado.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\teclado.cyprj -dcpsoc3 -verilog teclado.v
 ======================================================================
 
 tovif V6.3 IR 41:  High-level synthesis
-Mon Jan 13 14:29:10 2020
+Wed Feb 12 13:13:00 2020
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -108,17 +109,18 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\teclado.ctl'.
+Linking 'C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\codegentemp\teclado.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\teclado.v'.
+Linking 'C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\codegentemp\teclado.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_50\LUT_v1_50.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\and_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\lcpsoc3\stdlogic\mod_cnst.vif'.
@@ -129,11 +131,11 @@ tovif:  No errors.
 ======================================================================
 Compiling:  teclado.v
 Program  :   topld
-Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\teclado.cyprj -dcpsoc3 -verilog teclado.v
+Options  :    -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\teclado.cyprj -dcpsoc3 -verilog teclado.v
 ======================================================================
 
 topld V6.3 IR 41:  Synthesis and optimization
-Mon Jan 13 14:29:11 2020
+Wed Feb 12 13:13:01 2020
 
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\std.vhd'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.vhd'.
@@ -144,17 +146,18 @@ Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\c
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_cnst.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_mthv.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\mod_genv.vif'.
-Linking 'C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\teclado.ctl'.
+Linking 'C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\codegentemp\teclado.ctl'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\CyStatusReg_v1_80\CyStatusReg_v1_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cypress.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\cy_psoc3_inc.v'.
-Linking 'C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\codegentemp\teclado.v'.
+Linking 'C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\codegentemp\teclado.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\LUT_v1_50\LUT_v1_50.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\ZeroTerminal\ZeroTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\cy_virtualmux_v1_0\cy_virtualmux_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_Timer_v2_80\B_Timer_v2_80.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\OneTerminal\OneTerminal.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyComponentLibrary\CyComponentLibrary.cylib\B_PWM_v3_30\B_PWM_v3_30.v'.
+Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\psoc\content\CyPrimitives\cyprimitives.cylib\and_v1_0\and_v1_0.v'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3pkg.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\common\stdlogic\cy_psoc3.vif'.
 Linking 'C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\lib\lcpsoc3\stdlogic\mod_cnst.vif'.
@@ -194,9 +197,9 @@ Detecting unused logic.
 	\PWM:PWMUDB:db_tc\
 	\PWM:PWMUDB:dith_sel\
 	\PWM:PWMUDB:compare2\
-	\PWM:Net_96\
-	Net_86
-	Net_87
+	\PWM:Net_101\
+	Net_152
+	Net_153
 	\PWM:PWMUDB:MODULE_1:b_31\
 	\PWM:PWMUDB:MODULE_1:b_30\
 	\PWM:PWMUDB:MODULE_1:b_29\
@@ -306,8 +309,8 @@ Detecting unused logic.
 	\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_27\
 	\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_26\
 	\PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_25\
-	Net_94
-	Net_88
+	Net_154
+	Net_41
 	\PWM:Net_113\
 	\PWM:Net_107\
 	\PWM:Net_114\
@@ -380,28 +383,26 @@ Aliasing \Timer:TimerUDB:status_4\ to \Keypad_1:Status_Reg:status_5\
 Aliasing \Timer:TimerUDB:status_0\ to \Timer:TimerUDB:tc_i\
 Aliasing \PWM:PWMUDB:hwCapture\ to \Keypad_1:Status_Reg:status_5\
 Aliasing \PWM:PWMUDB:trig_out\ to \Keypad_1:tmpOE__Column_net_3\
-Aliasing \PWM:PWMUDB:runmode_enable\\R\ to \Keypad_1:Status_Reg:status_5\
 Aliasing \PWM:PWMUDB:runmode_enable\\S\ to \Keypad_1:Status_Reg:status_5\
-Aliasing \PWM:PWMUDB:ltch_kill_reg\\R\ to \Keypad_1:Status_Reg:status_5\
+Aliasing \PWM:PWMUDB:ltch_kill_reg\\R\ to \PWM:PWMUDB:runmode_enable\\R\
 Aliasing \PWM:PWMUDB:ltch_kill_reg\\S\ to \Keypad_1:Status_Reg:status_5\
-Aliasing \PWM:PWMUDB:min_kill_reg\\R\ to \Keypad_1:Status_Reg:status_5\
+Aliasing \PWM:PWMUDB:min_kill_reg\\R\ to \PWM:PWMUDB:runmode_enable\\R\
 Aliasing \PWM:PWMUDB:min_kill_reg\\S\ to \Keypad_1:Status_Reg:status_5\
 Aliasing \PWM:PWMUDB:final_kill\ to \Keypad_1:tmpOE__Column_net_3\
-Aliasing \PWM:PWMUDB:dith_count_1\\R\ to \Keypad_1:Status_Reg:status_5\
+Aliasing \PWM:PWMUDB:dith_count_1\\R\ to \PWM:PWMUDB:runmode_enable\\R\
 Aliasing \PWM:PWMUDB:dith_count_1\\S\ to \Keypad_1:Status_Reg:status_5\
-Aliasing \PWM:PWMUDB:dith_count_0\\R\ to \Keypad_1:Status_Reg:status_5\
+Aliasing \PWM:PWMUDB:dith_count_0\\R\ to \PWM:PWMUDB:runmode_enable\\R\
 Aliasing \PWM:PWMUDB:dith_count_0\\S\ to \Keypad_1:Status_Reg:status_5\
-Aliasing \PWM:PWMUDB:reset\ to \Keypad_1:Status_Reg:status_5\
 Aliasing \PWM:PWMUDB:status_6\ to \Keypad_1:Status_Reg:status_5\
 Aliasing \PWM:PWMUDB:status_4\ to \Keypad_1:Status_Reg:status_5\
 Aliasing \PWM:PWMUDB:cmp2\ to \Keypad_1:Status_Reg:status_5\
-Aliasing \PWM:PWMUDB:cmp1_status_reg\\R\ to \Keypad_1:Status_Reg:status_5\
+Aliasing \PWM:PWMUDB:cmp1_status_reg\\R\ to \PWM:PWMUDB:runmode_enable\\R\
 Aliasing \PWM:PWMUDB:cmp1_status_reg\\S\ to \Keypad_1:Status_Reg:status_5\
-Aliasing \PWM:PWMUDB:cmp2_status_reg\\R\ to \Keypad_1:Status_Reg:status_5\
+Aliasing \PWM:PWMUDB:cmp2_status_reg\\R\ to \PWM:PWMUDB:runmode_enable\\R\
 Aliasing \PWM:PWMUDB:cmp2_status_reg\\S\ to \Keypad_1:Status_Reg:status_5\
-Aliasing \PWM:PWMUDB:final_kill_reg\\R\ to \Keypad_1:Status_Reg:status_5\
+Aliasing \PWM:PWMUDB:final_kill_reg\\R\ to \PWM:PWMUDB:runmode_enable\\R\
 Aliasing \PWM:PWMUDB:final_kill_reg\\S\ to \Keypad_1:Status_Reg:status_5\
-Aliasing \PWM:PWMUDB:cs_addr_0\ to \Keypad_1:Status_Reg:status_5\
+Aliasing \PWM:PWMUDB:cs_addr_0\ to \PWM:PWMUDB:runmode_enable\\R\
 Aliasing \PWM:PWMUDB:pwm1_i\ to \Keypad_1:Status_Reg:status_5\
 Aliasing \PWM:PWMUDB:pwm2_i\ to \Keypad_1:Status_Reg:status_5\
 Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:a_23\ to \Keypad_1:Status_Reg:status_5\
@@ -428,7 +429,8 @@ Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:a_3\ to \Keypad_1:Status_Reg:status_5\
 Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:a_2\ to \Keypad_1:Status_Reg:status_5\
 Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\ to \Keypad_1:tmpOE__Column_net_3\
 Aliasing tmpOE__salida_net_0 to \Keypad_1:tmpOE__Column_net_3\
-Aliasing tmpOE__sync_net_0 to \Keypad_1:tmpOE__Column_net_3\
+Aliasing tmpOE__cruce_por_cero_net_0 to \Keypad_1:tmpOE__Column_net_3\
+Aliasing tmpOE__num_control_net_0 to \Keypad_1:tmpOE__Column_net_3\
 Aliasing \Timer:TimerUDB:capture_last\\D\ to \Keypad_1:Status_Reg:status_5\
 Aliasing \Timer:TimerUDB:hwEnable_reg\\D\ to \Timer:TimerUDB:run_mode\
 Aliasing \Timer:TimerUDB:capture_out_reg_i\\D\ to \Timer:TimerUDB:capt_fifo_load_int\
@@ -506,21 +508,20 @@ Removing Lhs of wire \PWM:PWMUDB:ctrl_enable\[268] = \PWM:PWMUDB:control_7\[260]
 Removing Lhs of wire \PWM:PWMUDB:hwCapture\[278] = zero[14]
 Removing Lhs of wire \PWM:PWMUDB:hwEnable\[279] = \PWM:PWMUDB:control_7\[260]
 Removing Lhs of wire \PWM:PWMUDB:trig_out\[283] = one[55]
-Removing Lhs of wire \PWM:PWMUDB:runmode_enable\\R\[285] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:runmode_enable\\S\[286] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:final_enable\[287] = \PWM:PWMUDB:runmode_enable\[284]
-Removing Lhs of wire \PWM:PWMUDB:ltch_kill_reg\\R\[291] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:ltch_kill_reg\\S\[292] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:min_kill_reg\\R\[293] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:min_kill_reg\\S\[294] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:final_kill\[297] = one[55]
-Removing Lhs of wire \PWM:PWMUDB:add_vi_vv_MODGEN_1_1\[301] = \PWM:PWMUDB:MODULE_1:g2:a0:s_1\[589]
-Removing Lhs of wire \PWM:PWMUDB:add_vi_vv_MODGEN_1_0\[303] = \PWM:PWMUDB:MODULE_1:g2:a0:s_0\[590]
-Removing Lhs of wire \PWM:PWMUDB:dith_count_1\\R\[304] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:dith_count_1\\S\[305] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:dith_count_0\\R\[306] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:dith_count_0\\S\[307] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:reset\[310] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:runmode_enable\\R\[285] = Net_188[286]
+Removing Lhs of wire \PWM:PWMUDB:runmode_enable\\S\[287] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:final_enable\[288] = \PWM:PWMUDB:runmode_enable\[284]
+Removing Lhs of wire \PWM:PWMUDB:ltch_kill_reg\\R\[292] = Net_188[286]
+Removing Lhs of wire \PWM:PWMUDB:ltch_kill_reg\\S\[293] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:min_kill_reg\\R\[294] = Net_188[286]
+Removing Lhs of wire \PWM:PWMUDB:min_kill_reg\\S\[295] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:final_kill\[298] = one[55]
+Removing Lhs of wire \PWM:PWMUDB:add_vi_vv_MODGEN_1_1\[302] = \PWM:PWMUDB:MODULE_1:g2:a0:s_1\[541]
+Removing Lhs of wire \PWM:PWMUDB:add_vi_vv_MODGEN_1_0\[304] = \PWM:PWMUDB:MODULE_1:g2:a0:s_0\[542]
+Removing Lhs of wire \PWM:PWMUDB:dith_count_1\\R\[305] = Net_188[286]
+Removing Lhs of wire \PWM:PWMUDB:dith_count_1\\S\[306] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:dith_count_0\\R\[307] = Net_188[286]
+Removing Lhs of wire \PWM:PWMUDB:dith_count_0\\S\[308] = zero[14]
 Removing Lhs of wire \PWM:PWMUDB:status_6\[311] = zero[14]
 Removing Rhs of wire \PWM:PWMUDB:status_5\[312] = \PWM:PWMUDB:final_kill_reg\[326]
 Removing Lhs of wire \PWM:PWMUDB:status_4\[313] = zero[14]
@@ -529,66 +530,67 @@ Removing Rhs of wire \PWM:PWMUDB:status_1\[316] = \PWM:PWMUDB:cmp2_status_reg\[3
 Removing Rhs of wire \PWM:PWMUDB:status_0\[317] = \PWM:PWMUDB:cmp1_status_reg\[324]
 Removing Lhs of wire \PWM:PWMUDB:cmp2_status\[322] = zero[14]
 Removing Lhs of wire \PWM:PWMUDB:cmp2\[323] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:cmp1_status_reg\\R\[327] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:cmp1_status_reg\\R\[327] = Net_188[286]
 Removing Lhs of wire \PWM:PWMUDB:cmp1_status_reg\\S\[328] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:cmp2_status_reg\\R\[329] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:cmp2_status_reg\\R\[329] = Net_188[286]
 Removing Lhs of wire \PWM:PWMUDB:cmp2_status_reg\\S\[330] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:final_kill_reg\\R\[331] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:final_kill_reg\\R\[331] = Net_188[286]
 Removing Lhs of wire \PWM:PWMUDB:final_kill_reg\\S\[332] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:cs_addr_2\[334] = \PWM:PWMUDB:tc_i\[289]
+Removing Lhs of wire \PWM:PWMUDB:cs_addr_2\[334] = \PWM:PWMUDB:tc_i\[290]
 Removing Lhs of wire \PWM:PWMUDB:cs_addr_1\[335] = \PWM:PWMUDB:runmode_enable\[284]
-Removing Lhs of wire \PWM:PWMUDB:cs_addr_0\[336] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:compare1\[417] = \PWM:PWMUDB:cmp1_eq\[387]
-Removing Lhs of wire \PWM:PWMUDB:pwm1_i\[422] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:pwm2_i\[424] = zero[14]
-Removing Rhs of wire \PWM:Net_101\[426] = \PWM:PWMUDB:tc_i_reg\[425]
-Removing Lhs of wire \PWM:PWMUDB:pwm_temp\[430] = \PWM:PWMUDB:cmp1\[320]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_23\[471] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_22\[472] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_21\[473] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_20\[474] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_19\[475] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_18\[476] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_17\[477] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_16\[478] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_15\[479] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_14\[480] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_13\[481] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_12\[482] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_11\[483] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_10\[484] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_9\[485] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_8\[486] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_7\[487] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_6\[488] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_5\[489] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_4\[490] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_3\[491] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_2\[492] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_1\[493] = \PWM:PWMUDB:MODIN1_1\[494]
-Removing Lhs of wire \PWM:PWMUDB:MODIN1_1\[494] = \PWM:PWMUDB:dith_count_1\[300]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_0\[495] = \PWM:PWMUDB:MODIN1_0\[496]
-Removing Lhs of wire \PWM:PWMUDB:MODIN1_0\[496] = \PWM:PWMUDB:dith_count_0\[302]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[628] = one[55]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[629] = one[55]
-Removing Rhs of wire Net_41[632] = \PWM:Net_101\[426]
-Removing Lhs of wire tmpOE__salida_net_0[637] = one[55]
-Removing Lhs of wire tmpOE__sync_net_0[643] = one[55]
-Removing Lhs of wire \Timer:TimerUDB:capture_last\\D\[655] = zero[14]
-Removing Lhs of wire \Timer:TimerUDB:tc_reg_i\\D\[656] = \Timer:TimerUDB:status_tc\[147]
-Removing Lhs of wire \Timer:TimerUDB:hwEnable_reg\\D\[657] = \Timer:TimerUDB:control_7\[125]
-Removing Lhs of wire \Timer:TimerUDB:capture_out_reg_i\\D\[658] = \Timer:TimerUDB:capt_fifo_load\[143]
-Removing Lhs of wire \PWM:PWMUDB:min_kill_reg\\D\[659] = one[55]
-Removing Lhs of wire \PWM:PWMUDB:prevCapture\\D\[660] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:trig_last\\D\[661] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:ltch_kill_reg\\D\[664] = one[55]
-Removing Lhs of wire \PWM:PWMUDB:prevCompare1\\D\[667] = \PWM:PWMUDB:cmp1\[320]
-Removing Lhs of wire \PWM:PWMUDB:cmp1_status_reg\\D\[668] = \PWM:PWMUDB:cmp1_status\[321]
-Removing Lhs of wire \PWM:PWMUDB:cmp2_status_reg\\D\[669] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:pwm_i_reg\\D\[671] = \PWM:PWMUDB:pwm_i\[420]
-Removing Lhs of wire \PWM:PWMUDB:pwm1_i_reg\\D\[672] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:pwm2_i_reg\\D\[673] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:tc_i_reg\\D\[674] = \PWM:PWMUDB:status_2\[315]
+Removing Lhs of wire \PWM:PWMUDB:cs_addr_0\[336] = Net_188[286]
+Removing Lhs of wire \PWM:PWMUDB:compare1\[369] = \PWM:PWMUDB:cmp1_eq\[339]
+Removing Lhs of wire \PWM:PWMUDB:pwm1_i\[374] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:pwm2_i\[376] = zero[14]
+Removing Rhs of wire \PWM:Net_96\[379] = \PWM:PWMUDB:pwm_i_reg\[371]
+Removing Lhs of wire \PWM:PWMUDB:pwm_temp\[382] = \PWM:PWMUDB:cmp1\[320]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_23\[423] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_22\[424] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_21\[425] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_20\[426] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_19\[427] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_18\[428] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_17\[429] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_16\[430] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_15\[431] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_14\[432] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_13\[433] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_12\[434] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_11\[435] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_10\[436] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_9\[437] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_8\[438] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_7\[439] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_6\[440] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_5\[441] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_4\[442] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_3\[443] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_2\[444] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_1\[445] = \PWM:PWMUDB:MODIN1_1\[446]
+Removing Lhs of wire \PWM:PWMUDB:MODIN1_1\[446] = \PWM:PWMUDB:dith_count_1\[301]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:a_0\[447] = \PWM:PWMUDB:MODIN1_0\[448]
+Removing Lhs of wire \PWM:PWMUDB:MODIN1_0\[448] = \PWM:PWMUDB:dith_count_0\[303]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:c_0\[580] = one[55]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_0\[581] = one[55]
+Removing Rhs of wire Net_163[582] = \PWM:Net_96\[379]
+Removing Lhs of wire tmpOE__salida_net_0[589] = one[55]
+Removing Lhs of wire tmpOE__cruce_por_cero_net_0[597] = one[55]
+Removing Lhs of wire tmpOE__num_control_net_0[602] = one[55]
+Removing Lhs of wire \Timer:TimerUDB:capture_last\\D\[612] = zero[14]
+Removing Lhs of wire \Timer:TimerUDB:tc_reg_i\\D\[613] = \Timer:TimerUDB:status_tc\[147]
+Removing Lhs of wire \Timer:TimerUDB:hwEnable_reg\\D\[614] = \Timer:TimerUDB:control_7\[125]
+Removing Lhs of wire \Timer:TimerUDB:capture_out_reg_i\\D\[615] = \Timer:TimerUDB:capt_fifo_load\[143]
+Removing Lhs of wire \PWM:PWMUDB:min_kill_reg\\D\[616] = one[55]
+Removing Lhs of wire \PWM:PWMUDB:prevCapture\\D\[617] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:trig_last\\D\[618] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:ltch_kill_reg\\D\[621] = one[55]
+Removing Lhs of wire \PWM:PWMUDB:prevCompare1\\D\[624] = \PWM:PWMUDB:cmp1\[320]
+Removing Lhs of wire \PWM:PWMUDB:cmp1_status_reg\\D\[625] = \PWM:PWMUDB:cmp1_status\[321]
+Removing Lhs of wire \PWM:PWMUDB:cmp2_status_reg\\D\[626] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:pwm_i_reg\\D\[628] = \PWM:PWMUDB:pwm_i\[372]
+Removing Lhs of wire \PWM:PWMUDB:pwm1_i_reg\\D\[629] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:pwm2_i_reg\\D\[630] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:tc_i_reg\\D\[631] = \PWM:PWMUDB:status_2\[315]
 
 ------------------------------------------------------
 Aliased 0 equations, 151 wires.
@@ -725,11 +727,11 @@ Aliasing \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\ to zero
 Aliasing \PWM:PWMUDB:final_kill_reg\\D\ to zero
 Removing Lhs of wire \Timer:TimerUDB:trig_reg\[157] = \Timer:TimerUDB:control_7\[125]
 Removing Lhs of wire \PWM:PWMUDB:final_capture\[338] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\[599] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\[609] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\[619] = zero[14]
-Removing Lhs of wire \PWM:PWMUDB:runmode_enable\\D\[662] = \PWM:PWMUDB:control_7\[260]
-Removing Lhs of wire \PWM:PWMUDB:final_kill_reg\\D\[670] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_24\[551] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_16\[561] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:MODULE_1:g2:a0:g1:z1:s0:g1:u0:b_8\[571] = zero[14]
+Removing Lhs of wire \PWM:PWMUDB:runmode_enable\\D\[619] = \PWM:PWMUDB:control_7\[260]
+Removing Lhs of wire \PWM:PWMUDB:final_kill_reg\\D\[627] = zero[14]
 
 ------------------------------------------------------
 Aliased 0 equations, 7 wires.
@@ -760,16 +762,16 @@ topld:  No errors.
 
 CYPRESS_DIR    : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp
 Warp Program   : C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\warp\bin\warp.exe
-Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\teclado.cyprj" -dcpsoc3 teclado.v -verilog
+Warp Arguments : -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya "-.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\teclado.cyprj" -dcpsoc3 teclado.v -verilog
 </CYPRESSTAG>
-Warp synthesis phase: Elapsed time ==> 3s.081ms
+Warp synthesis phase: Elapsed time ==> 2s.451ms
 <CYPRESSTAG name="Fitter results...">
 <CYPRESSTAG name="Fitter startup details...">
-cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Monday, 13 January 2020 14:29:12
-Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\teclado.cydsn\teclado.cyprj -d CY8C5888LTI-LP097 teclado.v -verilog
+cyp3fit: V4.2.0.641, Family: PSoC3, Started at: Wednesday, 12 February 2020 13:13:01
+Options: -yv2 -q10 -ygs -o2 -v3 -.fftcfgtype=LE -ya -.fftprj=C:\Users\jeanpierre\Documents\PSoC Creator\teclado\Lab5_VelocidadMotor\teclado.cydsn\teclado.cyprj -d CY8C5888LTI-LP097 teclado.v -verilog
 </CYPRESSTAG>
 <CYPRESSTAG name="Design parsing">
-Design parsing phase: Elapsed time ==> 0s.105ms
+Design parsing phase: Elapsed time ==> 0s.059ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Tech Mapping">
 <CYPRESSTAG name="Initial Mapping" icon="FILE_RPT_TECHM">
@@ -785,7 +787,7 @@ Design parsing phase: Elapsed time ==> 0s.105ms
     Converted constant MacroCell: \PWM:PWMUDB:pwm2_i_reg\ from registered to combinatorial
 <CYPRESSTAG name="Global Clock Selection" icon="FILE_RPT_TECHM">
     Digital Clock 0: Automatic-assigning  clock 'Keypad_1_Clock'. Fanout=6, Signal=\Keypad_1:Net_64\
-    Digital Clock 1: Automatic-assigning  clock 'timer_clock'. Fanout=3, Signal=Net_10
+    Digital Clock 1: Automatic-assigning  clock 'timer_clock'. Fanout=3, Signal=Net_183
 </CYPRESSTAG>
 
 Removing unused cells resulting from optimization
@@ -804,7 +806,7 @@ Done removing unused cells.
         EnableIn: Constant 1 was determined to be synchronous to ClockIn
         ClockOut: timer_clock, EnableOut: Constant 1
 </CYPRESSTAG>
-ADD: pft.M0040: information: The following 3 pin(s) will be assigned a location by the fitter: Encoder(0), salida(0), sync(0)
+ADD: pft.M0040: information: The following 1 pin(s) will be assigned a location by the fitter: num_control(0)
 
 
 Removing unused cells resulting from optimization
@@ -1534,6 +1536,9 @@ Design Equations
         PORT MAP (
             pa_out => Encoder(0)__PA ,
             pad => Encoder(0)_PAD );
+        Properties:
+        {
+        }
 
     Pin : Name = salida(0)
         Attributes:
@@ -1569,16 +1574,19 @@ Design Equations
             IO Voltage: 0
         PORT MAP (
             pa_out => salida(0)__PA ,
-            pin_input => Net_41 ,
+            pin_input => Net_163 ,
             pad => salida(0)_PAD );
+        Properties:
+        {
+        }
 
-    Pin : Name = sync(0)
+    Pin : Name = cruce_por_cero(0)
         Attributes:
             In Group/Port: True
             In Sync Option: NOSYNC
             Out Sync Option: AUTO
-            Interrupt generated: True
-            Interrupt mode: ON_CHANGE
+            Interrupt generated: False
+            Interrupt mode: NONE
             Drive mode: RES_PULL_UP
             VTrip: CMOS
             Slew: FAST
@@ -1589,7 +1597,7 @@ Design Equations
             LCD Mode: COMMON
             Register Mode: RegComb
             CaSense Mode: NEITHER
-            Treat as pin: False
+            Treat as pin: True
             Is OE Registered: False
             Uses Analog: False
             Can contain Digital: True
@@ -1601,12 +1609,53 @@ Design Equations
             SIO Vtrip: MULTIPLIER_0_5
             SIO Multiplier Index: 0
             SIO RefSel: VCC_IO
-            Required Capabilities: DIGITAL, PORT_INTERRUPT
+            Required Capabilities: DIGITAL, ROUTABLE
             Initial Value: 1
             IO Voltage: 0
         PORT MAP (
-            pa_out => sync(0)__PA ,
-            pad => sync(0)_PAD );
+            pa_out => cruce_por_cero(0)__PA ,
+            fb => Net_166 ,
+            pad => cruce_por_cero(0)_PAD );
+        Properties:
+        {
+        }
+
+    Pin : Name = num_control(0)
+        Attributes:
+            In Group/Port: True
+            In Sync Option: NOSYNC
+            Out Sync Option: AUTO
+            Interrupt generated: False
+            Interrupt mode: NONE
+            Drive mode: RES_PULL_UP
+            VTrip: CMOS
+            Slew: FAST
+            Input Sync needed: False
+            Output Sync needed: False
+            SC shield enabled: False
+            POR State: ANY
+            LCD Mode: COMMON
+            Register Mode: RegComb
+            CaSense Mode: NEITHER
+            Treat as pin: True
+            Is OE Registered: False
+            Uses Analog: False
+            Can contain Digital: True
+            Is SIO: False
+            SIO Output Buf: NONREGULATED
+            SIO Input Buf: SINGLE_ENDED
+            SIO HiFreq: LOW
+            SIO Hyst: DISABLED
+            SIO Vtrip: MULTIPLIER_0_5
+            SIO Multiplier Index: 0
+            SIO RefSel: VCC_IO
+            Required Capabilities: DIGITAL, ROUTABLE
+            Initial Value: 1
+            IO Voltage: 0
+        PORT MAP (
+            pa_out => num_control(0)__PA ,
+            fb => Net_167 ,
+            pad => num_control(0)_PAD );
     </CYPRESSTAG>
     <CYPRESSTAG name="Macrocell listing" icon="FILE_RPT_EQUATION">
 
@@ -1676,6 +1725,16 @@ Design Equations
               \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:tc_i\
         );
         Output = \PWM:PWMUDB:status_2\ (fanout=1)
+
+    MacroCell: Name=Net_188, Mode=(Combinatorial)
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              Net_166 * Net_167
+        );
+        Output = Net_188 (fanout=4)
 
     MacroCell: Name=\Keypad_1:Net_12\, Mode=(D-Register)
         Total # of inputs        : 4
@@ -1785,7 +1844,7 @@ Design Equations
         Total # of inputs        : 2
         Total # of product terms : 1
         List of special equations: 
-            Clock  = (Net_10) => Global
+            Clock  = (Net_183) => Global
             Clock Enable: True
         Main Equation            : 1 pterm
         (
@@ -1797,19 +1856,20 @@ Design Equations
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
-            Clock  = (Net_10) => Global
+            Clock  = (Net_183) => Global
+            Reset  = (Net_188)
             Clock Enable: True
         Main Equation            : 1 pterm
         (
               \PWM:PWMUDB:control_7\
         );
-        Output = \PWM:PWMUDB:runmode_enable\ (fanout=4)
+        Output = \PWM:PWMUDB:runmode_enable\ (fanout=3)
 
     MacroCell: Name=\PWM:PWMUDB:prevCompare1\, Mode=(D-Register)
         Total # of inputs        : 1
         Total # of product terms : 1
         List of special equations: 
-            Clock  = (Net_10) => Global
+            Clock  = (Net_183) => Global
             Clock Enable: True
         Main Equation            : 1 pterm
         (
@@ -1821,7 +1881,8 @@ Design Equations
         Total # of inputs        : 2
         Total # of product terms : 1
         List of special equations: 
-            Clock  = (Net_10) => Global
+            Clock  = (Net_183) => Global
+            Reset  = (Net_188)
             Clock Enable: True
         Main Equation            : 1 pterm
         (
@@ -1829,17 +1890,17 @@ Design Equations
         );
         Output = \PWM:PWMUDB:status_0\ (fanout=1)
 
-    MacroCell: Name=Net_41, Mode=(D-Register)
+    MacroCell: Name=Net_163, Mode=(D-Register)
         Total # of inputs        : 2
         Total # of product terms : 1
         List of special equations: 
-            Clock  = (Net_10) => Global
+            Clock  = (Net_183) => Global
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:tc_i\
+              \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:cmp1_eq\
         );
-        Output = Net_41 (fanout=1)
+        Output = Net_163 (fanout=1)
     </CYPRESSTAG>
     <CYPRESSTAG name="Datapath listing">
 
@@ -1849,7 +1910,7 @@ Design Equations
 
     datapathcell: Name =\Timer:TimerUDB:sT16:timerdp:u0\
         PORT MAP (
-            clock => Net_10 ,
+            clock => Net_183 ,
             cs_addr_1 => \Timer:TimerUDB:control_7\ ,
             cs_addr_0 => \Timer:TimerUDB:per_zero\ ,
             chain_out => \Timer:TimerUDB:sT16:timerdp:carry\ );
@@ -1883,7 +1944,7 @@ Design Equations
 
     datapathcell: Name =\Timer:TimerUDB:sT16:timerdp:u1\
         PORT MAP (
-            clock => Net_10 ,
+            clock => Net_183 ,
             cs_addr_1 => \Timer:TimerUDB:control_7\ ,
             cs_addr_0 => \Timer:TimerUDB:per_zero\ ,
             z0_comb => \Timer:TimerUDB:per_zero\ ,
@@ -1918,12 +1979,15 @@ Design Equations
         Clock Enable: True
         Previous in chain : \Timer:TimerUDB:sT16:timerdp:u0\
 
-    datapathcell: Name =\PWM:PWMUDB:sP16:pwmdp:u0\
+    datapathcell: Name =\PWM:PWMUDB:sP8:pwmdp:u0\
         PORT MAP (
-            clock => Net_10 ,
+            clock => Net_183 ,
             cs_addr_2 => \PWM:PWMUDB:tc_i\ ,
             cs_addr_1 => \PWM:PWMUDB:runmode_enable\ ,
-            chain_out => \PWM:PWMUDB:sP16:pwmdp:carry\ );
+            cs_addr_0 => Net_188 ,
+            ce0_comb => \PWM:PWMUDB:cmp1_eq\ ,
+            z0_comb => \PWM:PWMUDB:tc_i\ ,
+            f1_blk_stat_comb => \PWM:PWMUDB:status_3\ );
         Properties:
         {
             a0_init = "00000000"
@@ -1950,44 +2014,6 @@ Design Equations
         }
         Clock Polarity: Active High
         Clock Enable: True
-        Next in chain : \PWM:PWMUDB:sP16:pwmdp:u1\
-
-    datapathcell: Name =\PWM:PWMUDB:sP16:pwmdp:u1\
-        PORT MAP (
-            clock => Net_10 ,
-            cs_addr_2 => \PWM:PWMUDB:tc_i\ ,
-            cs_addr_1 => \PWM:PWMUDB:runmode_enable\ ,
-            ce0_comb => \PWM:PWMUDB:cmp1_eq\ ,
-            z0_comb => \PWM:PWMUDB:tc_i\ ,
-            f1_blk_stat_comb => \PWM:PWMUDB:status_3\ ,
-            chain_in => \PWM:PWMUDB:sP16:pwmdp:carry\ );
-        Properties:
-        {
-            a0_init = "00000000"
-            a1_init = "00000000"
-            ce0_sync = 1
-            ce1_sync = 1
-            cl0_sync = 1
-            cl1_sync = 1
-            cmsb_sync = 1
-            co_msb_sync = 1
-            cy_dpconfig = "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101011110000000000000100000011110000000000011000"
-            d0_init = "00000000"
-            d1_init = "00000000"
-            f0_blk_sync = 1
-            f0_bus_sync = 1
-            f1_blk_sync = 1
-            f1_bus_sync = 1
-            ff0_sync = 1
-            ff1_sync = 1
-            ov_msb_sync = 1
-            so_sync = 1
-            z0_sync = 1
-            z1_sync = 1
-        }
-        Clock Polarity: Active High
-        Clock Enable: True
-        Previous in chain : \PWM:PWMUDB:sP16:pwmdp:u0\
     </CYPRESSTAG>
     <CYPRESSTAG name="Status register listing">
 
@@ -2017,7 +2043,7 @@ Design Equations
 
     statusicell: Name =\Timer:TimerUDB:rstSts:stsreg\
         PORT MAP (
-            clock => Net_10 ,
+            clock => Net_183 ,
             status_3 => \Timer:TimerUDB:status_3\ ,
             status_2 => \Timer:TimerUDB:status_2\ ,
             status_0 => \Timer:TimerUDB:status_tc\ );
@@ -2032,7 +2058,8 @@ Design Equations
 
     statusicell: Name =\PWM:PWMUDB:genblk8:stsreg\
         PORT MAP (
-            clock => Net_10 ,
+            reset => Net_188 ,
+            clock => Net_183 ,
             status_3 => \PWM:PWMUDB:status_3\ ,
             status_2 => \PWM:PWMUDB:status_2\ ,
             status_0 => \PWM:PWMUDB:status_0\ );
@@ -2055,7 +2082,7 @@ Design Equations
 
     controlcell: Name =\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
         PORT MAP (
-            clock => Net_10 ,
+            clock => Net_183 ,
             control_7 => \Timer:TimerUDB:control_7\ ,
             control_6 => \Timer:TimerUDB:control_6\ ,
             control_5 => \Timer:TimerUDB:control_5\ ,
@@ -2077,7 +2104,7 @@ Design Equations
 
     controlcell: Name =\PWM:PWMUDB:genblk1:ctrlreg\
         PORT MAP (
-            clock => Net_10 ,
+            clock => Net_183 ,
             control_7 => \PWM:PWMUDB:control_7\ ,
             control_6 => \PWM:PWMUDB:control_6\ ,
             control_5 => \PWM:PWMUDB:control_5\ ,
@@ -2130,16 +2157,7 @@ Design Equations
             interrupt => Net_17 );
         Properties:
         {
-            int_type = "10"
-            is_nmi = 0
-        }
-
-    interrupt: Name =isr_sync
-        PORT MAP (
-            interrupt => Net_54 );
-        Properties:
-        {
-            int_type = "10"
+            int_type = "00"
             is_nmi = 0
         }
     </CYPRESSTAG>
@@ -2156,8 +2174,8 @@ Digital Clocks                :    2 :    6 :    8 : 25.00 %
 Analog Clocks                 :    0 :    4 :    4 :  0.00 %
 CapSense Buffers              :    0 :    2 :    2 :  0.00 %
 Digital Filter Block          :    0 :    1 :    1 :  0.00 %
-Interrupts                    :    4 :   28 :   32 : 12.50 %
-IO                            :   23 :   25 :   48 : 47.92 %
+Interrupts                    :    3 :   29 :   32 :  9.38 %
+IO                            :   24 :   24 :   48 : 50.00 %
 Segment LCD                   :    0 :    1 :    1 :  0.00 %
 CAN 2.0b                      :    0 :    1 :    1 :  0.00 %
 I2C                           :    0 :    1 :    1 :  0.00 %
@@ -2165,10 +2183,10 @@ USB                           :    0 :    1 :    1 :  0.00 %
 DMA Channels                  :    0 :   24 :   24 :  0.00 %
 Timer                         :    0 :    4 :    4 :  0.00 %
 UDB                           :      :      :      :        
-  Macrocells                  :   16 :  176 :  192 :  8.33 %
-  Unique P-terms              :   14 :  370 :  384 :  3.65 %
-  Total P-terms               :   34 :      :      :        
-  Datapath Cells              :    4 :   20 :   24 : 16.67 %
+  Macrocells                  :   17 :  175 :  192 :  8.85 %
+  Unique P-terms              :   16 :  368 :  384 :  4.17 %
+  Total P-terms               :   35 :      :      :        
+  Datapath Cells              :    3 :   21 :   24 : 12.50 %
   Status Cells                :    3 :   21 :   24 : 12.50 %
     Status Registers          :    1 :      :      :        
     StatusI Registers         :    2 :      :      :        
@@ -2183,12 +2201,13 @@ Analog (SC/CT) Blocks         :    0 :    4 :    4 :  0.00 %
 DAC                           :      :      :      :        
   VIDAC                       :    0 :    4 :    4 :  0.00 %
 </CYPRESSTAG>
-Technology Mapping: Elapsed time ==> 0s.563ms
-Tech Mapping phase: Elapsed time ==> 0s.688ms
+Technology Mapping: Elapsed time ==> 0s.420ms
+Tech Mapping phase: Elapsed time ==> 0s.527ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Placement">
 Initial Analog Placement Results:
-IO_7@[IOP=(2)][IoId=(7)] : Pin_1(0) (fixed)
+IO_7@[IOP=(2)][IoId=(7)] : Encoder(0) (fixed)
+IO_1@[IOP=(2)][IoId=(1)] : Pin_1(0) (fixed)
 IO_2@[IOP=(2)][IoId=(2)] : Pin_2(0) (fixed)
 IO_4@[IOP=(3)][IoId=(4)] : \Keypad_1:Column(0)\ (fixed)
 IO_5@[IOP=(3)][IoId=(5)] : \Keypad_1:Column(1)\ (fixed)
@@ -2205,7 +2224,9 @@ IO_3@[IOP=(12)][IoId=(3)] : \LCD:LCDPort(3)\ (fixed)
 IO_4@[IOP=(12)][IoId=(4)] : \LCD:LCDPort(4)\ (fixed)
 IO_5@[IOP=(12)][IoId=(5)] : \LCD:LCDPort(5)\ (fixed)
 IO_6@[IOP=(12)][IoId=(6)] : \LCD:LCDPort(6)\ (fixed)
-Analog Placement phase: Elapsed time ==> 0s.200ms
+IO_0@[IOP=(0)][IoId=(0)] : cruce_por_cero(0) (fixed)
+IO_3@[IOP=(0)][IoId=(3)] : salida(0) (fixed)
+Analog Placement phase: Elapsed time ==> 0s.148ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Analog Routing">
 Analog Routing phase: Elapsed time ==> 0s.000ms
@@ -2223,11 +2244,11 @@ Dump of CyP35AnalogRoutingResultsDB
 IsVddaHalfUsedForComp = False
 IsVddaHalfUsedForSar0 = False
 IsVddaHalfUsedForSar1 = False
-Analog Code Generation phase: Elapsed time ==> 0s.381ms
+Analog Code Generation phase: Elapsed time ==> 0s.397ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Placement">
 <CYPRESSTAG name="Detailed placement messages">
-I2076: Total run-time: 2.4 sec.
+I2076: Total run-time: 1.0 sec.
 
 </CYPRESSTAG>
 <CYPRESSTAG name="PLD Packing">
@@ -2244,21 +2265,21 @@ PLD Packing Summary
 
         PLD Resource Type :     Average/LAB
     =======================================
-                   Inputs :            3.29
-                   Pterms :            3.00
-               Macrocells :            2.29
+                   Inputs :            4.29
+                   Pterms :            3.57
+               Macrocells :            2.43
 </CYPRESSTAG>
 <CYPRESSTAG name="Packed PLD Contents">
 Packed PLD Contents not displayed at this verbose level.</CYPRESSTAG>
 </CYPRESSTAG>
-PLD Packing: Elapsed time ==> 0s.001ms
+PLD Packing: Elapsed time ==> 0s.002ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Partitioning">
 <CYPRESSTAG name="Initial Partitioning Summary">
 Initial Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
 <CYPRESSTAG name="Final Partitioning Summary">
 Final Partitioning Summary not displayed at this verbose level.</CYPRESSTAG>
-Partitioning: Elapsed time ==> 0s.107ms
+Partitioning: Elapsed time ==> 0s.081ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Final Placement Summary">
 
@@ -2268,7 +2289,7 @@ Final Placement Summary
 
        Resource Type :      Count : Avg Inputs : Avg Outputs
     ========================================================
-                 UDB :          6 :       3.83 :       2.67
+                 UDB :          4 :       5.25 :       4.25
 <CYPRESSTAG name="Final Placement Details">
 <CYPRESSTAG name="Component Details">
 
@@ -2288,9 +2309,374 @@ UDB [UDB=(1,3)] is empty.
 UDB [UDB=(1,4)] is empty.
 UDB [UDB=(1,5)] is empty.
 UDB [UDB=(2,0)] contents:
-LAB@[UDB=(2,0)][LB=1] #macrocells=2, #inputs=4, #pterms=5
+LAB@[UDB=(2,0)][LB=0] #macrocells=2, #inputs=2, #pterms=1
 {
-    [McSlotId=0]:     MacroCell: Name=\Keypad_1:Net_81\, Mode=(D-Register) @ [UDB=(2,0)][LB=1][MC=0]
+    [McSlotId=0]:     MacroCell: Name=Net_15, Mode=(D-Register) @ [UDB=(2,0)][LB=0][MC=0]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_183) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Timer:TimerUDB:control_7\ * \Timer:TimerUDB:per_zero\
+        );
+        Output = Net_15 (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\Timer:TimerUDB:status_tc\, Mode=(Combinatorial) @ [UDB=(2,0)][LB=0][MC=1]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \Timer:TimerUDB:control_7\ * \Timer:TimerUDB:per_zero\
+        );
+        Output = \Timer:TimerUDB:status_tc\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]: (empty)
+    [McSlotId=3]: (empty)
+}
+
+datapathcell: Name =\Timer:TimerUDB:sT16:timerdp:u0\
+    PORT MAP (
+        clock => Net_183 ,
+        cs_addr_1 => \Timer:TimerUDB:control_7\ ,
+        cs_addr_0 => \Timer:TimerUDB:per_zero\ ,
+        chain_out => \Timer:TimerUDB:sT16:timerdp:carry\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+    Next in chain : \Timer:TimerUDB:sT16:timerdp:u1\
+
+statusicell: Name =\Timer:TimerUDB:rstSts:stsreg\
+    PORT MAP (
+        clock => Net_183 ,
+        status_3 => \Timer:TimerUDB:status_3\ ,
+        status_2 => \Timer:TimerUDB:status_2\ ,
+        status_0 => \Timer:TimerUDB:status_tc\ );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "0000011"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+controlcell: Name =\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
+    PORT MAP (
+        clock => Net_183 ,
+        control_7 => \Timer:TimerUDB:control_7\ ,
+        control_6 => \Timer:TimerUDB:control_6\ ,
+        control_5 => \Timer:TimerUDB:control_5\ ,
+        control_4 => \Timer:TimerUDB:control_4\ ,
+        control_3 => \Timer:TimerUDB:control_3\ ,
+        control_2 => \Timer:TimerUDB:control_2\ ,
+        control_1 => \Timer:TimerUDB:control_1\ ,
+        control_0 => \Timer:TimerUDB:control_0\ );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "11111111"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(2,1)] is empty.
+UDB [UDB=(2,2)] contents:
+LAB@[UDB=(2,2)][LB=0] #macrocells=2, #inputs=6, #pterms=3
+{
+    [McSlotId=0]: (empty)
+    [McSlotId=1]: (empty)
+    [McSlotId=2]:     MacroCell: Name=\Keypad_1:Net_14\, Mode=(Combinatorial) @ [UDB=(2,2)][LB=0][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              !\Keypad_1:Net_259\ * \Keypad_1:Net_258\ * \Keypad_1:Net_257\ * 
+              \Keypad_1:Net_256\
+            + \Keypad_1:Net_259\ * \Keypad_1:Net_258\ * !\Keypad_1:Net_257\ * 
+              \Keypad_1:Net_256\
+        );
+        Output = \Keypad_1:Net_14\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\PWM:PWMUDB:status_0\, Mode=(D-Register) @ [UDB=(2,2)][LB=0][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_183) => Global
+            Reset  = (Net_188)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              !\PWM:PWMUDB:prevCompare1\ * \PWM:PWMUDB:cmp1_eq\
+        );
+        Output = \PWM:PWMUDB:status_0\ (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(2,2)][LB=1] #macrocells=4, #inputs=4, #pterms=4
+{
+    [McSlotId=0]:     MacroCell: Name=\PWM:PWMUDB:prevCompare1\, Mode=(D-Register) @ [UDB=(2,2)][LB=1][MC=0]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_183) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PWM:PWMUDB:cmp1_eq\
+        );
+        Output = \PWM:PWMUDB:prevCompare1\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\PWM:PWMUDB:runmode_enable\, Mode=(D-Register) @ [UDB=(2,2)][LB=1][MC=1]
+        Total # of inputs        : 1
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_183) => Global
+            Reset  = (Net_188)
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PWM:PWMUDB:control_7\
+        );
+        Output = \PWM:PWMUDB:runmode_enable\ (fanout=3)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\PWM:PWMUDB:status_2\, Mode=(Combinatorial) @ [UDB=(2,2)][LB=1][MC=2]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:tc_i\
+        );
+        Output = \PWM:PWMUDB:status_2\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=Net_163, Mode=(D-Register) @ [UDB=(2,2)][LB=1][MC=3]
+        Total # of inputs        : 2
+        Total # of product terms : 1
+        List of special equations: 
+            Clock  = (Net_183) => Global
+            Clock Enable: True
+        Main Equation            : 1 pterm
+        (
+              \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:cmp1_eq\
+        );
+        Output = Net_163 (fanout=1)
+        Properties               : 
+        {
+        }
+}
+
+datapathcell: Name =\PWM:PWMUDB:sP8:pwmdp:u0\
+    PORT MAP (
+        clock => Net_183 ,
+        cs_addr_2 => \PWM:PWMUDB:tc_i\ ,
+        cs_addr_1 => \PWM:PWMUDB:runmode_enable\ ,
+        cs_addr_0 => Net_188 ,
+        ce0_comb => \PWM:PWMUDB:cmp1_eq\ ,
+        z0_comb => \PWM:PWMUDB:tc_i\ ,
+        f1_blk_stat_comb => \PWM:PWMUDB:status_3\ );
+    Properties:
+    {
+        a0_init = "00000000"
+        a1_init = "00000000"
+        ce0_sync = 1
+        ce1_sync = 1
+        cl0_sync = 1
+        cl1_sync = 1
+        cmsb_sync = 1
+        co_msb_sync = 1
+        cy_dpconfig = "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101000000000000000000100000000000000000000011000"
+        d0_init = "00000000"
+        d1_init = "00000000"
+        f0_blk_sync = 1
+        f0_bus_sync = 1
+        f1_blk_sync = 1
+        f1_bus_sync = 1
+        ff0_sync = 1
+        ff1_sync = 1
+        ov_msb_sync = 1
+        so_sync = 1
+        z0_sync = 1
+        z1_sync = 1
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+statusicell: Name =\PWM:PWMUDB:genblk8:stsreg\
+    PORT MAP (
+        reset => Net_188 ,
+        clock => Net_183 ,
+        status_3 => \PWM:PWMUDB:status_3\ ,
+        status_2 => \PWM:PWMUDB:status_2\ ,
+        status_0 => \PWM:PWMUDB:status_0\ );
+    Properties:
+    {
+        cy_force_order = 1
+        cy_int_mask = "1111111"
+        cy_md_select = "0100111"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+controlcell: Name =\PWM:PWMUDB:genblk1:ctrlreg\
+    PORT MAP (
+        clock => Net_183 ,
+        control_7 => \PWM:PWMUDB:control_7\ ,
+        control_6 => \PWM:PWMUDB:control_6\ ,
+        control_5 => \PWM:PWMUDB:control_5\ ,
+        control_4 => \PWM:PWMUDB:control_4\ ,
+        control_3 => \PWM:PWMUDB:control_3\ ,
+        control_2 => \PWM:PWMUDB:control_2\ ,
+        control_1 => \PWM:PWMUDB:control_1\ ,
+        control_0 => \PWM:PWMUDB:control_0\ );
+    Properties:
+    {
+        cy_ctrl_mode_0 = "11111111"
+        cy_ctrl_mode_1 = "00000000"
+        cy_ext_reset = 0
+        cy_force_order = 1
+        cy_init_value = "00000000"
+    }
+    Clock Polarity: Active High
+    Clock Enable: True
+
+UDB [UDB=(2,3)] is empty.
+UDB [UDB=(2,4)] is empty.
+UDB [UDB=(2,5)] is empty.
+UDB [UDB=(3,0)] contents:
+LAB@[UDB=(3,0)][LB=0] #macrocells=4, #inputs=4, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\Keypad_1:Net_83\, Mode=(D-Register) @ [UDB=(3,0)][LB=0][MC=0]
+        Total # of inputs        : 4
+        Total # of product terms : 4
+        List of special equations: 
+            Clock  = (\Keypad_1:Net_64\) => Global
+            Clock Enable: True
+        Main Equation            : 4 pterms
+        (
+              !\Keypad_1:Net_83\ * !\Keypad_1:Net_82\ * !\Keypad_1:Net_81\ * 
+              !\Keypad_1:Net_80\
+            + !\Keypad_1:Net_83\ * \Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
+              \Keypad_1:Net_80\
+            + \Keypad_1:Net_83\ * \Keypad_1:Net_82\ * !\Keypad_1:Net_81\ * 
+              \Keypad_1:Net_80\
+            + \Keypad_1:Net_83\ * \Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
+              !\Keypad_1:Net_80\
+        );
+        Output = \Keypad_1:Net_83\ (fanout=7)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=1]:     MacroCell: Name=\Keypad_1:Net_12\, Mode=(D-Register) @ [UDB=(3,0)][LB=0][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\Keypad_1:Net_64\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \Keypad_1:Net_83\ * !\Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
+              \Keypad_1:Net_80\
+            + \Keypad_1:Net_83\ * \Keypad_1:Net_82\ * !\Keypad_1:Net_81\ * 
+              \Keypad_1:Net_80\
+        );
+        Output = \Keypad_1:Net_12\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=2]:     MacroCell: Name=\Keypad_1:Net_16\, Mode=(D-Register) @ [UDB=(3,0)][LB=0][MC=2]
+        Total # of inputs        : 4
+        Total # of product terms : 2
+        List of special equations: 
+            Clock  = (\Keypad_1:Net_64\) => Global
+            Clock Enable: True
+        Main Equation            : 2 pterms
+        (
+              \Keypad_1:Net_83\ * !\Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
+              \Keypad_1:Net_80\
+            + \Keypad_1:Net_83\ * \Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
+              !\Keypad_1:Net_80\
+        );
+        Output = \Keypad_1:Net_16\ (fanout=1)
+        Properties               : 
+        {
+        }
+
+    [McSlotId=3]:     MacroCell: Name=\Keypad_1:Net_80\, Mode=(D-Register) @ [UDB=(3,0)][LB=0][MC=3]
+        Total # of inputs        : 4
+        Total # of product terms : 3
+        List of special equations: 
+            Clock  = (\Keypad_1:Net_64\) => Global
+            Clock Enable: True
+        Main Equation            : 3 pterms
+        (
+              \Keypad_1:Net_83\ * !\Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
+              \Keypad_1:Net_80\
+            + \Keypad_1:Net_83\ * \Keypad_1:Net_82\ * !\Keypad_1:Net_81\ * 
+              \Keypad_1:Net_80\
+            + \Keypad_1:Net_83\ * \Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
+              !\Keypad_1:Net_80\
+        );
+        Output = \Keypad_1:Net_80\ (fanout=7)
+        Properties               : 
+        {
+        }
+}
+
+LAB@[UDB=(3,0)][LB=1] #macrocells=2, #inputs=4, #pterms=5
+{
+    [McSlotId=0]:     MacroCell: Name=\Keypad_1:Net_81\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=0]
         Total # of inputs        : 4
         Total # of product terms : 4
         List of special equations: 
@@ -2312,56 +2698,35 @@ LAB@[UDB=(2,0)][LB=1] #macrocells=2, #inputs=4, #pterms=5
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=\Keypad_1:Net_80\, Mode=(D-Register) @ [UDB=(2,0)][LB=1][MC=1]
+    [McSlotId=1]:     MacroCell: Name=\Keypad_1:Net_82\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=1]
         Total # of inputs        : 4
-        Total # of product terms : 3
+        Total # of product terms : 4
         List of special equations: 
             Clock  = (\Keypad_1:Net_64\) => Global
             Clock Enable: True
-        Main Equation            : 3 pterms
+        Main Equation            : 4 pterms
         (
-              \Keypad_1:Net_83\ * !\Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
+              !\Keypad_1:Net_83\ * !\Keypad_1:Net_82\ * !\Keypad_1:Net_81\ * 
+              !\Keypad_1:Net_80\
+            + !\Keypad_1:Net_83\ * \Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
               \Keypad_1:Net_80\
-            + \Keypad_1:Net_83\ * \Keypad_1:Net_82\ * !\Keypad_1:Net_81\ * 
+            + \Keypad_1:Net_83\ * !\Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
               \Keypad_1:Net_80\
             + \Keypad_1:Net_83\ * \Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
               !\Keypad_1:Net_80\
         );
-        Output = \Keypad_1:Net_80\ (fanout=7)
+        Output = \Keypad_1:Net_82\ (fanout=7)
         Properties               : 
         {
         }
 
-    [McSlotId=2]: (empty)
-    [McSlotId=3]: (empty)
-}
-
-UDB [UDB=(2,1)] contents:
-LAB@[UDB=(2,1)][LB=0] #macrocells=1, #inputs=2, #pterms=1
-{
-    [McSlotId=0]:     MacroCell: Name=Net_15, Mode=(D-Register) @ [UDB=(2,1)][LB=0][MC=0]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_10) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \Timer:TimerUDB:control_7\ * \Timer:TimerUDB:per_zero\
-        );
-        Output = Net_15 (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
     [McSlotId=2]: (empty)
     [McSlotId=3]: (empty)
 }
 
 datapathcell: Name =\Timer:TimerUDB:sT16:timerdp:u1\
     PORT MAP (
-        clock => Net_10 ,
+        clock => Net_183 ,
         cs_addr_1 => \Timer:TimerUDB:control_7\ ,
         cs_addr_0 => \Timer:TimerUDB:per_zero\ ,
         z0_comb => \Timer:TimerUDB:per_zero\ ,
@@ -2396,150 +2761,60 @@ datapathcell: Name =\Timer:TimerUDB:sT16:timerdp:u1\
     Clock Enable: True
     Previous in chain : \Timer:TimerUDB:sT16:timerdp:u0\
 
-statusicell: Name =\Timer:TimerUDB:rstSts:stsreg\
+statuscell: Name =\Keypad_1:Status_Reg:sts:sts_reg\
     PORT MAP (
-        clock => Net_10 ,
-        status_3 => \Timer:TimerUDB:status_3\ ,
-        status_2 => \Timer:TimerUDB:status_2\ ,
-        status_0 => \Timer:TimerUDB:status_tc\ );
+        status_4 => Net_1 ,
+        status_3 => \Keypad_1:Net_15\ ,
+        status_2 => \Keypad_1:Net_14\ ,
+        status_1 => \Keypad_1:Net_12\ ,
+        status_0 => \Keypad_1:Net_16\ );
     Properties:
     {
         cy_force_order = 1
-        cy_int_mask = "1111111"
-        cy_md_select = "0000011"
+        cy_md_select = "00000000"
     }
-    Clock Polarity: Active High
     Clock Enable: True
 
-controlcell: Name =\Timer:TimerUDB:sCTRLReg:SyncCtl:ctrlreg\
-    PORT MAP (
-        clock => Net_10 ,
-        control_7 => \Timer:TimerUDB:control_7\ ,
-        control_6 => \Timer:TimerUDB:control_6\ ,
-        control_5 => \Timer:TimerUDB:control_5\ ,
-        control_4 => \Timer:TimerUDB:control_4\ ,
-        control_3 => \Timer:TimerUDB:control_3\ ,
-        control_2 => \Timer:TimerUDB:control_2\ ,
-        control_1 => \Timer:TimerUDB:control_1\ ,
-        control_0 => \Timer:TimerUDB:control_0\ );
-    Properties:
-    {
-        cy_ctrl_mode_0 = "11111111"
-        cy_ctrl_mode_1 = "00000000"
-        cy_ext_reset = 0
-        cy_force_order = 1
-        cy_init_value = "00000000"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-UDB [UDB=(2,2)] is empty.
-UDB [UDB=(2,3)] is empty.
-UDB [UDB=(2,4)] contents:
-LAB@[UDB=(2,4)][LB=0] #macrocells=3, #inputs=4, #pterms=3
+UDB [UDB=(3,1)] is empty.
+UDB [UDB=(3,2)] contents:
+LAB@[UDB=(3,2)][LB=0] #macrocells=2, #inputs=6, #pterms=3
 {
-    [McSlotId=0]:     MacroCell: Name=\PWM:PWMUDB:prevCompare1\, Mode=(D-Register) @ [UDB=(2,4)][LB=0][MC=0]
-        Total # of inputs        : 1
+    [McSlotId=0]:     MacroCell: Name=Net_188, Mode=(Combinatorial) @ [UDB=(3,2)][LB=0][MC=0]
+        Total # of inputs        : 2
         Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_10) => Global
             Clock Enable: True
         Main Equation            : 1 pterm
         (
-              \PWM:PWMUDB:cmp1_eq\
+              Net_166 * Net_167
         );
-        Output = \PWM:PWMUDB:prevCompare1\ (fanout=1)
+        Output = Net_188 (fanout=4)
         Properties               : 
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=\PWM:PWMUDB:status_0\, Mode=(D-Register) @ [UDB=(2,4)][LB=0][MC=1]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_10) => Global
+    [McSlotId=1]:     MacroCell: Name=\Keypad_1:Net_15\, Mode=(Combinatorial) @ [UDB=(3,2)][LB=0][MC=1]
+        Total # of inputs        : 4
+        Total # of product terms : 2
             Clock Enable: True
-        Main Equation            : 1 pterm
+        Main Equation            : 2 pterms
         (
-              !\PWM:PWMUDB:prevCompare1\ * \PWM:PWMUDB:cmp1_eq\
+              !\Keypad_1:Net_259\ * \Keypad_1:Net_258\ * \Keypad_1:Net_257\ * 
+              \Keypad_1:Net_256\
+            + \Keypad_1:Net_259\ * !\Keypad_1:Net_258\ * \Keypad_1:Net_257\ * 
+              \Keypad_1:Net_256\
         );
-        Output = \PWM:PWMUDB:status_0\ (fanout=1)
+        Output = \Keypad_1:Net_15\ (fanout=1)
         Properties               : 
         {
         }
 
     [McSlotId=2]: (empty)
-    [McSlotId=3]:     MacroCell: Name=\PWM:PWMUDB:status_2\, Mode=(Combinatorial) @ [UDB=(2,4)][LB=0][MC=3]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:tc_i\
-        );
-        Output = \PWM:PWMUDB:status_2\ (fanout=1)
-        Properties               : 
-        {
-        }
+    [McSlotId=3]: (empty)
 }
 
-datapathcell: Name =\PWM:PWMUDB:sP16:pwmdp:u1\
-    PORT MAP (
-        clock => Net_10 ,
-        cs_addr_2 => \PWM:PWMUDB:tc_i\ ,
-        cs_addr_1 => \PWM:PWMUDB:runmode_enable\ ,
-        ce0_comb => \PWM:PWMUDB:cmp1_eq\ ,
-        z0_comb => \PWM:PWMUDB:tc_i\ ,
-        f1_blk_stat_comb => \PWM:PWMUDB:status_3\ ,
-        chain_in => \PWM:PWMUDB:sP16:pwmdp:carry\ );
-    Properties:
-    {
-        a0_init = "00000000"
-        a1_init = "00000000"
-        ce0_sync = 1
-        ce1_sync = 1
-        cl0_sync = 1
-        cl1_sync = 1
-        cmsb_sync = 1
-        co_msb_sync = 1
-        cy_dpconfig = "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101011110000000000000100000011110000000000011000"
-        d0_init = "00000000"
-        d1_init = "00000000"
-        f0_blk_sync = 1
-        f0_bus_sync = 1
-        f1_blk_sync = 1
-        f1_bus_sync = 1
-        ff0_sync = 1
-        ff1_sync = 1
-        ov_msb_sync = 1
-        so_sync = 1
-        z0_sync = 1
-        z1_sync = 1
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-    Previous in chain : \PWM:PWMUDB:sP16:pwmdp:u0\
-
-statusicell: Name =\PWM:PWMUDB:genblk8:stsreg\
-    PORT MAP (
-        clock => Net_10 ,
-        status_3 => \PWM:PWMUDB:status_3\ ,
-        status_2 => \PWM:PWMUDB:status_2\ ,
-        status_0 => \PWM:PWMUDB:status_0\ );
-    Properties:
-    {
-        cy_force_order = 1
-        cy_int_mask = "1111111"
-        cy_md_select = "0100111"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
-UDB [UDB=(2,5)] is empty.
-UDB [UDB=(3,0)] contents:
-LAB@[UDB=(3,0)][LB=0] #macrocells=3, #inputs=4, #pterms=4
+LAB@[UDB=(3,2)][LB=1] #macrocells=1, #inputs=4, #pterms=4
 {
-    [McSlotId=0]:     MacroCell: Name=Net_1, Mode=(Combinatorial) @ [UDB=(3,0)][LB=0][MC=0]
+    [McSlotId=0]:     MacroCell: Name=Net_1, Mode=(Combinatorial) @ [UDB=(3,2)][LB=1][MC=0]
         Total # of inputs        : 4
         Total # of product terms : 4
             Clock Enable: True
@@ -2559,288 +2834,13 @@ LAB@[UDB=(3,0)][LB=0] #macrocells=3, #inputs=4, #pterms=4
         {
         }
 
-    [McSlotId=1]:     MacroCell: Name=\Keypad_1:Net_14\, Mode=(Combinatorial) @ [UDB=(3,0)][LB=0][MC=1]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              !\Keypad_1:Net_259\ * \Keypad_1:Net_258\ * \Keypad_1:Net_257\ * 
-              \Keypad_1:Net_256\
-            + \Keypad_1:Net_259\ * \Keypad_1:Net_258\ * !\Keypad_1:Net_257\ * 
-              \Keypad_1:Net_256\
-        );
-        Output = \Keypad_1:Net_14\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\Keypad_1:Net_15\, Mode=(Combinatorial) @ [UDB=(3,0)][LB=0][MC=2]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              !\Keypad_1:Net_259\ * \Keypad_1:Net_258\ * \Keypad_1:Net_257\ * 
-              \Keypad_1:Net_256\
-            + \Keypad_1:Net_259\ * !\Keypad_1:Net_258\ * \Keypad_1:Net_257\ * 
-              \Keypad_1:Net_256\
-        );
-        Output = \Keypad_1:Net_15\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]: (empty)
-}
-
-LAB@[UDB=(3,0)][LB=1] #macrocells=4, #inputs=4, #pterms=5
-{
-    [McSlotId=0]:     MacroCell: Name=\Keypad_1:Net_83\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=0]
-        Total # of inputs        : 4
-        Total # of product terms : 4
-        List of special equations: 
-            Clock  = (\Keypad_1:Net_64\) => Global
-            Clock Enable: True
-        Main Equation            : 4 pterms
-        (
-              !\Keypad_1:Net_83\ * !\Keypad_1:Net_82\ * !\Keypad_1:Net_81\ * 
-              !\Keypad_1:Net_80\
-            + !\Keypad_1:Net_83\ * \Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
-              \Keypad_1:Net_80\
-            + \Keypad_1:Net_83\ * \Keypad_1:Net_82\ * !\Keypad_1:Net_81\ * 
-              \Keypad_1:Net_80\
-            + \Keypad_1:Net_83\ * \Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
-              !\Keypad_1:Net_80\
-        );
-        Output = \Keypad_1:Net_83\ (fanout=7)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]:     MacroCell: Name=\Keypad_1:Net_12\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=1]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (\Keypad_1:Net_64\) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              \Keypad_1:Net_83\ * !\Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
-              \Keypad_1:Net_80\
-            + \Keypad_1:Net_83\ * \Keypad_1:Net_82\ * !\Keypad_1:Net_81\ * 
-              \Keypad_1:Net_80\
-        );
-        Output = \Keypad_1:Net_12\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=2]:     MacroCell: Name=\Keypad_1:Net_16\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=2]
-        Total # of inputs        : 4
-        Total # of product terms : 2
-        List of special equations: 
-            Clock  = (\Keypad_1:Net_64\) => Global
-            Clock Enable: True
-        Main Equation            : 2 pterms
-        (
-              \Keypad_1:Net_83\ * !\Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
-              \Keypad_1:Net_80\
-            + \Keypad_1:Net_83\ * \Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
-              !\Keypad_1:Net_80\
-        );
-        Output = \Keypad_1:Net_16\ (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]:     MacroCell: Name=\Keypad_1:Net_82\, Mode=(D-Register) @ [UDB=(3,0)][LB=1][MC=3]
-        Total # of inputs        : 4
-        Total # of product terms : 4
-        List of special equations: 
-            Clock  = (\Keypad_1:Net_64\) => Global
-            Clock Enable: True
-        Main Equation            : 4 pterms
-        (
-              !\Keypad_1:Net_83\ * !\Keypad_1:Net_82\ * !\Keypad_1:Net_81\ * 
-              !\Keypad_1:Net_80\
-            + !\Keypad_1:Net_83\ * \Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
-              \Keypad_1:Net_80\
-            + \Keypad_1:Net_83\ * !\Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
-              \Keypad_1:Net_80\
-            + \Keypad_1:Net_83\ * \Keypad_1:Net_82\ * \Keypad_1:Net_81\ * 
-              !\Keypad_1:Net_80\
-        );
-        Output = \Keypad_1:Net_82\ (fanout=7)
-        Properties               : 
-        {
-        }
-}
-
-statuscell: Name =\Keypad_1:Status_Reg:sts:sts_reg\
-    PORT MAP (
-        status_4 => Net_1 ,
-        status_3 => \Keypad_1:Net_15\ ,
-        status_2 => \Keypad_1:Net_14\ ,
-        status_1 => \Keypad_1:Net_12\ ,
-        status_0 => \Keypad_1:Net_16\ );
-    Properties:
-    {
-        cy_force_order = 1
-        cy_md_select = "00000000"
-    }
-    Clock Enable: True
-
-UDB [UDB=(3,1)] contents:
-LAB@[UDB=(3,1)][LB=0] #macrocells=1, #inputs=2, #pterms=1
-{
-    [McSlotId=0]: (empty)
-    [McSlotId=1]:     MacroCell: Name=\Timer:TimerUDB:status_tc\, Mode=(Combinatorial) @ [UDB=(3,1)][LB=0][MC=1]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \Timer:TimerUDB:control_7\ * \Timer:TimerUDB:per_zero\
-        );
-        Output = \Timer:TimerUDB:status_tc\ (fanout=1)
-        Properties               : 
-        {
-        }
-
+    [McSlotId=1]: (empty)
     [McSlotId=2]: (empty)
     [McSlotId=3]: (empty)
 }
 
-datapathcell: Name =\Timer:TimerUDB:sT16:timerdp:u0\
-    PORT MAP (
-        clock => Net_10 ,
-        cs_addr_1 => \Timer:TimerUDB:control_7\ ,
-        cs_addr_0 => \Timer:TimerUDB:per_zero\ ,
-        chain_out => \Timer:TimerUDB:sT16:timerdp:carry\ );
-    Properties:
-    {
-        a0_init = "00000000"
-        a1_init = "00000000"
-        ce0_sync = 1
-        ce1_sync = 1
-        cl0_sync = 1
-        cl1_sync = 1
-        cmsb_sync = 1
-        co_msb_sync = 1
-        cy_dpconfig = "0000000001000000000000000100000001000000010000000000000010000000000000001000000000000000100000000000000010000000000000001000000011111111000000001111111111111111000000000000000000000001000000000000000000011000"
-        d0_init = "00000000"
-        d1_init = "00000000"
-        f0_blk_sync = 1
-        f0_bus_sync = 1
-        f1_blk_sync = 1
-        f1_bus_sync = 1
-        ff0_sync = 1
-        ff1_sync = 1
-        ov_msb_sync = 1
-        so_sync = 1
-        z0_sync = 1
-        z1_sync = 1
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-    Next in chain : \Timer:TimerUDB:sT16:timerdp:u1\
-
-UDB [UDB=(3,2)] is empty.
 UDB [UDB=(3,3)] is empty.
-UDB [UDB=(3,4)] contents:
-LAB@[UDB=(3,4)][LB=0] #macrocells=2, #inputs=3, #pterms=2
-{
-    [McSlotId=0]:     MacroCell: Name=\PWM:PWMUDB:runmode_enable\, Mode=(D-Register) @ [UDB=(3,4)][LB=0][MC=0]
-        Total # of inputs        : 1
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_10) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \PWM:PWMUDB:control_7\
-        );
-        Output = \PWM:PWMUDB:runmode_enable\ (fanout=4)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=1]: (empty)
-    [McSlotId=2]:     MacroCell: Name=Net_41, Mode=(D-Register) @ [UDB=(3,4)][LB=0][MC=2]
-        Total # of inputs        : 2
-        Total # of product terms : 1
-        List of special equations: 
-            Clock  = (Net_10) => Global
-            Clock Enable: True
-        Main Equation            : 1 pterm
-        (
-              \PWM:PWMUDB:runmode_enable\ * \PWM:PWMUDB:tc_i\
-        );
-        Output = Net_41 (fanout=1)
-        Properties               : 
-        {
-        }
-
-    [McSlotId=3]: (empty)
-}
-
-datapathcell: Name =\PWM:PWMUDB:sP16:pwmdp:u0\
-    PORT MAP (
-        clock => Net_10 ,
-        cs_addr_2 => \PWM:PWMUDB:tc_i\ ,
-        cs_addr_1 => \PWM:PWMUDB:runmode_enable\ ,
-        chain_out => \PWM:PWMUDB:sP16:pwmdp:carry\ );
-    Properties:
-    {
-        a0_init = "00000000"
-        a1_init = "00000000"
-        ce0_sync = 1
-        ce1_sync = 1
-        cl0_sync = 1
-        cl1_sync = 1
-        cmsb_sync = 1
-        co_msb_sync = 1
-        cy_dpconfig = "0000000001000000000000001100000001000000010000000000000011000000000000001100000000000000110000000000000011000000000000001100000011111111000000001111111111111111101000000000000000000100000000000000000000011000"
-        d0_init = "00000000"
-        d1_init = "00000000"
-        f0_blk_sync = 1
-        f0_bus_sync = 1
-        f1_blk_sync = 1
-        f1_bus_sync = 1
-        ff0_sync = 1
-        ff1_sync = 1
-        ov_msb_sync = 1
-        so_sync = 1
-        z0_sync = 1
-        z1_sync = 1
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-    Next in chain : \PWM:PWMUDB:sP16:pwmdp:u1\
-
-controlcell: Name =\PWM:PWMUDB:genblk1:ctrlreg\
-    PORT MAP (
-        clock => Net_10 ,
-        control_7 => \PWM:PWMUDB:control_7\ ,
-        control_6 => \PWM:PWMUDB:control_6\ ,
-        control_5 => \PWM:PWMUDB:control_5\ ,
-        control_4 => \PWM:PWMUDB:control_4\ ,
-        control_3 => \PWM:PWMUDB:control_3\ ,
-        control_2 => \PWM:PWMUDB:control_2\ ,
-        control_1 => \PWM:PWMUDB:control_1\ ,
-        control_0 => \PWM:PWMUDB:control_0\ );
-    Properties:
-    {
-        cy_ctrl_mode_0 = "11111111"
-        cy_ctrl_mode_1 = "00000000"
-        cy_ext_reset = 0
-        cy_force_order = 1
-        cy_init_value = "00000000"
-    }
-    Clock Polarity: Active High
-    Clock Enable: True
-
+UDB [UDB=(3,4)] is empty.
 UDB [UDB=(3,5)] is empty.
 Intr container @ [IntrContainer=(0)]: 
   Intr@ [IntrContainer=(0)][IntrId=(0)] 
@@ -2853,6 +2853,15 @@ Intr container @ [IntrContainer=(0)]:
             is_nmi = 0
         }
   Intr@ [IntrContainer=(0)][IntrId=(1)] 
+    interrupt: Name =isr_Encoder
+        PORT MAP (
+            interrupt => Net_17 );
+        Properties:
+        {
+            int_type = "00"
+            is_nmi = 0
+        }
+  Intr@ [IntrContainer=(0)][IntrId=(2)] 
     interrupt: Name =isr_press
         PORT MAP (
             interrupt => Net_1 );
@@ -2861,26 +2870,133 @@ Intr container @ [IntrContainer=(0)]:
             int_type = "10"
             is_nmi = 0
         }
-  Intr@ [IntrContainer=(0)][IntrId=(4)] 
-    interrupt: Name =isr_Encoder
-        PORT MAP (
-            interrupt => Net_17 );
-        Properties:
-        {
-            int_type = "10"
-            is_nmi = 0
-        }
-  Intr@ [IntrContainer=(0)][IntrId=(5)] 
-    interrupt: Name =isr_sync
-        PORT MAP (
-            interrupt => Net_54 );
-        Properties:
-        {
-            int_type = "10"
-            is_nmi = 0
-        }
 Drq container @ [DrqContainer=(0)]: empty
-Port 0 generates interrupt for logical port:
+Port 0 contains the following IO cells:
+[IoId=0]: 
+Pin : Name = cruce_por_cero(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: RES_PULL_UP
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL, ROUTABLE
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => cruce_por_cero(0)__PA ,
+        fb => Net_166 ,
+        pad => cruce_por_cero(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=1]: 
+Pin : Name = num_control(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: NOSYNC
+        Out Sync Option: AUTO
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: RES_PULL_UP
+        VTrip: CMOS
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL, ROUTABLE
+        Initial Value: 1
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => num_control(0)__PA ,
+        fb => Net_167 ,
+        pad => num_control(0)_PAD );
+    Properties:
+    {
+    }
+
+[IoId=3]: 
+Pin : Name = salida(0)
+    Attributes:
+        In Group/Port: True
+        In Sync Option: AUTO
+        Out Sync Option: NOSYNC
+        Interrupt generated: False
+        Interrupt mode: NONE
+        Drive mode: CMOS_OUT
+        VTrip: EITHER
+        Slew: FAST
+        Input Sync needed: False
+        Output Sync needed: False
+        SC shield enabled: False
+        POR State: ANY
+        LCD Mode: COMMON
+        Register Mode: RegComb
+        CaSense Mode: NEITHER
+        Treat as pin: True
+        Is OE Registered: False
+        Uses Analog: False
+        Can contain Digital: True
+        Is SIO: False
+        SIO Output Buf: NONREGULATED
+        SIO Input Buf: SINGLE_ENDED
+        SIO HiFreq: LOW
+        SIO Hyst: DISABLED
+        SIO Vtrip: MULTIPLIER_0_5
+        SIO Multiplier Index: 0
+        SIO RefSel: VCC_IO
+        Required Capabilities: DIGITAL, ROUTABLE
+        Initial Value: 0
+        IO Voltage: 0
+    PORT MAP (
+        pa_out => salida(0)__PA ,
+        pin_input => Net_163 ,
+        pad => salida(0)_PAD );
+    Properties:
+    {
+    }
+
+Port 1 contains the following IO cells:
+Port 2 generates interrupt for logical port:
     logicalport: Name =Encoder
         PORT MAP (
             in_clock_en => one ,
@@ -2947,56 +3063,16 @@ Port 0 generates interrupt for logical port:
             width = 1
         }
     and contains the following IO cells:
-[IoId=0]: 
-Pin : Name = Encoder(0)
+[IoId=1]: 
+Pin : Name = Pin_1(0)
     Attributes:
         In Group/Port: True
         In Sync Option: NOSYNC
         Out Sync Option: AUTO
-        Interrupt generated: True
-        Interrupt mode: RISING
-        Drive mode: RES_PULL_UP
-        VTrip: CMOS
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: False
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, PORT_INTERRUPT
-        Initial Value: 1
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => Encoder(0)__PA ,
-        pad => Encoder(0)_PAD );
-    Properties:
-    {
-    }
-
-[IoId=1]: 
-Pin : Name = salida(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: AUTO
-        Out Sync Option: NOSYNC
         Interrupt generated: False
         Interrupt mode: NONE
-        Drive mode: CMOS_OUT
-        VTrip: EITHER
+        Drive mode: RES_PULL_UP
+        VTrip: CMOS
         Slew: FAST
         Input Sync needed: False
         Output Sync needed: False
@@ -3017,125 +3093,16 @@ Pin : Name = salida(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, ROUTABLE
-        Initial Value: 0
-        IO Voltage: 0
-    PORT MAP (
-        pa_out => salida(0)__PA ,
-        pin_input => Net_41 ,
-        pad => salida(0)_PAD );
-    Properties:
-    {
-    }
-
-Port 1 generates interrupt for logical port:
-    logicalport: Name =sync
-        PORT MAP (
-            in_clock_en => one ,
-            in_reset => zero ,
-            out_clock_en => one ,
-            out_reset => zero ,
-            interrupt => Net_54 );
-        Properties:
-        {
-            drive_mode = "010"
-            ibuf_enabled = "1"
-            id = "e4dcbf19-4bc3-466f-954a-c22d41ac7342"
-            init_dr_st = "1"
-            input_buffer_sel = "00"
-            input_clk_en = 0
-            input_sync = "0"
-            input_sync_mode = "0"
-            intr_mode = "11"
-            invert_in_clock = 0
-            invert_in_clock_en = 0
-            invert_in_reset = 0
-            invert_out_clock = 0
-            invert_out_clock_en = 0
-            invert_out_reset = 0
-            io_voltage = ""
-            layout_mode = "CONTIGUOUS"
-            oe_conn = "0"
-            oe_reset = 0
-            oe_sync = "0"
-            output_clk_en = 0
-            output_clock_mode = "0"
-            output_conn = "0"
-            output_mode = "0"
-            output_reset = 0
-            output_sync = "0"
-            ovt_hyst_trim = "0"
-            ovt_needed = "0"
-            ovt_slew_control = "00"
-            pa_in_clock = -1
-            pa_in_clock_en = -1
-            pa_in_reset = -1
-            pa_out_clock = -1
-            pa_out_clock_en = -1
-            pa_out_reset = -1
-            pin_aliases = ""
-            pin_mode = "I"
-            por_state = 4
-            port_alias_group = ""
-            port_alias_required = 0
-            sio_group_cnt = 0
-            sio_hifreq = "00000000"
-            sio_hyst = "1"
-            sio_ibuf = "00000000"
-            sio_info = "00"
-            sio_obuf = "00000000"
-            sio_refsel = "00000000"
-            sio_vohsel = "00000000"
-            sio_vtrip = "00000000"
-            slew_rate = "0"
-            spanning = 0
-            sw_only = 0
-            use_annotation = "0"
-            vtrip = "00"
-            width = 1
-        }
-    and contains the following IO cells:
-[IoId=2]: 
-Pin : Name = sync(0)
-    Attributes:
-        In Group/Port: True
-        In Sync Option: NOSYNC
-        Out Sync Option: AUTO
-        Interrupt generated: True
-        Interrupt mode: ON_CHANGE
-        Drive mode: RES_PULL_UP
-        VTrip: CMOS
-        Slew: FAST
-        Input Sync needed: False
-        Output Sync needed: False
-        SC shield enabled: False
-        POR State: ANY
-        LCD Mode: COMMON
-        Register Mode: RegComb
-        CaSense Mode: NEITHER
-        Treat as pin: False
-        Is OE Registered: False
-        Uses Analog: False
-        Can contain Digital: True
-        Is SIO: False
-        SIO Output Buf: NONREGULATED
-        SIO Input Buf: SINGLE_ENDED
-        SIO HiFreq: LOW
-        SIO Hyst: DISABLED
-        SIO Vtrip: MULTIPLIER_0_5
-        SIO Multiplier Index: 0
-        SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL, PORT_INTERRUPT
+        Required Capabilities: DIGITAL
         Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => sync(0)__PA ,
-        pad => sync(0)_PAD );
+        pa_out => Pin_1(0)__PA ,
+        pad => Pin_1(0)_PAD );
     Properties:
     {
     }
 
-Port 2 contains the following IO cells:
 [IoId=2]: 
 Pin : Name = Pin_2(0)
     Attributes:
@@ -3177,13 +3144,13 @@ Pin : Name = Pin_2(0)
     }
 
 [IoId=7]: 
-Pin : Name = Pin_1(0)
+Pin : Name = Encoder(0)
     Attributes:
         In Group/Port: True
         In Sync Option: NOSYNC
         Out Sync Option: AUTO
-        Interrupt generated: False
-        Interrupt mode: NONE
+        Interrupt generated: True
+        Interrupt mode: RISING
         Drive mode: RES_PULL_UP
         VTrip: CMOS
         Slew: FAST
@@ -3194,7 +3161,7 @@ Pin : Name = Pin_1(0)
         LCD Mode: COMMON
         Register Mode: RegComb
         CaSense Mode: NEITHER
-        Treat as pin: True
+        Treat as pin: False
         Is OE Registered: False
         Uses Analog: False
         Can contain Digital: True
@@ -3206,12 +3173,12 @@ Pin : Name = Pin_1(0)
         SIO Vtrip: MULTIPLIER_0_5
         SIO Multiplier Index: 0
         SIO RefSel: VCC_IO
-        Required Capabilities: DIGITAL
+        Required Capabilities: DIGITAL, PORT_INTERRUPT
         Initial Value: 1
         IO Voltage: 0
     PORT MAP (
-        pa_out => Pin_1(0)__PA ,
-        pad => Pin_1(0)_PAD );
+        pa_out => Encoder(0)__PA ,
+        pad => Encoder(0)_PAD );
     Properties:
     {
     }
@@ -3848,8 +3815,8 @@ Clock group 0:
             clk_bus => ClockBlock_BUS_CLK_local ,
             dclk_glb_0 => \Keypad_1:Net_64\ ,
             dclk_0 => \Keypad_1:Net_64_local\ ,
-            dclk_glb_1 => Net_10 ,
-            dclk_1 => Net_10_local );
+            dclk_glb_1 => Net_183 ,
+            dclk_1 => Net_183_local );
         Properties:
         {
         }
@@ -3884,13 +3851,13 @@ Port Configuration report
      |     |       | Interrupt |                  |                      | 
 Port | Pin | Fixed |      Type |       Drive Mode |                 Name | Connections
 -----+-----+-------+-----------+------------------+----------------------+-----------------------
-   0 |   0 |       |    RISING |      RES_PULL_UP |           Encoder(0) | 
-     |   1 |       |      NONE |         CMOS_OUT |            salida(0) | In(Net_41)
+   0 |   0 |     * |      NONE |      RES_PULL_UP |    cruce_por_cero(0) | FB(Net_166)
+     |   1 |       |      NONE |      RES_PULL_UP |       num_control(0) | FB(Net_167)
+     |   3 |     * |      NONE |         CMOS_OUT |            salida(0) | In(Net_163)
 -----+-----+-------+-----------+------------------+----------------------+-----------------------
-   1 |   2 |       | ON_CHANGE |      RES_PULL_UP |              sync(0) | 
------+-----+-------+-----------+------------------+----------------------+-----------------------
-   2 |   2 |     * |      NONE |         CMOS_OUT |             Pin_2(0) | 
-     |   7 |     * |      NONE |      RES_PULL_UP |             Pin_1(0) | 
+   2 |   1 |     * |      NONE |      RES_PULL_UP |             Pin_1(0) | 
+     |   2 |     * |      NONE |         CMOS_OUT |             Pin_2(0) | 
+     |   7 |     * |    RISING |      RES_PULL_UP |           Encoder(0) | 
 -----+-----+-------+-----------+------------------+----------------------+-----------------------
    3 |   0 |     * |      NONE |      RES_PULL_UP |    \Keypad_1:Row(0)\ | FB(\Keypad_1:Net_256\)
      |   1 |     * |      NONE |      RES_PULL_UP |    \Keypad_1:Row(1)\ | FB(\Keypad_1:Net_257\)
@@ -3912,33 +3879,33 @@ Port | Pin | Fixed |      Type |       Drive Mode |                 Name | Conne
 </CYPRESSTAG>
 </CYPRESSTAG>
 </CYPRESSTAG>
-Digital component placer commit/Report: Elapsed time ==> 0s.041ms
-Digital Placement phase: Elapsed time ==> 3s.963ms
+Digital component placer commit/Report: Elapsed time ==> 0s.072ms
+Digital Placement phase: Elapsed time ==> 2s.722ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Digital Routing">
 "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\bin/sjrouter.exe" --xml-path "C:\Program Files (x86)\Cypress\PSoC Creator\4.2\PSoC Creator\dev\psoc5/psoc5lp/route_arch-rrg.cydata" --vh2-path "teclado_r.vh2" --pcf-path "teclado.pco" --des-name "teclado" --dsf-path "teclado.dsf" --sdc-path "teclado.sdc" --lib-path "teclado_r.lib"
 Routing successful.
-Digital Routing phase: Elapsed time ==> 2s.080ms
+Digital Routing phase: Elapsed time ==> 2s.305ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Generation">
-Bitstream Generation phase: Elapsed time ==> 0s.706ms
+Bitstream Generation phase: Elapsed time ==> 0s.446ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Bitstream Verification">
-Bitstream Verification phase: Elapsed time ==> 0s.085ms
+Bitstream Verification phase: Elapsed time ==> 0s.062ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Static timing analysis">
 Timing report is in teclado_timing.html.
-Static timing analysis phase: Elapsed time ==> 0s.394ms
+Static timing analysis phase: Elapsed time ==> 0s.338ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Data reporting">
-Data reporting phase: Elapsed time ==> 0s.001ms
+Data reporting phase: Elapsed time ==> 0s.000ms
 </CYPRESSTAG>
 <CYPRESSTAG name="Database update...">
-Design database save phase: Elapsed time ==> 0s.380ms
+Design database save phase: Elapsed time ==> 0s.314ms
 </CYPRESSTAG>
-cydsfit: Elapsed time ==> 9s.015ms
+cydsfit: Elapsed time ==> 7s.355ms
 </CYPRESSTAG>
-Fitter phase: Elapsed time ==> 9s.035ms
-API generation phase: Elapsed time ==> 4s.950ms
-Dependency generation phase: Elapsed time ==> 0s.041ms
+Fitter phase: Elapsed time ==> 7s.398ms
+API generation phase: Elapsed time ==> 2s.331ms
+Dependency generation phase: Elapsed time ==> 0s.025ms
 Cleanup phase: Elapsed time ==> 0s.001ms
